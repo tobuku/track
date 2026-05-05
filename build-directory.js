@@ -19,7 +19,7 @@ var path = require("path");
 
 var CSV_FILE      = path.join(__dirname, "track-clubs-data.csv");
 var SITEMAP_FILE  = path.join(__dirname, "sitemap.xml");
-var AFFILIATE_TAG = "trackclubfinder-20";
+var AFFILIATE_TAG = "dwelldoc-20";
 var SITE_DOMAIN   = "https://trackclubfinder.com";
 
 var STATE_NAMES = {
