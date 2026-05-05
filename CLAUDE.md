@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Site Overview
 
-TrackClubFinder.com — national directory of track and running clubs across all 50 US states. GitHub Pages static site. Domain: `trackclubfinder.com`. Affiliate tag: `dwelldoc-20`.
+TrackClubFinder.com — national directory of track and running clubs across all 50 US states. GitHub Pages static site. Domain: `trackclubfinder.com`. Affiliate tag: `dwelldoc-20`. GA4: `G-LC8M82YBSN`.
 
 ## Data Pipeline
 
-1. **Google Apps Script** (`track-clubs-appscript.gs`) — runs inside the Google Sheet named `track-club-directory`. Makes 100 Outscraper API queries (2 per state: "track club" + "running club"). Resumes on re-run via `PropertiesService`. Call `resetProgress()` to start over.
+1. **Google Apps Script** (`track-clubs-appscript.gs`) — runs inside the Google Sheet named `track-club-directory`. Makes 100 Outscraper API queries (2 per state: "track club" + "running club"). Resumes on re-run via `PropertiesService`. Call `resetProgress()` to start over. Call `fillMissingPhones()` after `main()` to backfill missing phone numbers.
 2. **CSV export** — download the sheet as `track-clubs-data.csv`, save to repo root.
 3. **Build** — `node build-directory.js` — reads the CSV, generates all state pages and `sitemap.xml`.
 
@@ -53,6 +53,19 @@ git push origin main
 
 State pages are fully regenerated on every build — do not hand-edit the generated `/{state}/index.html` files directly, edits will be overwritten on next build. Hand-edit `build-directory.js` templates instead.
 
+## Recurring Data Issue — Spartan Track Club Hawaii
+
+Outscraper returns a bad row for Spartan Track Club Hawaii (empty city/state, coordinates 23.69°N 166.59°W — middle of the Pacific). The build script filters rows with no state field, so Spartan disappears from the Hawaii page after every fresh CSV export.
+
+**Fix after every CSV export:**
+Find line with `Spartan Track Club Hawaii` in `track-clubs-data.csv` and ensure it reads:
+```
+Spartan Track Club Hawaii,,Honolulu,HI,,,https://www.spartantrackclubhawaii.org,5,1,...,21.3069,-157.8583
+```
+The permanent fix is to correct the row directly in the Google Sheet so future exports are already correct.
+
+Also watch for a junk row with just `Hawaii,,US,HI` — delete it if present.
+
 ## Key Design Decisions
 
 - **Font**: Barlow Condensed (Google Fonts) for all headings — loaded via `<link>` in both homepage and state pages
@@ -65,8 +78,15 @@ State pages are fully regenerated on every build — do not hand-edit the genera
 
 Real track meet photos in `/images/` — shot in Hawaii. Usage:
 - `IMG_5760.JPG` — hero background (red track, Honolulu skyline)
-- `IMG_5761.JPG` — about section photo + photo strip
-- `IMG_9680.JPG` — CTA section background + photo strip
-- `IMG_9683.JPG` — photo strip
-- `IMG_9696.JPG` — photo strip
-- `IMG_0541.JPG`, `IMG_0542.JPG` — telecom tools (Neal's day job), not used on site
+- `IMG_5761.JPG` — about section photo
+- `IMG_9680.JPG` — CTA section background
+- `IMG_0724.JPG` — start blocks (photo strip + socks gear card)
+- `IMG_0751.JPG` — red track, lane numbers, skyline (photo strip)
+- `IMG_0805.JPG` — meet atmosphere (photo strip + hydration gear card)
+- `IMG_0747.JPG` — spikes on feet (spikes gear card)
+- `IMG_0745.JPG` — Hoka shoes (running shoes gear card)
+- `IMG_0740.JPG` — timing equipment (GPS watch gear card)
+- `IMG_0735.JPG` — athletes on track (uniforms gear card)
+- `IMG_0723.JPG` — abstract lane lines (recovery gear card)
+- `IMG_0836.JPG` — wide sunny track, skyline (sunglasses gear card)
+- `IMG_0541.JPG`, `IMG_0542.JPG` — telecom tools, not used on site
