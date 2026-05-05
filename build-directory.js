@@ -21,6 +21,7 @@ var CSV_FILE      = path.join(__dirname, "track-clubs-data.csv");
 var SITEMAP_FILE  = path.join(__dirname, "sitemap.xml");
 var AFFILIATE_TAG = "dwelldoc-20";
 var SITE_DOMAIN   = "https://trackclubfinder.com";
+var GA4_ID        = "G-LC8M82YBSN";
 
 var STATE_NAMES = {
   "AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California",
@@ -361,6 +362,14 @@ function generateStatePage(stateData) {
   var html = '<!DOCTYPE html>\n' +
     '<html lang="en">\n' +
     '<head>\n' +
+    '  <!-- Google tag (gtag.js) -->\n' +
+    '  <script async src="https://www.googletagmanager.com/gtag/js?id=' + GA4_ID + '"></script>\n' +
+    '  <script>\n' +
+    '    window.dataLayer = window.dataLayer || [];\n' +
+    '    function gtag(){dataLayer.push(arguments);}\n' +
+    '    gtag(\'js\', new Date());\n' +
+    '    gtag(\'config\', \'' + GA4_ID + '\');\n' +
+    '  </script>\n' +
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
     '  <title>Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder</title>\n' +
