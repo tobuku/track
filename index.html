@@ -464,9 +464,19 @@
       transform: translateY(-2px);
       text-decoration: none;
     }
-    .gear-accent {
-      height: 3px;
+    .gear-img {
+      height: 160px;
+      overflow: hidden;
     }
+    .gear-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gear-card:hover .gear-img img { transform: scale(1.05); }
     .gear-body { padding: 1.1rem 1.25rem 1.25rem; }
     .gear-cat {
       font-family: "Barlow Condensed", sans-serif;
@@ -802,13 +812,13 @@
 <!-- ── Photo Strip ── -->
 <div class="photo-strip" aria-hidden="true">
   <div class="photo-strip-item">
-    <img src="/images/IMG_5761.JPG" alt="Track meet in Honolulu" loading="lazy">
+    <img src="/images/IMG_0724.JPG" alt="Starting blocks at the line" loading="lazy">
   </div>
   <div class="photo-strip-item">
-    <img src="/images/IMG_9683.JPG" alt="Athlete sprinting on blue track" loading="lazy">
+    <img src="/images/IMG_0751.JPG" alt="Track lanes with Honolulu skyline" loading="lazy">
   </div>
   <div class="photo-strip-item">
-    <img src="/images/IMG_9696.JPG" alt="Track stadium elevated view" loading="lazy">
+    <img src="/images/IMG_0805.JPG" alt="Meet day atmosphere in Honolulu" loading="lazy">
   </div>
 </div>
 
@@ -954,7 +964,7 @@
     <div class="gear-grid">
 
       <a class="gear-card" href="https://www.amazon.com/s?k=track+spikes&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:var(--red);"></div>
+        <div class="gear-img"><img src="/images/IMG_0747.JPG" alt="Track spikes" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Footwear</div>
           <h3>Track Spikes</h3>
@@ -963,7 +973,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=running+shoes+track&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#e67e22;"></div>
+        <div class="gear-img"><img src="/images/IMG_0745.JPG" alt="Running shoes" loading="lazy" style="object-position:center 30%;"></div>
         <div class="gear-body">
           <div class="gear-cat">Footwear</div>
           <h3>Performance Running Shoes</h3>
@@ -972,7 +982,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=gps+running+watch&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#3b9ddd;"></div>
+        <div class="gear-img"><img src="/images/IMG_0740.JPG" alt="Timing technology at a track meet" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Technology</div>
           <h3>GPS Running Watches</h3>
@@ -981,7 +991,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=track+and+field+uniform&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#2ecc71;"></div>
+        <div class="gear-img"><img src="/images/IMG_0735.JPG" alt="Athletes on the track" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Apparel</div>
           <h3>Track Uniforms &amp; Shorts</h3>
@@ -990,7 +1000,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=running+hydration+vest&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#a29bfe;"></div>
+        <div class="gear-img"><img src="/images/IMG_0805.JPG" alt="Hot sunny day at a track meet" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Hydration</div>
           <h3>Hydration Vests &amp; Bottles</h3>
@@ -999,7 +1009,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=foam+roller+running+recovery&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#fd79a8;"></div>
+        <div class="gear-img"><img src="/images/IMG_0723.JPG" alt="Track surface close-up" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Recovery</div>
           <h3>Recovery &amp; Stretching Tools</h3>
@@ -1008,7 +1018,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=running+socks+athletic&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#f0a500;"></div>
+        <div class="gear-img"><img src="/images/IMG_0724.JPG" alt="Starting blocks on the track" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Apparel</div>
           <h3>Athletic Running Socks</h3>
@@ -1017,7 +1027,7 @@
       </a>
 
       <a class="gear-card" href="https://www.amazon.com/s?k=running+sunglasses+sport&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-accent" style="background:#00b894;"></div>
+        <div class="gear-img"><img src="/images/IMG_0836.JPG" alt="Sunny track in Honolulu" loading="lazy"></div>
         <div class="gear-body">
           <div class="gear-cat">Accessories</div>
           <h3>Sport Sunglasses</h3>

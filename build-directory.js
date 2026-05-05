@@ -257,12 +257,12 @@ function footerHTML() {
 
 function gearSectionHTML() {
   var items = [
-    { cat: "Footwear",    name: "Track Spikes",                 icon: "&#128099;", q: "track+spikes" },
-    { cat: "Footwear",    name: "Performance Running Shoes",    icon: "&#128099;", q: "running+shoes+track" },
-    { cat: "Technology",  name: "GPS Running Watches",          icon: "&#8987;",   q: "gps+running+watch" },
-    { cat: "Apparel",     name: "Track Uniforms &amp; Shorts",  icon: "&#128084;", q: "track+and+field+uniform" },
-    { cat: "Recovery",    name: "Recovery &amp; Stretching",    icon: "&#129298;", q: "foam+roller+running+recovery" },
-    { cat: "Accessories", name: "Sport Sunglasses",             icon: "&#128526;", q: "running+sunglasses+sport" }
+    { cat: "Footwear",    name: "Track Spikes",                img: "/images/IMG_0747.JPG", alt: "Track spikes",                    q: "track+spikes" },
+    { cat: "Footwear",    name: "Performance Running Shoes",   img: "/images/IMG_0745.JPG", alt: "Running shoes",                   q: "running+shoes+track" },
+    { cat: "Technology",  name: "GPS Running Watches",         img: "/images/IMG_0740.JPG", alt: "Timing technology at a meet",     q: "gps+running+watch" },
+    { cat: "Apparel",     name: "Track Uniforms &amp; Shorts", img: "/images/IMG_0735.JPG", alt: "Athletes on the track",           q: "track+and+field+uniform" },
+    { cat: "Recovery",    name: "Recovery &amp; Stretching",   img: "/images/IMG_0723.JPG", alt: "Track surface close-up",          q: "foam+roller+running+recovery" },
+    { cat: "Accessories", name: "Sport Sunglasses",            img: "/images/IMG_0836.JPG", alt: "Sunny track in Honolulu",         q: "running+sunglasses+sport" }
   ];
 
   var html = '<section class="gear-section" id="gear">\n' +
@@ -274,7 +274,7 @@ function gearSectionHTML() {
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     html += '      <a class="gear-card" href="https://www.amazon.com/s?k=' + item.q + '&tag=' + AFFILIATE_TAG + '" target="_blank" rel="noopener sponsored">\n' +
-      '        <div class="gear-img">' + item.icon + '</div>\n' +
+      '        <div class="gear-img"><img src="' + item.img + '" alt="' + item.alt + '" loading="lazy"></div>\n' +
       '        <div class="gear-body">\n' +
       '          <div class="gear-cat">' + item.cat + '</div>\n' +
       '          <h3>' + item.name + '</h3>\n' +
