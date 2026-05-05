@@ -1,0 +1,585 @@
+business_name,street_address,city,state,zip,phone,website,google_rating,review_count,hours_monday,hours_tuesday,hours_wednesday,hours_thursday,hours_friday,hours_saturday,hours_sunday,latitude,longitude
+Parker Track Club (PTC),"Bob Jones High School Track, 670 Hughes Rd",Madison,AL,35758,1 256-559-8913,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",34.7202526,-86.7416524
+Anniston Runners Club,26 W 10th St,Anniston,AL,36201,,,,,,,,,,,,33.6568023,-85.8310242
+Dothan Runners,3405 Wellington,Dothan,AL,36305,1 334-792-6021,,3.8,,,,,,,,,31.2071298,-85.4386253
+Resolute Running Training Center,2709 Mamie L Foster,Birmingham,AL,35209,1 205-492-3670,,5,,"[""5:30-6:30AM"",""9:30AM-5:45PM""]",,,,,,,33.4825424,-86.7903945
+Red Lane Runners track club,6200 Old Leeds Rd,Birmingham,AL,35210,1 205-541-4538,,5,,"[""6-8PM""]",,,,,,,33.5443508,-86.6645889
+Huntsville Track Club,,,,,1 256-701-4443,,,,"[""Open 24 hours""]",,,,,,,34.6992935,-86.6780524
+Alaska Sports Car Club Ice Race Track,G4PM+FR,Wasilla,AK,99654,,,,,,,,,,,,61.536159,-149.8653939
+Skinny Raven Sports,800 H St,Anchorage,AK,99501,1 907-274-7222,,4.7,460,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""Closed""]",61.2143472,-149.8979494
+MatSu Running Club,,,,,1 415-757-9745,,,,,,,,,,,62.278646,-149.7129325
+Hanshew Middle Athletic Track,10207 Ridge Park Dr,Anchorage,AK,99507,,,4.6,25,,,,,,,,61.128449,-149.8328678
+Quicksilver Running Club,6927 Grandwood Way #2216,San Jose,CA,95120,,,5,3,,,,,,,,37.207828,-121.8296833
+Anchorage Alaska Sports Car Lions Club,,Anchorage,AK,99501,1 907-276-2337,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",61.2175758,-149.8996784
+Track Club Fitness,915 N Central Ave,Phoenix,AZ,85004,1 602-529-5600,,4.5,204,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",33.4582303,-112.0736573
+AZ Flames Track Club,1391 E Crescent Way,Chandler,AZ,85249,1 602-319-2523,,4.8,5,,,,,,,,33.238213,-111.816955
+Arizona Road Racers Running,2627 N 27th St #1916,Phoenix,AZ,85008,1 602-684-1496,,3.4,5,,,,,,,,33.47756,-112.0231579
+Unlisted Run Club,7887 E Thomas Rd,Scottsdale,AZ,85257,,,5,10,"[""Closed""]","[""Closed""]","[""Open 24 hours""]","[""Closed""]","[""Closed""]","[""Open 24 hours""]","[""Closed""]",33.479095,-111.9112856
+Run Your Race AZ,3331 N 25th St,Phoenix,AZ,85016,1 602-722-6503,,5,10,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",33.4870172,-112.0274576
+Runner's Den,6505 N 16th St,Phoenix,AZ,85016,1 602-277-4333,,4.7,551,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""10AM-5PM""]",33.531277,-112.047263
+Queen Creek Running Company,23858 S Power Rd #103,Queen Creek,AZ,85142,1 480-659-9310,,4.9,286,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-5PM""]",33.2321961,-111.6864417
+Run Flagstaff,204 Historic Rte 66,Flagstaff,AZ,86001,1 928-774-2990,,5,382,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-4PM""]",35.1969689,-111.6465575
+Sole Sports,2494 S Recker Rd #101,Gilbert,AZ,85295,1 480-247-7232,,5,79,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""11AM-5PM""]",33.3056327,-111.7058567
+Valley Runners Run Club,,,,,,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",34.168035,-111.9307474
+Aravaipa Running,2401 S 24th St,Phoenix,AZ,85034,1 602-346-0554,,4.9,74,,,,,,,,33.4256639,-112.0298918
+Sole Sports Running Zone,7001 N Scottsdale Rd #170,Scottsdale,AZ,85253,1 480-991-2475,,5,186,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""11AM-5PM""]",33.5392891,-111.923759
+Road Runner Sports,7077 E Mayo Blvd,Phoenix,AZ,85054,1 480-513-1774,,4.6,1787,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]",33.6539859,-111.9279821
+Everyone Runs,,,,,1 520-797-7867,,5,36,,,,,,,,32.1347769,-110.9987685
+Sole Sports Running Zone,1006 E Warner Rd # 104,Tempe,AZ,85284,1 480-522-2475,,4.9,401,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""11AM-5PM""]",33.3356356,-111.9275722
+Road Runner Sports,43 S McClintock Dr,Tempe,AZ,85288,1 480-968-2022,,4.5,2276,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]",33.4321033,-111.9069914
+Super Speed Runners Club,,,,,1 928-261-5459,,5,1,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",34.168035,-111.9307474
+Tortoise & Hare Sports,17570 N 75th Ave #605,Glendale,AZ,85308,1 623-792-7900,,4.8,616,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",33.644296,-112.221928
+Girls on the Run serving Maricopa & Pinal Counties,7721 E Gray Rd Ste 103,Scottsdale,AZ,85260,1 602-795-6572,,5,4,,,,,,,,33.6120421,-111.9139162
+Cadence Running - Gilbert,3107 S Gilbert Rd #103,Gilbert,AZ,85295,1 480-786-8835,,4.7,391,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""11AM-4PM""]",33.293131,-111.7890269
+Cadence Running Company,37724 N Gantzel Rd Ste 102,Queen Creek,AZ,85140,1 480-687-3082,,4.8,47,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""11AM-4PM""]",33.2215591,-111.5650497
+Team Elite Track Club,604 Colynwood Dr,Sherwood,AR,72120,1 501-612-5522,,,,,,,,,,,34.842616,-92.2266696
+Rock City Running,"Market Place Shopping Center, 11121 N Rodney Parham Rd Ste 37B",Little Rock,AR,72212,1 501-313-4689,,4.9,114,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""Closed""]",34.7701982,-92.3975174
+Run Bentonville,215 SW A St,Bentonville,AR,72712,1 479-464-7275,,4.3,4,,,,,,,,36.3701121,-94.2099566
+GOTR Central Arkansas,15 Sharon Ln,Conway,AR,72034,1 501-519-7739,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]","[""Closed""]",35.0334213,-92.4441722
+Rush Running Co,1600 SE J St #2,Bentonville,AR,72712,1 479-464-7866,,4.8,305,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""12-4PM""]",36.3549637,-94.1974576
+Western Arkansas Runners,,Fort Smith,AR,72916,,,,,,,,,,,,35.3109023,-94.3000155
+Rise n Fly Track Club,32593 Riverside Dr,Lake Elsinore,CA,92530,1 951-445-6034,,3,2,,,,,,,,33.6701224,-117.3806008
+Cal Coast,4060 Campus Dr #110,Newport Beach,CA,92660,1 714-852-3800,,5,1,,,,,,,,33.666742,-117.8713546
+Falcon Track Club,"Administration (financial aid, admissions & records, counseling), 11110 Alondra Blvd",Norwalk,CA,90650,1 562-441-4239,,,,"[""Closed""]","[""6-8PM""]","[""Closed""]","[""6-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",33.8864907,-118.0973626
+GrassRoots Athletics,25025 Chrisanta Dr,Mission Viejo,CA,92691,1 949-444-2370,,5,1,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",33.5966545,-117.6718218
+Antelope Valley Track Club,2315 E Palmdale Blvd # B48,Palmdale,CA,93550,1 661-209-6525,,,,,,,,,,,34.5804288,-118.0860227
+Imani Compton Track Club,417 S Ward Ave,Compton,CA,90221,1 562-618-0435,,5,5,,,,,,,,33.892786,-118.205618
+East Bay Heat Track Club,2180 Allston Way,Berkeley,CA,94704,1 510-368-0168,,4.5,2,"[""6-8PM""]","[""6-8PM""]","[""6-8PM""]","[""6-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",37.8694091,-122.2661763
+Fresno Flyers Track Club,5637 N Figarden Dr Suite 112,Fresno,CA,93722,1 559-691-0377,,5,1,,,,,,,,36.8212415,-119.870363
+No Limit Sports Track & Field Club,340 Bruin Walk,Los Angeles,CA,90095,1 310-490-0849,,,,"[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""Closed""]",34.0726441,-118.4487694
+306 TrackRideOut,1205 S Figueroa St,Los Angeles,CA,90015,,,5,4,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""10:30AM-3PM""]",34.0413298,-118.2677016
+Cal Club,18202 Cal Club Rd,Buttonwillow,CA,93206,1 661-304-9382,,4.5,10,,,,,,,,35.4917516,-119.5466154
+LEAP Squad Youth Track Club,1202 W Edinger Ave,Santa Ana,CA,92707,1 657-400-5327,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Closed""]",33.726264,-117.8840246
+HawksTrackClub.org,616 W Rte 66,Glendora,CA,91740,1 818-321-7133,,,,"[""5-8PM""]","[""5-8PM""]","[""5-8PM""]","[""5-8PM""]","[""Closed""]","[""8AM-3PM""]","[""10AM-1PM""]",34.1285014,-117.8750259
+Northridge Pacers Track Club,,,,,1 818-943-1958,,5,1,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8:03AM-8PM""]",34.2922009,-118.5074266
+MP Striders Youth Track Club,3500 Florin Rd,Sacramento,CA,95823,1 916-475-7259,,,,,,,,,,,38.4946836,-121.4664355
+Youth Track and Running Club,1158 26th St,Santa Monica,CA,90403,1 310-316-2806,,5,1,"[""Closed""]","[""3:30-4:30PM""]","[""Closed""]","[""3:30-4:30PM""]","[""3:30-4:30PM""]","[""Closed""]","[""Closed""]",34.0361516,-118.4778539
+CPRunners,4777 Casa Loma Ave,Yorba Linda,CA,92886,,,5,1,"[""6:30-8PM""]","[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",33.8917106,-117.8254195
+Colts Running Club,22760 Olympiad Rd,Mission Viejo,CA,92692,1 949-534-2049,,,,,,,,,,,33.6318714,-117.6351187
+Whitmore Track and Field,,Mammoth Lakes,CA,93546,,,5,12,,,,,,,,37.6273269,-118.8171997
+Orange Crush Track Club,,,,,1 949-410-3343,,,,,,,,,,,33.640814,-117.7803964
+Quicksilver Running Club,6927 Grandwood Way #2216,San Jose,CA,95120,,,5,3,,,,,,,,37.207828,-121.8296833
+New Basin Blues Running Club,21200 Oxnard St #208,Woodland Hills,CA,91365,1 310-633-1058,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",34.1785716,-118.5942796
+LA Leggers,2309 Santa Monica Blvd suite 531,Santa Monica,CA,90404,1 424-253-4437,,5,4,,,,,,,,34.0310722,-118.4774046
+San Francisco FrontRunners,2261 Market St,San Francisco,CA,94114,,,5,1,,,,,,,,37.7647186,-122.4319401
+LA Running Club,101 Ocean Ave,Santa Monica,CA,90401,1 310-795-2621,,,,,,,,,,,34.0266335,-118.5149461
+Progression Run Club,2863 California St,San Francisco,CA,94109,1 628-297-1521,,5,24,"[""Closed""]","[""12-1:30PM""]","[""Closed""]","[""12-1:30PM""]","[""5-6PM""]","[""Closed""]","[""8:30-10:30AM""]",37.7878083,-122.4415559
+Sacramento Running Association,4181 Power Inn Rd,Sacramento,CA,95826,,,3.4,10,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",38.5372279,-121.407841
+Long Beach Run Club,3300 E Ocean Blvd,Long Beach,CA,90803,,,4.5,11,"[""Closed""]","[""7-8:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",33.7610074,-118.1544976
+San Francisco Road Runners Club,1901 21st Ave,San Francisco,CA,94116,1 415-793-3353,,,,,,,,,,,37.7521366,-122.4787538
+Black Flag Running Club,655 Columbia St Student Lockers,San Diego,CA,92101,1 619-405-1828,,5,3,,,,,,,,32.7123037,-117.1671729
+Run Free Running Club LLC,1130 Rosewood Ave,Camarillo,CA,93010,1 805-407-3977,,5,3,"[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""Closed""]",34.229206,-119.0612981
+University City Running Club,5428 Barkla St,San Diego,CA,92122,1 858-449-6582,,,,"[""Closed""]","[""4-6PM""]","[""4-5PM""]","[""4-6PM""]","[""Closed""]","[""10AM-12PM""]","[""Closed""]",32.8428545,-117.2324056
+Pasadena Pacer-Meeting Place,352 N Arroyo Blvd,Pasadena,CA,91103,,,5,1,,,,,,,,34.150863,-118.165248
+LA Running Club,1338 4th St,Santa Monica,CA,90401,1 424-214-3535,,,,,,,,,,,34.0167429,-118.4959817
+Club Ed Running,501 S Peck Ave,Manhattan Beach,CA,90266,,,5,1,"[""Closed""]","[""Closed""]","[""5:45-7PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",33.875785,-118.3880715
+CPRunners,4777 Casa Loma Ave,Yorba Linda,CA,92886,,,5,1,"[""6:30-8PM""]","[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",33.8917106,-117.8254195
+Excelsior Running Club,311 Lexington Way,Burlingame,CA,94010,1 415-341-5344,,,,,,,,,,,37.585688,-122.3385131
+Equalizers Running Club,825 Fee Ana St,Placentia,CA,92870,1 714-524-2218,,,,"[""7AM-3PM""]","[""7AM-3PM""]","[""7AM-3PM""]","[""7AM-3PM""]","[""7AM-3PM""]","[""Closed""]","[""Closed""]",33.8638272,-117.8237003
+Whittier Pacers,5736 El Rancho Dr,Whittier,CA,90606,,,5,4,"[""6:30-8:30PM""]","[""Closed""]","[""6:30-8:30PM""]","[""Closed""]","[""Closed""]","[""6:45-10AM""]","[""Closed""]",33.9918565,-118.0577661
+Colorado Track Club,,,,,1 970-509-0213,,,,,,,,,,,38.9979464,-105.550863
+Revolution Running,245 Century Cir,Louisville,CO,80027,1 303-482-6202,,5,22,,,,,,,,39.9677038,-105.1651419
+The Colorado Running Company,5262 N Nevada Ave #140,Colorado Springs,CO,80918,1 719-635-3833,,4.6,387,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]",38.9061869,-104.817217
+Landsharks Running Club,4570 Hilton Pkwy #106,Colorado Springs,CO,80907,1 719-623-5314,,2.8,16,,,,,,,,38.897608,-104.8345575
+run.Windsor Race Series,9271 Weld County Rd 70,Windsor,CO,80550,1 970-213-7258,,4.9,61,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",40.4951078,-104.8838875
+RUN to Change Lives,1071 Round Top Ln,Castle Rock,CO,80108,1 303-907-5410,,5,2,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",39.4473315,-104.8665777
+Runners Roost Lakewood,7978 W Alameda Ave A,Lakewood,CO,80226,1 303-991-1851,,4.8,439,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.709615,-105.0841241
+Colorado Coyotes,7637 S Williams St,Centennial,CO,80122,1 303-725-7368,,4.9,87,,,,,,,,39.5785348,-104.9672116
+50 States Half Marathon Club,2175 Academy Cir STE Ste 200,Colorado Springs,CO,80909,1 719-423-6284,,4.8,5,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",38.8639341,-104.7547818
+Runners Roost Central Park,7305 E 35th Ave #150,Denver,CO,80238,1 303-377-3732,,4.6,106,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.7656861,-104.9020528
+Runners Roost,1685 S Colorado Blvd J,Denver,CO,80222,1 303-759-8455,,4.7,296,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.6863869,-104.9426995
+BP-RUN-CO,10033 W 26th Ave,Wheat Ridge,CO,80215,1 720-456-6904,,4.9,110,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.7550129,-105.111238
+Peak Performance Running,426 Violet St,Golden,CO,80401,1 440-759-2224,,5,43,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]",39.723038,-105.1964595
+Runners Roost,2120 Ford St,Golden,CO,80401,1 720-583-2911,,4.8,192,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.7485116,-105.2121447
+Fleet Feet Littleton,8116 W Bowles Ave,Littleton,CO,80123,1 303-932-6000,,4.8,387,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""11AM-5PM""]",39.6089955,-105.0889853
+Phidippides Track Club,4869 S Dayton St,Greenwood Village,CO,80111,,,,,"[""Closed""]","[""5:50-6:45PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",39.6278587,-104.8758996
+Elevated Distance Training,,,,,1 303-359-4042,,5,22,"[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]",39.6019742,-104.7566729
+Good Boys Running Club,,,,,1 720-507-4163,,,,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]",39.7642444,-104.8547524
+Runners Roost,629 S Broadway suite e,Boulder,CO,80305,1 303-554-7837,,4.8,175,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.9840117,-105.2489636
+Runners Roost,459 McCaslin Blvd Unit 2,Louisville,CO,80027,1 303-926-7653,,4.8,117,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""11AM-5PM""]",39.9648577,-105.1641366
+Run The Edge,7270 W 118th Pl,Broomfield,CO,80020,,,4,1,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",39.9099824,-105.0783241
+Lightfoot Running Club,7 New St,Norwalk,CT,6855,1 203-434-6746,,2,1,,,,,,,,41.0975267,-73.4046857
+New Haven Road Runners,,,,,,,,,"[""6:30-8:30AM""]","[""6:30-8:30AM"",""6:30-8:30PM""]","[""6:30-8:30PM""]","[""6:30-8:30AM""]","[""6:30-8:30AM""]","[""Open 24 hours""]","[""Open 24 hours""]",41.298416,-72.9291785
+The Running Academy,31 Dairy Farm Dr,Brookfield,CT,6804,1 203-313-4955,,4,2,,,,,,,,41.433047,-73.380188
+Manchester Running Company,,,,,,,5,1,"[""12AM-12PM""]","[""12AM-12PM""]","[""12AM-12PM""]","[""12AM-12PM""]","[""12AM-12PM""]","[""12AM-12PM""]","[""12AM-12PM""]",41.7770486,-72.523694
+CT Run Co.- Ridgefield Running,423 Main St,Ridgefield,CT,6877,1 203-438-7778,,4.9,155,"[""12-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""9AM-5PM""]","[""11AM-4PM""]",41.2822975,-73.4988192
+Woodbridge Running Co,7 Landin St,Woodbridge,CT,6525,1 203-387-8704,,4.9,131,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-4PM""]",41.3416244,-72.9822477
+New Haven Road Runners,,,,,1 716-380-7977,,,,"[""6:30-8AM""]","[""6:30-8AM"",""6:30-8PM""]","[""6:30-8PM""]","[""6:30-8AM""]","[""6:30-8AM""]","[""6:30-8AM""]","[""6:30-8AM""]",41.3657095,-72.9275075
+Above Xpectations Track Club,710 N Lincoln St,Wilmington,DE,19805,1 302-658-4171,,3.7,3,,,,,,,,39.7514759,-75.5696079
+Delaware Running Co,4021 Kennett Pike,Wilmington,DE,19807,1 302-655-7463,,4.8,179,"[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""12-4PM""]",39.7806089,-75.5990528
+Middletown Athletic Club,118 Sleepy Hollow Dr #3,Middletown,DE,19709,1 302-740-7766,,,,"[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""Closed""]","[""Closed""]",39.4528169,-75.7333303
+Fort Myers Track Club,,Fort Myers,FL,33906,1 239-332-4786,,4.7,3,,,,,,,,26.5935368,-81.8583492
+East Orlando Track Club,13801 Mailer Blvd,Orlando,FL,32828,1 407-574-7033,,4.5,10,,,,,,,,28.5006938,-81.1531499
+Fast Lane Track Club West Palm Beach,175 Berenger Walk,West Palm Beach,FL,33414,1 561-628-5770,,4.7,10,,,,,,,,26.6715612,-80.2147748
+Blue Streak Track Club,7605 Destin Dr,Tampa,FL,33619,1 813-895-6408,,4.5,8,"[""6:30-8PM""]","[""6:30-8PM""]","[""6:30-8PM""]","[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]",27.9391587,-82.3714456
+ultimate track club,140 NW 198th St,Miami Gardens,FL,33169,1 786-679-2500,,,,"[""7:30AM-5:30PM""]","[""7:30AM-5:30PM""]","[""7:30AM-5:30PM""]","[""7:30AM-5:30PM""]","[""7:30AM-5:30PM""]","[""7:30AM-5:30PM""]","[""Closed""]",25.9561322,-80.2041388
+swiffers Track Club LLC,3400 NW 50th Ave,Lauderdale Lakes,FL,33319,1 954-687-4198,,5,13,"[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""Open 24 hours""]",26.1688644,-80.2156612
+Velocity Elite Track Club,5M92+5W,Tampa,FL,33647,1 757-390-0227,,5,12,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""Closed""]","[""Closed""]",28.1679375,-82.3476875
+Team Florida Track Club,,,,,,,5,58,"[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""Closed""]","[""Closed""]",27.698638,-83.804601
+Gulf Coast Runners,20 10th St S,Naples,FL,34102,,,4.6,7,,,,,,,,26.147232,-81.793942
+Pinellas Run Club,Tropicana Dr.,St. Petersburg,FL,33705,,,5,3,,,,,,,,27.7665947,-82.644248
+Run Tampa,,,,,,,5,52,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""7-9AM""]","[""Closed""]",28.046795,-82.5407359
+Freedom Running Club,,,,,1 813-748-3042,,5,88,"[""6AM-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]",46.423669,-129.9427086
+Milers Running Club and Camp,724 SE 10th St,Stuart,FL,34994,1 954-579-4991,,5,2,"[""5:30-6:30PM""]","[""Closed""]","[""5:30-6:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",27.1897821,-80.2415677
+Team Florida Track Club,,,,,,,5,58,"[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""8AM-6:30PM""]","[""Closed""]","[""Closed""]",27.698638,-83.804601
+Peak Pulse Run Club,874 SE 4th St,Gainesville,FL,32601,,,5,4,"[""Closed""]","[""Closed""]","[""Closed""]","[""6-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]",29.6437436,-82.3213077
+RunAdic,1408 Brickell Bay Dr,Miami,FL,33131,1 305-788-9531,,4,4,"[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]","[""9:30AM-6:30PM""]",25.7589759,-80.1895052
+Milestones Running Club,,,,,1 813-766-7667,,5,9,,,,,,,,27.992063,-82.4542805
+The Florida Run,,,,,1 352-250-4219,,5,8,"[""8AM-4PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""Closed""]","[""Closed""]",27.698638,-83.804601
+LOUD Runners,,,,,1 813-421-3283,,5,7,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""6-8AM""]","[""6-8AM""]",46.423669,-129.9427086
+Girls On the Run Northeast Florida,3986 Boulevard Center Dr #102,Jacksonville,FL,32207,1 904-619-6763,,4.5,16,,,,,,,,30.3002774,-81.6194946
+The Villages Running Club,,,,,,,,,"[""6:30-7:30AM""]","[""7-9AM""]","[""Closed""]","[""7-9AM""]","[""7-9AM""]","[""Closed""]","[""7-9AM""]",28.9018365,-81.996888
+Southeast Track Club,,,,,1 941-724-2013,,5,13,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]",46.423669,-129.9427086
+Track Shack,1104 N Mills Ave,Orlando,FL,32803,1 407-898-1313,,4.8,970,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""Closed""]",28.5606366,-81.3647232
+Hillsborough Harriers,5354 Northdale Blvd,Tampa,FL,33624,1 813-841-9985,,,,"[""Closed""]","[""6-8PM""]","[""Closed""]","[""6-8PM""]","[""Closed""]","[""7-9AM""]","[""Closed""]",28.111628,-82.514324
+Spanish Girls Run,336 E New York Ave STE 3411,DeLand,FL,32724,1 321-283-6794,,5,6,"[""6-7:30PM""]","[""Closed""]","[""6-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",29.0269153,-81.2976823
+Atlanta Track Club,201 Armour Dr NE,Atlanta,GA,30324,1 404-231-9064,,4.3,148,"[""Closed""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",33.810102,-84.3814972
+Track Georgia,741 Connally St SE,Atlanta,GA,30315,1 404-441-4416,,4.5,68,"[""6:30-8AM"",""7-9PM""]","[""6:30-8AM"",""7-9PM""]","[""6:30-8AM"",""7-9PM""]","[""6:30-8AM"",""7-9PM""]","[""6:30-8AM"",""7-9PM""]","[""6AM-9PM""]","[""6AM-9PM""]",33.7335208,-84.3816961
+Duluth Run Club,3579 Hill St NW,Duluth,GA,30096,,,5,1,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""6-8AM""]","[""Closed""]","[""Closed""]",34.0031356,-84.1456586
+Slow Pour Run Club,131 Eaton St,Lawrenceville,GA,30046,,,5,1,"[""Closed""]","[""Closed""]","[""6-10PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",33.9606964,-83.9884783
+Girls on the Run Georgia,1904 Monroe Dr NE #135,Atlanta,GA,30324,1 404-478-6558,,4.3,6,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",33.8073643,-84.3769217
+Macon Tracks Running Club,,,,,1 478-718-0316,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",32.7426085,-83.714582
+Total Kid Run Club LLC,,,,,1 404-491-1937,,5,13,"[""9AM-7PM""]","[""9AM-7PM""]","[""9AM-7PM""]","[""9AM-7PM""]","[""Closed""]","[""Closed""]","[""Closed""]",46.423669,-129.9427086
+Runners Fit Race Works,7419 Spout Springs Rd #103,Flowery Branch,GA,30542,1 770-561-1050,,5,8,,,,,,,,34.1080576,-83.8725069
+Hayesville Running Club,1407 Chatuge Dam Rd,Hayesville,NC,28904,,,5,8,"[""Closed""]","[""Closed""]","[""5:30-6:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",35.0200046,-83.7859658
+Anniston Runners Club,26 W 10th St,Anniston,AL,36201,,,,,,,,,,,,33.6568023,-85.8310242
+Charleston Running Club,472 Meeting St Ste C #138,Charleston,SC,29403,1 843-697-1613,,4.5,2,,,,,,,,32.79521,-79.9396029
+Striders Track Club,,,,,1 678-622-9022,,5,6,"[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]",33.731282,-84.3278885
+South Metro Running Club,,,,,1 657-782-2005,,,,,,,,,,,33.731282,-84.3278885
+Twin - City Run Club,672 W Church St,Batesburg-Leesville,SC,29006,1 803-727-7196,,,,,,,,,,,33.9035847,-81.5588323
+Runinlab- Personal Training | Kids Running Coach,3690 Burnette Park Dr C,Suwanee,GA,30024,1 470-406-2044,,5,10,"[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""Closed""]",34.0393943,-84.0798724
+Metro Area Running Club,,,,,,,,,,,,,,,,33.851383,-84.5153595
+Spartan Track Club Hawaii,,,,,,,5,1,"[""3-6PM""]","[""3-6PM""]","[""3-6PM""]","[""3-6PM""]","[""3-6PM""]","[""8AM-5PM""]","[""2-6PM""]",23.6913614,-166.5937802
+Hawaii,,US,HI,,,,,,,,,,,,,19.8986819,-155.6658568
+Big Island Road Runners,1381 POB Coconut Island,Hilo,HI,96720,,,5,1,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",19.727298,-155.0678354
+Runners Route,1322 Kapiolani Blvd,Honolulu,HI,96814,1 808-941-3111,,4.6,180,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]",21.2945518,-157.8452658
+Oahu Running Company,6600 Kalanianaʻole Hwy,Honolulu,HI,96825,1 808-633-8489,,5,4,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Closed""]",21.283285,-157.714329
+Spartan Track Club Hawaii,,Honolulu,HI,,,https://www.spartantrackclubhawaii.org,,,,,,,,,,,21.3069,-157.8583
+North Idaho Blaze Track and Field Club,,,,,,,5,1,,,,,,,,47.7018045,-116.792177
+University of Idaho Track and field,PXGH+JR,Moscow,ID,83843,,,,,,,,,,,,46.726562,-117.0203798
+Boise Run Walk,9119 W Austin St,Garden City,ID,83714,1 208-639-0205,,1,1,,,,,,,,43.6555835,-116.2957472
+Illinois Flames Track Club,32 E 34th St,Steger,IL,60475,1 708-248-5926,,5,1,,,,,,,,41.4697114,-87.6340334
+North Central College Track Club,455 S Brainard St,Naperville,IL,60540,,,5,5,,,,,,,,41.770164,-88.1459153
+Lakeview Run Club,"Nettelhorst School, 3252 N Broadway",Chicago,IL,60657,,,5,56,"[""Closed""]","[""6:25-8:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""9:55AM-12PM""]","[""Closed""]",41.941309,-87.6446467
+Alpine Runners,830 IL-22,Lake Zurich,IL,60047,1 847-648-8843,,,,,,,,,,,42.1908564,-88.1104987
+Indiana Express Elite Track & Field Club,12641 Bearsdale Dr,Indianapolis,IN,46235,,,,,,,,,,,,39.8740411,-85.9404913
+Carmel Runners Club,4335 W 106th St UNIT 700,Carmel,IN,46032,,,5,2,,,,,,,,39.939975,-86.2346816
+Run Club at IU Indianapolis,1001 W New York St,Indianapolis,IN,46202,1 765-413-4534,,,,"[""3:30-4:30PM""]","[""6-7PM""]","[""3:30-4:30PM""]","[""6-7PM""]","[""3:30-4:30PM""]","[""Closed""]","[""Closed""]",39.7712143,-86.1778779
+Iowa Athletic Club,200 E 9th St Suite 205,Coralville,IA,52241,1 319-499-1293,,4.2,249,"[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-9PM""]","[""11AM-11PM""]","[""11AM-11PM""]","[""11AM-9PM""]",41.6814501,-91.5619274
+Iowa Running Company,1000 3rd St SE #2,Cedar Rapids,IA,52401,1 319-364-0641,,4.9,100,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-4PM""]","[""11AM-3PM""]",41.9718057,-91.6594521
+Cornbelt Running Club,313 E George Washington Blvd,Davenport,IA,52803,1 563-326-1942,,5,2,,,,,,,,41.5532012,-90.5700622
+Francis X. Cretzmeyer Track,,Iowa City,IA,52246,,,4.5,18,,,,,,,,41.6669136,-91.5634136
+The Runner’s Flat,120 Main St,Cedar Falls,IA,50613,1 319-277-1154,,4.8,126,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""Closed""]",42.5371826,-92.4452155
+Central Iowa Railroad Club Inc,3218 E Walnut St,Des Moines,IA,50317,1 515-266-8899,,4.8,33,,,,,,,,41.5934643,-93.5529203
+Waukee Running Club,,,,,,,,,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""6-7:30AM""]","[""Closed""]",41.5888095,-93.8847975
+Hot Feet Track Club,10001 W 136th St #1202,Overland Park,KS,66221,1 913-710-8301,,4.4,10,,,,,,,,38.8816646,-94.6977664
+KC FIRE Track Club,7515 N Lewis Ave,Kansas City,MO,64158,1 816-721-3499,,4.2,6,"[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""9-10:30AM""]","[""Closed""]",39.229638,-94.4751199
+Kansas City Running Club,208 W 79th St,Kansas City,MO,64114,,,5,4,,,,,,,,38.9852041,-94.5925309
+Novas Track and Field,8218 Noland Rd,Lenexa,KS,66215,,,5,7,"[""4-7PM""]","[""4-7PM""]","[""4-7PM""]","[""4-7PM""]","[""Closed""]","[""9AM-1AM""]","[""Closed""]",38.9790096,-94.7384628
+Team Believe Track & Field,3221 Indiana Ave,Kansas City,MO,64128,1 816-728-0113,,5,1,,,,,,,,39.0667739,-94.5419521
+Johnson County Comets Track and Field Club,15100 W 127th St,Olathe,KS,66062,1 913-709-9243,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",38.899828,-94.7623431
+Team wichita elite track club,451 N Creek Trail St,Kechi,KS,67067,1 316-297-1718,,,,,,,,,,,37.7975674,-97.2757301
+Kansas City Athletic Club,845 Armstrong Ave,Kansas City,KS,66101,,,4.7,10,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",39.1143973,-94.6318294
+Sports Car Club of America,6620 S E Dwight St,Topeka,KS,66619,1 800-770-2055,,4.8,13,"[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""Closed""]","[""Closed""]",38.9481837,-95.6852308
+Team Wichita Track Club Inc,202 N Rock Rd Apt 514,Wichita,KS,67206,1 316-978-3364,,,,,,,,,,,37.688249,-97.24252
+Athletic Track,N 1st St,Lincoln,KS,67455,,,,,,,,,,,,39.047692,-98.1416863
+Wichita Jeeps Motorcycle Club,605 E 101st St N,Valley Center,KS,67147,1 316-755-0909,,4.8,125,,,,,,,,37.864531,-97.333387
+UMKC women's track,5099 Cherry St,Kansas City,MO,64110,,,,,,,,,,,,39.0350368,-94.5803485
+R.V. Christian Track,,Manhattan,KS,66502,,,5,4,,,,,,,,39.1982713,-96.594895
+Irie Blitz Track Club,,,,,1 314-600-1710,,,,"[""10AM-8:30PM""]","[""10AM-8:30PM""]","[""10AM-8:30PM""]","[""10AM-8:30PM""]","[""10AM-8:30PM""]","[""10AM-3PM""]","[""Closed""]",38.4980909,-98.320078
+Kansas City Running Club,208 W 79th St,Kansas City,MO,64114,,,5,4,,,,,,,,38.9852041,-94.5925309
+Kentucky State University Track & Field Facility,101–199 Athletic Dr,Frankfort,KY,40601,1 502-597-6011,,3.2,5,,,,,,,,38.1922518,-84.8511242
+Derby City Run Club,2120 Bardstown Rd,Louisville,KY,40205,,,,,"[""6:30-10:30PM""]","[""Closed""]","[""6:30-10:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",38.2246478,-85.6946252
+Central Kentucky Girls on the Run,446 E High St UNIT 130,Lexington,KY,40507,1 513-549-2560,,5,1,,,,,,,,38.0383539,-84.4938951
+Bolts Running Club,,,,,1 217-390-0225,,5,12,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",38.4046875,-85.4604495
+Carmel Runners Club,4335 W 106th St UNIT 700,Carmel,IN,46032,,,5,2,,,,,,,,39.939975,-86.2346816
+Kansas City Running Club,208 W 79th St,Kansas City,MO,64114,,,5,4,,,,,,,,38.9852041,-94.5925309
+Tri-State Running Company,148 Barnwood Dr,Edgewood,KY,41017,1 859-341-9999,,4.9,196,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",39.019143,-84.5755962
+Boone County Jaguars Running Club,,,,,1 859-912-3130,,,,,,,,,,,38.9625126,-84.6852425
+Middlesboro Running Club,,,,,1 606-449-1217,,,,,,,,,,,36.658123,-83.6926945
+Fleet Feet Lexington,4084 Finn Wy Suite 140,Lexington,KY,40517,1 859-523-4099,,4.7,142,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""12-5PM""]",37.9759755,-84.5276235
+Thomson Training,,,,,1 502-410-9850,,5,14,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",46.423669,-129.9427086
+Lexington Athletic Club,3882 Mall Rd,Lexington,KY,40503,1 859-273-3163,,3.4,112,"[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-9PM""]","[""7AM-7PM""]","[""8AM-8PM""]",37.9819172,-84.5317788
+Let's go beyond running club,,,,,1 760-470-0036,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",38.1887245,-85.6760015
+US Express Track Club,10100 Goodwood Blvd,Baton Rouge,LA,70815,1 225-892-3489,,4.1,9,,,,,,,,30.4436187,-91.0756903
+Louisiana Running + Walking Co.,4153 Canal St,New Orleans,LA,70119,1 504-304-4762,,4.9,207,"[""10AM-6:30PM""]","[""10AM-6:30PM""]","[""10AM-6:30PM""]","[""10AM-6:30PM""]","[""10AM-6:30PM""]","[""10AM-5PM""]","[""12-5PM""]",29.9756357,-90.1014922
+Runaways Run Club,21 Alton St,Portland,ME,4103,1 207-210-1832,,,,"[""Closed""]","[""6-7AM""]","[""6-8PM""]","[""12-1PM""]","[""Closed""]","[""Closed""]","[""8:30-10:30AM""]",43.6831369,-70.2650389
+Old Port Pub Run,250 Commercial St,Portland,ME,4101,1 207-613-5990,,5,,"[""Closed""]",,,,,,,43.6544002,-70.2543265
+Bethesda Track Club,7100 Whittier Blvd,Bethesda,MD,20817,1 301-728-0995,,5,2,,,,,,,,38.981709,-77.125853
+"Montgomery County Road Runners Club, Inc.",14672 Southlawn Ln Bay I,Rockville,MD,20850,,,4.7,16,"[""8AM-3:30PM""]","[""8AM-3:30PM""]","[""8AM-3:30PM""]","[""8AM-3:30PM""]","[""8AM-3:30PM""]","[""Closed""]","[""Closed""]",39.0968009,-77.139688
+Prince George's Running Club,5240 Paint Branch Parkway,College Park,MD,20740,1 301-337-7472,,4.7,7,,,,,,,,38.9755448,-76.921673
+EASTERN SHORE RUNNING CLUB,116 E Main St suite 403,Salisbury,MD,21801,1 443-244-1097,,,,,,,,,,,38.3653478,-75.5997804
+Town Track Club,84 Washington St,Boston,MA,2129,1 857-222-5630,,,,,,,,,,,42.3739154,-71.0669248
+Falmouth Running Club,661 Main St C,Falmouth,MA,2540,1 508-540-6959,,,,,,,,,,,41.5520765,-70.6051255
+BURLINGTON RUN CLUB,156 Cambridge St Suite 7,Burlington,MA,1803,1 781-365-0084,,5,19,"[""6AM-7:30PM""]","[""5-7:30AM"",""5-7:30PM""]","[""6-7:30AM"",""5-7PM""]","[""5-7:30AM"",""5-6PM""]","[""6-7:30AM"",""9-10AM""]","[""7:30-11:30AM""]","[""7:30-11:30AM""]",42.5083354,-71.1954437
+Boston Bulldogs Running Club,358 Chestnut Hill Ave,Brighton,MA,2135,,,3.3,3,,,,,,,,42.3367644,-71.1513291
+Greater Lowell Road Runners,1934 Lakeview Ave #1,Dracut,MA,1826,,,4.4,7,,,,,,,,42.6826899,-71.3499414
+Winner's Circle Running Club,211 Elm St,Salisbury,MA,1952,,,,,,,,,,,,42.8438956,-70.8973237
+Georgetown Run Walk Club & Social Fitness,207 Pond St,Georgetown,MA,1833,1 978-352-0589,,,,"[""Closed""]","[""6:30-8PM""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",42.7423797,-70.9899492
+Kier Byrnes Freedom Runners,565 Broadway,Somerville,MA,2145,,,5,4,"[""Closed""]","[""7-11PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",42.398478,-71.107474
+Boston Road Runners,,,,,1 617-971-8885,,4.6,7,"[""Closed""]","[""6:30-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""8-10AM""]","[""Closed""]",46.423669,-129.9427086
+EMPIRE ONE RUNNING CLUB,"ASHLEY RESEVOIR, 250 Whitney Ave",Holyoke,MA,1040,1 413-687-7892,,,,"[""10AM-4PM""]","[""Closed""]","[""10AM-4PM""]","[""10AM-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",42.1751614,-72.6515458
+Boston Running Center,50 Terminal St #715B,Boston,MA,2129,1 617-487-5055,,5,10,"[""2-7:30PM""]","[""7:30AM-7:30PM""]","[""2-7:30PM""]","[""7:30AM-7:30PM""]","[""9AM-5PM""]","[""10AM-2PM""]","[""Closed""]",42.3825747,-71.0606368
+Boston Athletic Association,699 Boylston St,Boston,MA,2116,1 617-236-1652,,3,8,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",42.349963,-71.0793312
+Power Kids Run Club,,,,,1 617-921-9937,,5,11,,,,,,,,42.144957,-71.1200764
+Appalachian Mountain Club,10 City Square,Boston,MA,2129,1 603-466-2727,,3.7,20,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",42.3723514,-71.0616236
+LSRHS Track,SUDB-F11-0014,Sudbury,MA,1776,,,4.6,7,,,,,,,,42.4000095,-71.4020479
+Weymouth Youth Track Club,1 Wildcat Way,Weymouth,MA,2190,,,,,,,,,,,,42.1821945,-70.9435344
+Tracksmith Trackhouse,285 Newbury St,Boston,MA,2115,1 857-233-5031,,4.4,142,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",42.3492134,-71.0847679
+Scores Running Club,82 Main St,Keene,NH,3431,,,,,,,,,,,,42.9321697,-72.2777584
+Michigan Athletic Club,2900 Hannah Blvd,East Lansing,MI,48823,1 517-364-8888,,4.2,431,"[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-8PM""]","[""7AM-8PM""]","[""7AM-8PM""]",42.7203722,-84.4573514
+MSU Running Club,393 Chestnut Rd,East Lansing,MI,48824,,,5,11,,,,,,,,42.7288835,-84.4872082
+PR Run Club,326 W Liberty St,Ann Arbor,MI,48103,1 303-815-4513,,5,6,"[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""6-7PM""]","[""Closed""]","[""8-11:30AM""]","[""Closed""]",42.2794877,-83.752383
+East Lansing Run Club,300 Valley Ct,East Lansing,MI,48823,,,5,3,"[""Closed""]","[""Closed""]","[""5:30-7PM""]","[""Closed""]","[""Closed""]","[""7:30-9AM""]","[""Closed""]",42.7372302,-84.4883964
+No Surrender Running Club,1451 Lake Dr SE #6954,Grand Rapids,MI,49516,1 616-426-2864,,4.5,2,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",42.9568339,-85.6332672
+Track Minnesota Elite,3333 N 4th St,Minneapolis,MN,55412,1 612-486-6730,,,,,,,,,,,45.0159921,-93.2854682
+Mill City Running,411 E Hennepin Ave,Minneapolis,MN,55414,1 612-378-6001,,5,840,"[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-6PM""]","[""10AM-5PM""]","[""11AM-5PM""]",44.988791,-93.254419
+Girls on the Run Minnesota,355 Randolph Ave #200,St Paul,MN,55102,1 612-217-4472,,5,5,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",44.929274,-93.1147316
+CLUB9 Running Club,2504 W 40th St,Minneapolis,MN,55410,,,,,,,,,,,,44.9306755,-93.3122204
+RunMN,14240 Plymouth Ave,Burnsville,MN,55337,1 952-892-7386,,4.8,55,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-4PM""]",44.7434553,-93.2726851
+TC Running Company,868 Randolph Ave,St Paul,MN,55102,1 651-290-2747,,4.8,395,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-5PM""]",44.9268014,-93.1368016
+Wild River Running,224 Chestnut St E,Stillwater,MN,55082,1 651-342-2741,,5,56,"[""Closed""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""12-4PM""]",45.0557611,-92.8063787
+Mile To Marathon Run Coaching,,,,,1 612-963-2609,,5,11,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",44.924759,-93.2626238
+Blaine Moms on the Run,,,,,1 763-732-8101,,,,,,,,,,,45.1652229,-93.2046144
+Plymouth Moms on the Run,,,,,1 651-560-6667,,,,,,,,,,,45.0222985,-93.4615354
+Ole Miss Track and Field Complex,328 Hill Drive,University,MS,38677,1 662-915-7538,,5,2,,,,,,,,34.3591241,-89.5376058
+Runstrong,1909 Spillway Rd,Brandon,MS,39047,,,5,3,,,,,,,,32.3817304,-90.0364596
+St. Louis Track Club,222 S Meramec Ave Suite 202,St. Louis,MO,63105,,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",38.6468866,-90.3398814
+Bobcat Track and Field Complex,1 Bobcat Cir,Bozeman,MT,59717,1 406-994-4221,,5,21,,,,,,,,45.6579271,-111.0481723
+Bozeman Run Club,,,,,,,5,21,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""10AM-1PM""]","[""Closed""]",45.3348385,-111.2946064
+Lincoln Youth Track Club,3100 N 92nd St,Lincoln,NE,68507,,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.8438303,-96.5951224
+Husker Run Club,University of Nebraska-Lincoln,Lincoln,NE,68588,,,,,"[""5-6:30AM""]","[""Closed""]","[""7:30-8:30PM""]","[""Closed""]","[""Closed""]","[""9-10:30AM""]","[""Closed""]",40.8180544,-96.6950865
+Las Vegas Heat Youth Track Club,,,,,1 702-802-8443,,3.7,3,,,,,,,,36.2655174,-115.2343695
+Nevada Storm Youth Track Club,7850 N Bradley Rd,Las Vegas,NV,89131,1 702-325-6846,,5,1,,,,,,,,36.3026503,-115.2147365
+LVR - Desert Bloom Park Meeting Site,8405 S Maryland Pkwy,Las Vegas,NV,89123,,,,,,,,,,,,36.0369452,-115.1368549
+Reno Running Company,13987 S Virginia St,Reno,NV,89511,1 775-853-8017,,4.8,320,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-5PM""]",39.4044797,-119.7501474
+Red Rock Running Company,7379 S Rainbow Blvd Suite 165,Las Vegas,NV,89139,1 702-870-4786,,4.7,129,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",36.0541913,-115.2450716
+Girls on the Run-Sierras,100 California Ave #210,Reno,NV,89501,1 775-298-0280,,3.7,3,"[""9AM-3PM""]","[""9AM-3PM""]","[""9AM-3PM""]","[""9AM-3PM""]","[""9AM-3PM""]","[""Closed""]","[""Closed""]",39.5199992,-119.8117821
+Winnemucca Great Basin Running Club,,,,,1 775-304-9955,,,,,,,,,,,41.0192235,-118.217419
+Scores Running Club,82 Main St,Keene,NH,3431,,,,,,,,,,,,42.9321697,-72.2777584
+Club Motorsports,NH-25,Tamworth,NH,3886,1 603-986-9805,,4.9,,,,,,,,,43.8250465,-71.2474822
+Hanover Track,Hovey Ln,Hanover,NH,3755,,,5,,,,,,,,,43.6980862,-72.2854977
+Greater Lowell Road Runners,1934 Lakeview Ave #1,Dracut,MA,1826,,,4.4,,,,,,,,,42.6826899,-71.3499414
+Millennium Running,138 Bedford Center Rd,Bedford,NH,3110,1 603-472-7867,,4.8,,"[""10AM-7PM""]",,,,,,,42.939845,-71.5235052
+Kezar Lake Running Club,,,,,1 603-748-5841,,,,,,,,,,,43.422161,-71.8960485
+Scores Running Club,82 Main St,Keene,NH,3431,,,,,,,,,,,,42.9321697,-72.2777584
+Girls On the Run NH,117 Water St Unit 9,Exeter,NH,3833,1 603-778-1389,,5,,"[""10AM-4:30PM""]",,,,,,,42.9816345,-70.9469013
+The New Hampshire Marathon,30 N Main St,Bristol,NH,3222,1 603-744-2713,,4.9,,,,,,,,,43.5920842,-71.7371345
+Winner's Circle Running Club,211 Elm St,Salisbury,MA,1952,,,,,,,,,,,,42.8438956,-70.8973237
+South Jersey Track and Field Club,,,,,,,4.8,16,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",39.8022165,-74.9376176
+Monmouth University Track Club,"The OceanFirst Bank Center, 400 Cedar Ave",West Long Branch,NJ,7764,1 212-767-9143,,4.8,4,,,,,,,,40.2791393,-74.0078846
+USA Track & Field New Jersey,150 River Rd,Montville,NJ,7045,1 973-334-8900,,4.8,5,,,,,,,,40.8914245,-74.3703952
+Road Runners Club of Woodbury,Wood St,Woodbury,NJ,8096,1 609-970-5577,,4.5,6,"[""Closed""]","[""Closed""]","[""Closed""]","[""6-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]",39.8413716,-75.1546293
+South Jersey Track and Field Club,,,,,,,4.8,16,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",39.8022165,-74.9376176
+Run Coach Kai,,,,,1 929-356-5347,,5,125,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.6971415,-73.9796294
+Keep The Pace Run Club,,,,,1 508-404-3398,,5,24,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.716628,-73.9448356
+RunningCo. of Haddonfield,121 Kings Hwy E,Haddonfield,NJ,8033,1 856-428-1666,,4.8,294,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-8PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""12-4PM""]",39.897704,-75.032941
+Ontherun | Running Coaching - Nicole D.,,,,,1 813-995-5385,,5,29,,,,,,,,40.7153106,-74.068848
+Runner's High,454 Main St,Metuchen,NJ,8840,1 732-549-9440,,4.8,128,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""12-4PM""]",40.5429601,-74.3620593
+Great Hill Track Club,,,,,,,5,1,"[""Closed""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",46.423669,-129.9427086
+Girls on the Run,200 Mansfield Rd E,Columbus,NJ,8022,1 973-951-4266,,,,"[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""Closed""]","[""Closed""]",40.0885,-74.691
+Unity Express Track & Field Club,,,,,1 732-801-5869,,5,2,,,,,,,,40.073132,-74.724323
+Mile High Run Club,24 W 25th St,New York,NY,10010,1 212-466-6472,,4.7,82,"[""6-10:30AM"",""4:30-8:30PM""]","[""6AM-1PM"",""4:30-8:30PM""]","[""6-10:30AM"",""4:30-8:30PM""]","[""6:30AM-1:30PM"",""4:30-8:30PM""]","[""6:30-10:30AM"",""4-8PM""]","[""8AM-1PM""]","[""8:30AM-1:30PM""]",40.7433365,-73.9904335
+"Run Fit Stoked, LLC",,,,,1 973-632-0764,,5,1,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",46.423669,-129.9427086
+Big Back Run Club,,,,,1 732-744-6548,,,,,,,,,,,46.423669,-129.9427086
+Fleet Feet Princeton,108 Nassau St,Princeton,NJ,8542,1 609-252-9110,,4.8,384,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""12-5PM""]",40.3499878,-74.6591744
+New Jersey Chess Club,39 Maple Ave,Morristown,NJ,7960,1 201-588-7022,,5,26,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""5-9PM""]","[""Closed""]","[""10AM-4PM""]",40.7937068,-74.4810685
+Bridgewater Youth Running Club,,,,,,,,,,,,,,,,40.073132,-74.724323
+Cinnaminson Running Club,"Rich Wojnar, 7 Emerson Dr",Cinnaminson,NJ,8077,1 215-756-2504,,,,,,,,,,,39.9859726,-74.984734
+Las Cruces Running Club,7024 Raasaf Dr,Las Cruces,NM,88005,1 575-526-1526,,5,1,,,,,,,,32.2574092,-106.8413814
+New York Athletic Club,180 Central Park S,New York,NY,10019,1 212-767-7000,,4.5,605,,,,,,,,40.7664144,-73.9788573
+Five Points Runners Track Club,453 FDR Dr,New York,NY,10002,1 917-747-7490,,4,4,,,,,,,,40.7125397,-73.9782826
+NYRR RUNCENTER featuring the New Balance Run Hub,320 W 57th St Ground Floor,New York,NY,10019,1 855-569-6977,,4.7,960,"[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-3PM""]","[""9AM-3PM""]",40.7668002,-73.9841223
+South Brooklyn Running Club,"President St and, Court St",Brooklyn,NY,11231,,,5,20,"[""6:45-8AM"",""7-8PM""]","[""Closed""]","[""6:45-8AM"",""7-8PM""]","[""Closed""]","[""6:45-7:30AM""]","[""Closed""]","[""Closed""]",40.681608,-73.9961272
+Morris County Track Club,361 15th St,Brooklyn,NY,11215,1 212-912-2580,,3.7,3,,,,,,,,40.663092,-73.9832757
+Manhattan Track Club,,,,,,,5,9,,,,,,,,40.7813047,-73.9771184
+NRG TRACK CLUB,804 E 221st St,Bronx,NY,10467,1 347-961-0498,,5,1,,,,,,,,40.8838315,-73.8589036
+Upper West Side Run Club,W 72nd St,New York,NY,10023,,,5,17,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""9:30-10:30AM""]",40.7807218,-73.9856854
+McCarren Park Track,769 Lorimer St,Brooklyn,NY,11222,1 212-639-9675,,4.7,959,"[""6AM-1AM""]","[""6AM-1AM""]","[""6AM-1AM""]","[""6AM-1AM""]","[""6AM-1AM""]","[""6AM-1AM""]","[""6AM-1AM""]",40.7200368,-73.9517251
+Dashing Whippets Brooklyn Meeting Point,,Brooklyn,NY,11215,,,5,4,,,,,,,,40.6721992,-73.9699227
+Achilles International: NYC Central Park Workout,2 E 90th St,New York,NY,10128,1 212-354-0300,,5,6,"[""Closed""]","[""6-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""10AM-12PM""]","[""Closed""]",40.7842337,-73.9588565
+Van Cortlandt Park Running Track,Broadway,Bronx,NY,10471,,,4.5,105,,,,,,,,40.8879763,-73.8981682
+Hellgate Road Runners,14-41 31st Dr,Long Island City,NY,11106,1 718-721-7844,,,,,,,,,,,40.766635,-73.931451
+ROCKAWAY TRACK CLUB,"1-12 Cross Bay Pkwy, Queens, NY 11693 Queens",Queens,NY,11693,1 347-545-0540,,3,1,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""6AM-1PM""]","[""Closed""]",40.5835181,-73.8155213
+Red Hook Running Track,155 Bay St,Brooklyn,NY,11231,,,4.7,21,,,,,,,,40.6720756,-74.0069375
+Upper West Side Run Club,W 72nd St,New York,NY,10023,,,5,17,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""9:30-10:30AM""]",40.7807218,-73.9856854
+South Brooklyn Running Club,"President St and, Court St",Brooklyn,NY,11231,,,5,20,"[""6:45-8AM"",""7-8PM""]","[""Closed""]","[""6:45-8AM"",""7-8PM""]","[""Closed""]","[""6:45-7:30AM""]","[""Closed""]","[""Closed""]",40.681608,-73.9961272
+Girls on the Run NYC,77 Sands Street Sixth Floor,Brooklyn,NY,11201,1 212-401-6380,,4.3,3,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",40.7003477,-73.9874324
+Run for Chinatown,108 Mosco St,New York,NY,10013,1 917-830-6952,,5,5,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.7145385,-73.9990512
+New York Road Runners Club,9 E 89th St,New York,NY,10128,1 212-860-4455,,4,14,,,,,,,,40.783299,-73.95802
+North Wake Track Club,3608 Greenlawn Dr,Raleigh,NC,27609,1 919-614-2946,,,,,,,,,,,35.8308254,-78.6163994
+Lights Out Track Club,908 Ridge Gate Dr,Lewisville,NC,27023,1 803-479-3251,,5,1,,,,,,,,36.0877886,-80.3953359
+Durham Striders Track Club,309 Rippling Stream Rd,Durham,NC,27704,1 919-477-9445,,3.6,9,,,,,,,,36.0729479,-78.905455
+Revelation Peak Performance Track Club,,,,,1 252-714-6083,,5,5,"[""6-7:30PM""]","[""6-7:30PM""]","[""6-7:30PM""]","[""6-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]",35.8847955,-77.9959255
+Greenville Track Club,1619 E North St,Greenville,SC,29607,1 864-238-6850,,5,6,,,,,,,,34.8603107,-82.3757688
+Wilson Wide AWake Elite track Club,610 Glendale Dr W,Wilson,NC,27893,1 252-292-8331,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Closed""]",35.7328392,-77.9448071
+Total Athlete Track Club,2301 Tramway Rd,Sanford,NC,27332,1 919-352-9576,,,,,,,,,,,35.4328564,-79.1872789
+Start To Finish Track Club,,,,,1 336-287-4221,,5,1,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""Closed""]","[""Closed""]",35.6080491,-78.7720289
+Running Wild Collective,,,,,,,5,16,,,,,,,,35.450633,-78.9593294
+Armored Calves Run Club,8821 JW Clay Blvd,Charlotte,NC,28262,1 704-277-6641,,5,1,"[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",35.3129322,-80.753249
+Pub Runners,12725 US-601,Midland,NC,28107,,,4.8,18,,,,,,,,35.2419592,-80.5034837
+Riachuelo,"Av. Lineu Machado, 419",Fortaleza,CE,60520-102,55 85 4009-6510,,4.4,2556,"[""10AM-10PM""]","[""10AM-10PM""]","[""10AM-10PM""]","[""10AM-10PM""]","[""10AM-10PM""]","[""10AM-10PM""]","[""2-8PM""]",-3.7657064,-38.5747178
+Bull City Running Co.,202 W North Carolina 54 #109,Durham,NC,27713,1 919-265-3904,,4.9,223,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",35.9130076,-78.9356968
+Run For Holland,200 E Tappan St,Spruce Pine,NC,28777,1 828-385-2341,,5,3,,,,,,,,35.9137308,-82.0698562
+Girls On the Run,1415 W North Carolina 54,Durham,NC,27707,1 919-401-6307,,3.7,3,,,,,,,,35.9170119,-78.9634363
+Carolina Liberty Running Club,,,,,1 910-257-7560,,,,,,,,,,,35.069569,-78.9431874
+Richmond Road Runners Club,2219 Tomlynn St,Richmond,VA,23230,,,5,3,,,,,,,,37.5812418,-77.4791083
+RunningWorks,901-E N Tryon St,Charlotte,NC,28206,1 980-500-8786,,5,10,"[""9AM-1PM""]","[""9AM-1PM""]","[""9AM-1PM""]","[""9AM-1PM""]","[""9AM-1PM""]","[""Closed""]","[""Closed""]",35.2339136,-80.8348039
+Triangle Run Smart,,,,,,,5,3,"[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""Closed""]","[""Closed""]",35.746669,-78.8491755
+Greer Run Club,300 Randall St,Greer,SC,29651,,,,,"[""Closed""]","[""Closed""]","[""Closed""]","[""6:30-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",34.936319,-82.2258683
+Running Track Open To Public,328 Hamilton St,Fayetteville,NC,28301,,,4.5,10,"[""8AM-10PM""]","[""8AM-10PM""]","[""8AM-10PM""]","[""8AM-10PM""]","[""8AM-10PM""]","[""8AM-10PM""]","[""8AM-10PM""]",35.0995048,-78.8744019
+Wilmington Road Runners,,,,,,,,,"[""6-9AM""]","[""6-9PM""]","[""Closed""]","[""6-9PM""]","[""6AM-9PM""]","[""7-10AM""]","[""7-10AM""]",34.204614,-77.8975685
+Dakota Elite Athletics Club,,,,,1 701-219-4771,,5,1,,,,,,,,46.8399055,-96.828238
+Shelly Ellig Indoor Track and Field Facility,1625 14th Ave N,Fargo,ND,58102,1 701-231-8981,,4.8,4,,,,,,,,46.899436,-96.801003
+Terrence Dahl and Donna Beres Track Complex,1701 15th Ave N,Fargo,ND,58102,1 701-231-8331,,5,1,,,,,,,,46.8985489,-96.8062412
+NDSU Indoor TRACK,1601 16th Ave N,Fargo,ND,58102,,,4.4,25,,,,,,,,46.8996165,-96.801252
+Central Dakota Resilience Track and Field,,,,,1 701-400-6800,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",46.783227,-100.023924
+Dickinson Running Club,2547 4th St W Apt 108,Dickinson,ND,58601,1 406-498-5285,,,,,,,,,,,46.8813015,-102.8212062
+Hilliard Track Club,5920 Ancestor Dr,Hilliard,OH,43026,1 614-519-4487,,5,2,,,,,,,,40.0147515,-83.173044
+Ohio River Road Runner Club,,Dayton,OH,45402,1 937-640-2786,,5,4,,,,,,,,39.7574433,-84.2094347
+Dayton Track Club,8970 Kingsridge Dr,Dayton,OH,45458,,,5,1,,,,,,,,39.6297124,-84.2235478
+Toledo Roadrunners Club,1375 Ford St,Maumee,OH,43537,,,5,2,,,,,,,,41.5768502,-83.6797912
+River City Runners Club,,Parkersburg,WV,26104,1 304-488-4108,,5,2,,,,,,,,39.266742,-81.5615136
+Ohio Valley Running Company,20 Station St,Athens,OH,45701,1 740-592-0059,,4.9,132,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10:30AM-5PM""]","[""12-5PM""]",39.3282933,-82.1062917
+Run The Land,2600 E 55th St,Cleveland,OH,44104,1 216-870-4902,,5,2,,,,,,,,41.4824566,-81.6517344
+Girls on the Run of Central Ohio,1145 Chesapeake Ave l,Columbus,OH,43212,1 614-681-4687,,4.8,6,,,,,,,,39.9921771,-83.0371412
+RUNColumbus Race Series,,,,,,,5,4,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.0672362,-83.0194391
+Feet On F.I.R.E. Track Club,16781 Chagrin Blvd #234,Shaker Heights,OH,44120,,,5,1,,,,,,,,41.4651781,-81.5618174
+Columbus Running Company,3990 Broadway,Grove City,OH,43123,1 614-317-7051,,4.9,35,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""12-5PM""]",39.8827764,-83.0928025
+Bethel Youth Run Club Inc.,5118 Buttercup Dr,Tipp City,OH,45371,1 937-570-0014,,,,,,,,,,,39.8952769,-84.1234002
+Girls on the Run Northeast Ohio,8929 Brecksville Rd,Brecksville,OH,44141,1 234-206-0786,,4.6,5,,,,,,,,41.31917,-81.6264747
+Columbus Running Company,50 N State St,Westerville,OH,43081,1 614-523-2377,,4.8,177,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""12-5PM""]",40.1272747,-82.9318364
+Run For Performance,,,,,1 740-833-5986,,5,2,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""8AM-5PM""]","[""7AM-6PM""]",40.0734475,-82.9374055
+Columbus Running Company,765 N High St B,Columbus,OH,43215,1 614-947-7717,,4.8,98,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""12-5PM""]",39.977978,-83.003896
+Columbus Running Company,1250 Hill Rd N,Pickerington,OH,43147,1 614-863-4073,,4.8,121,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""12-5PM""]",39.9135178,-82.7786504
+Healthy Kids Running Series,47 Hall St,Powell,OH,43065,,,,,,,,,,,,40.1569085,-83.0767781
+Fleet Feet Upper Arlington,1344 W Lane Ave,Columbus,OH,43221,1 614-486-0301,,4.9,667,"[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""10AM-6PM""]","[""12-5PM""]",40.0072703,-83.0465257
+Columbus Running Company,28 N Sandusky St,Delaware,OH,43015,1 740-417-4507,,5,9,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""12-5PM""]",40.2995826,-83.0673089
+Jacobs Track and Field Complex,,Norman,OK,73019,1 405-325-8200,,4.4,13,,,,,,,,35.2058012,-97.4390025
+Red Coyote Running and Fitness,5720 N Classen Blvd,Oklahoma City,OK,73118,1 405-840-0033,,4.8,758,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""1-5PM""]",35.530097,-97.534425
+OK Runner,519 NW 23rd St Suite 104,Oklahoma City,OK,73103,1 405-702-9291,,4.9,127,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""Closed""]",35.493413,-97.5215939
+Oregon Track Club,2350 Oakmont Way,Eugene,OR,97401,1 541-343-7247,,4.8,4,,,,,,,,44.0666279,-123.07477
+Portland Running Co. + The Run Pub,2258 NW Raleigh St,Portland,OR,97210,1 503-894-9341,,4.8,104,"[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""8AM-5PM""]",45.533867,-122.6979619
+Portland Running Company,10029 SW Nimbus Ave #100,Beaverton,OR,97008,1 503-524-7570,,4.7,305,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-5PM""]",45.4475173,-122.7905731
+Run Hub Northwest,515 High St,Eugene,OR,97401,1 541-344-1239,,4.9,201,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""12-5PM""]",44.0539572,-123.0879346
+Poole Running Lab,,,,,,,5,16,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",46.423669,-129.9427086
+Eugene Running Company,116 Oakway Center,Eugene,OR,97401,1 541-344-6399,,4.7,115,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""11AM-5PM""]",44.066587,-123.0769121
+Duniway Track,2815 SW Barbur Blvd,Portland,OR,97201,,,4.8,73,"[""5AM-12AM""]","[""5AM-12AM""]","[""5AM-12AM""]","[""5AM-12AM""]","[""5AM-12AM""]","[""5AM-12AM""]","[""5AM-12AM""]",45.5037507,-122.6826504
+Girls on the Run of Portland Metro,2337 NW York St #202e,Portland,OR,97210,1 503-318-5212,,4.2,5,,,,,,,,45.539575,-122.6996694
+WIllamette Striders Track Club,14388 S Maplelane Rd,Oregon City,OR,97045,1 971-207-1422,,4.8,25,"[""4-8PM""]","[""4-8PM""]","[""4-8PM""]","[""4-8PM""]","[""4-8PM""]","[""8AM-5PM""]","[""10AM-6PM""]",45.3343136,-122.5702299
+Rogue Valley Runners LLC,161 E Main St,Ashland,OR,97520,1 541-201-0014,,4.7,54,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",42.1965248,-122.7131004
+Foot Traffic Northeast,4020 NE Fremont St,Portland,OR,97212,1 503-284-0345,,4.6,225,"[""10AM-6PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""11AM-5PM""]",45.5481236,-122.6211719
+Athletic Club of Bend,61615 Athletic Club Dr,Bend,OR,97702,1 541-385-3062,,4.2,209,"[""5:30AM-9PM""]","[""5:30AM-9PM""]","[""5:30AM-9PM""]","[""5:30AM-9PM""]","[""5:30AM-8PM""]","[""7:45AM-7PM""]","[""8AM-7PM""]",44.0361407,-121.3363093
+Gallagher Fitness Resources,135 Commercial St NE,Salem,OR,97301,1 503-364-4198,,4.7,249,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""Closed""]",44.940913,-123.0404759
+Foot Traffic Sellwood,1260 SE Lambert St Suite 101,Portland,OR,97202,1 971-271-7264,,4.8,125,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""11AM-5PM""]",45.4684592,-122.6531715
+Foot Traffic West,13306 NW Cornell Rd,Portland,OR,97229,1 503-350-0294,,4.7,109,"[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""11AM-5PM""]",45.5254489,-122.812916
+Fleet Feet - Portland,2111 NW Savier St,Portland,OR,97210,1 503-525-2122,,4.9,503,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""12-5PM""]",45.5350703,-122.6949363
+Whisper Running,,,,,1 360-989-0935,,4.6,11,"[""9AM-6PM""]","[""9AM-6PM""]","[""9AM-6PM""]","[""9AM-6PM""]","[""9AM-6PM""]","[""9AM-6PM""]","[""9AM-6PM""]",45.5652724,-122.6506261
+PA United Track and Field,1400 Industrial Hwy,Pottstown,PA,19464,1 610-960-9146,,5,24,"[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""Closed""]","[""Closed""]","[""10:30AM-3PM""]",40.2345729,-75.6242626
+Penn Hills Eagles Track Club,309 Collins Dr,Penn Hills Township,PA,15235,1 412-430-0507,,4.8,6,,,,,,,,40.4663781,-79.8146669
+Lehigh Valley Road Runners (LVRR) Club House,1696 Park Dr,Allentown,PA,18103,,,4.7,131,"[""3-5PM""]","[""3-5PM""]","[""3-5PM""]","[""3-5PM""]","[""8AM-10PM""]","[""7AM-5PM""]","[""7AM-5PM""]",40.5790587,-75.4935453
+York Road Runners Club,,,,,,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",39.96767,-76.731131
+Pittsburgh Track Club,108 Three Degree Rd,Pittsburgh,PA,15237,,,,,,,,,,,,40.5443101,-80.0349574
+RUN717 - Running Coach,731 State St,Lancaster,PA,17603,1 717-855-6822,,5,52,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.0496498,-76.3235812
+Run The Day,2021 Chestnut St,Philadelphia,PA,19103,1 484-832-8748,,5,10,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",39.9522729,-75.1742831
+The Running Place,"Across from, Shopping Center, 3551 West Chester Pike",Newtown Square,PA,19073,1 610-353-8826,,4.9,127,"[""10AM-6PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""Closed""]",39.9868005,-75.3976376
+Crails Running Company,1346 Brook Ln,Jamison,PA,18929,1 215-359-7368,,5,2,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]",40.2507356,-75.1076764
+Southern Tier Running Club,,,,,,,,,,,,,,,,42.1275005,-76.926215
+Yinz Run Club,,,,,,,,,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",40.4312755,-79.9805855
+Philadelphia Runner,1711 Walnut St,Philadelphia,PA,19103,1 215-972-8333,,4.8,577,"[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7PM""]","[""11AM-6PM""]",39.9502641,-75.1695637
+Students Run Philly Style,1819 John F Kennedy Blvd Suite #480,Philadelphia,PA,19103,1 267-930-3546,,5,3,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",39.954591,-75.1708063
+Midcity Runners running club,2900 Mt Pleasant St NW,Washington,DC,20009,,,,,,,,,,,,38.92668,-77.03693
+US Road Running,,,,,,,4.1,37,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]",46.423669,-129.9427086
+Philadelphia Runner (Glen Mills),505 Glen Eagle Square,Glen Mills,PA,19342,1 610-558-9100,,4.9,119,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-7PM""]","[""12-5PM""]",39.8643047,-75.5424936
+Scranton Running Company,3 W Olive St,Scranton,PA,18508,1 570-955-0921,,4.9,266,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""12-5PM""]",41.4173052,-75.664105
+Kutztown Fools Run,450 Wentz St,Kutztown,PA,19530,1 267-566-3638,,,,,,,,,,,40.5182489,-75.7845952
+Whirlwinds Track Club,,,,,1 484-483-9707,,5,4,,,,,,,,39.9340575,-75.4065016
+Bucks County Running Co,25 W State St,Doylestown,PA,18901,1 215-230-9606,,4.8,69,"[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""12-4PM""]",40.3098096,-75.131214
+Rhode Island Trials Club,,Exeter,RI,2822,,,4.9,9,,,,,,,,41.5893654,-71.7576389
+Providence College Track,62 Wardlaw Ave,Providence,RI,2908,,,5,5,,,,,,,,41.8456718,-71.4387799
+CLCF Panthers Track,,,,,1 401-648-0400,,5,3,"[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]",41.7686344,-71.468144
+Rhode Runner Inc,657 N Main St,Providence,RI,2906,1 401-831-6346,,4.8,377,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""12-5PM""]",41.838627,-71.408906
+Run Newport,16 Long Wharf Mall,Newport,RI,2840,1 401-846-1036,,4.7,88,"[""10AM-6PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""9:30AM-6:30PM""]","[""9:30AM-7PM""]","[""9:30AM-6PM""]",41.4897222,-71.3163889
+Rhode Island Running Camp,,,,,1 781-500-0077,,5,1,,,,,,,,41.5573165,-71.4979145
+Prov Run Club,,,,,,,,,,,,,,,,41.817106,-71.4210855
+Elite Speed Track Club,3033-I McNaughton Dr,Columbia,SC,29223,1 803-553-9309,,4.7,39,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",34.072568,-80.9462555
+Mt. Pleasant Track Club,1251 Park W Blvd,Mt Pleasant,SC,29466,,,5,3,,,,,,,,32.8802609,-79.7870834
+Carolina Track and Field,213 S Marion St,Columbia,SC,29205,,,4.7,22,,,,,,,,33.9845983,-81.0199433
+Sheila & Morris Cregger Track,199 S Marion St,Columbia,SC,29205,,,4.7,29,,,,,,,,33.9839281,-81.0205325
+Quick Fire Track Club,130 Big Game Loop,Columbia,SC,29229,1 803-347-2289,,,,,,,,,,,34.1505283,-80.9333451
+Carolina Indoor Track & Field Complex,"Field House, 1401 Whaley St",Columbia,SC,29205,,,4.3,11,,,,,,,,33.9881762,-81.0231563
+ClubMx,857 Croft Jones Rd,Chesterfield,SC,29709,1 843-623-3409,,4.8,90,"[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""9AM-3PM""]","[""9AM-3PM""]",34.708126,-80.1660995
+Coastal Carolina Track & Field Facility,,Conway,SC,29526,,,4.7,30,,,,,,,,33.7965751,-79.0160215
+Palmetto TRAC Club,1221 Main St,Columbia,SC,29201,1 803-771-7900,,,,,,,,,,,34.001918,-81.034349
+R3 Fast Track,,,,,1 417-307-8193,,5,2,"[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""10AM-7:30PM""]","[""Closed""]","[""Closed""]",34.040102,-80.9375599
+Wade Hampton Track,Pine Knoll Dr,Greenville,SC,29609,,,4.7,19,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",34.8890293,-82.3613483
+Owens Field Track,1000-1046 Airport Blvd,Columbia,SC,29205,,,4.8,25,,,,,,,,33.9775028,-81.0010907
+South Carolina Region SCCA,701 Gervais St,Columbia,SC,29201,1 803-386-7727,,4,2,,,,,,,,33.9991787,-81.0414056
+COASTAL CAROLINA MEN'S TRACK AND FIELD,125 Chanticleer Dr W,Conway,SC,29526,,,,,,,,,,,,33.7969904,-79.0144755
+Red Diamond Track,Johnson St,Columbia,SC,29207,,,,,,,,,,,,34.0197675,-80.9402779
+SGT Leonard B. Keller Track,23F7+VP,Columbia,SC,29207,,,5,2,,,,,,,,34.0246875,-80.9356875
+Shaw AFB Outdoor Running Track,398 Shaw Dr,Shaw AFB,SC,29152,,,4.4,25,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",33.9675056,-80.4825266
+Strictly Running,2515 Devine St,Columbia,SC,29205,1 803-799-4786,,4.7,116,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""2-6PM""]",33.9986759,-81.0081659
+Mt. Pleasant Track Club,1251 Park W Blvd,Mt Pleasant,SC,29466,,,5,3,,,,,,,,32.8802609,-79.7870834
+Palmetto Road Runners,26 Browns Island Rd,Seabrook,SC,29940,1 843-263-1075,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",32.5546221,-80.7132529
+Run In Simpsonville,102 E Curtis St,Simpsonville,SC,29681,1 864-894-1693,,4.9,55,"[""Closed""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""10AM-5PM""]","[""12-5PM""]",34.7374821,-82.2550001
+Girls on the Run of Columbia,105 Lexington St,West Columbia,SC,29169,1 803-381-0482,,4,1,"[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""Closed""]","[""Closed""]",33.9901436,-81.0714152
+Turkey Track Club,8067 Blucksberg Dr,Sturgis,SD,57785,1 605-490-0517,,5,1,,,,,,,,44.3550905,-103.4554954
+605 Running Company Downtown,225 E 11th St Suite 110,Sioux Falls,SD,57104,1 605-951-4605,,4.8,129,"[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-4PM""]","[""11AM-4PM""]",43.5442149,-96.7244175
+Black Hills Running Company,1130 W Omaha St,Rapid City,SD,57701,1 605-716-0432,,5,64,"[""9:30AM-5:30PM""]","[""9:30AM-5:30PM""]","[""9:30AM-5:30PM""]","[""9:30AM-5:30PM""]","[""9:30AM-5:30PM""]","[""10AM-4PM""]","[""10AM-2PM""]",44.0846818,-103.2374334
+Dakota Distance,,,,,1 605-937-8492,,5,11,,,,,,,,42.7544891,-98.5285874
+605 Running Company at The Bridges,5019 S Western Ave Unit 180,Sioux Falls,SD,57108,1 605-951-1632,,5,13,"[""Closed""]","[""Closed""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-4PM""]","[""11AM-4PM""]",43.4982825,-96.7489197
+The Runner's Shop,41 E Omaha St,Rapid City,SD,57701,1 605-348-7866,,4.7,171,"[""9AM-5:30PM""]","[""9AM-5:30PM""]","[""9AM-5:30PM""]","[""9AM-5:30PM""]","[""9AM-5:30PM""]","[""9AM-5PM""]","[""Closed""]",44.0811813,-103.2126529
+Sioux Falls Marathon/Half Marathon,200 N Phillips Ave #304,Sioux Falls,SD,57104,1 605-373-2033,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",43.5488532,-96.7264854
+Big Bend Ranch Pheasant Hunting,21617 Joe Creek Road,Harrold,SD,57536,1 605-216-8203,,5,45,,,,,,,,44.248593,-99.857318
+Rapid City Trap Club,9210 SD-79,Rapid City,SD,57702,1 605-342-9450,,4.9,21,,,,,,,,43.9922114,-103.1742213
+Runnings,1600 N Harrison Ave,Pierre,SD,57501,1 605-224-1669,,4.5,567,"[""7:30AM-8PM""]","[""7:30AM-8PM""]","[""7:30AM-8PM""]","[""7:30AM-8PM""]","[""7:30AM-8PM""]","[""7:30AM-7PM""]","[""9AM-6PM""]",44.3760174,-100.3187431
+Sioux River Hunt Club,46646 200th St,Bruce,SD,57220,1 605-691-9231,,5,5,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",44.4921171,-96.874048
+Running Strong Field Office,,Porcupine,SD,57772,1 605-455-2975,,3.9,7,"[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""8AM-5PM""]","[""Closed""]","[""Closed""]",43.3486831,-102.395749
+Runnings,326 US-18,Winner,SD,57580,1 605-842-2142,,4.6,285,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-6PM""]","[""10AM-5PM""]",43.3748705,-99.8438315
+Willow Run Golf Course,8000 E Arrowhead Pkwy,Sioux Falls,SD,57110,1 605-335-5900,,4.5,357,"[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]","[""6AM-8PM""]",43.5352978,-96.624093
+Rocky Run Golf Course,47364 Golf View Dr,Dell Rapids,SD,57022,1 605-428-3498,,4.4,96,,,,,,,,43.8257146,-96.7353967
+Runnings,1815 6th Ave SE,Aberdeen,SD,57401,1 605-226-2600,,4.6,955,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-6PM""]","[""9AM-6PM""]",45.461049,-98.4607688
+Wings of Thunder,35786 244th St,Kimball,SD,57355,1 605-778-6842,,4.8,17,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",43.8498568,-99.0295943
+Pheasant Cove Outfitters,101 5th Ave,Glenham,SD,57631,1 605-581-8270,,5,30,,,,,,,,45.5366846,-100.2733467
+Rock Road Outfitters,305 Felton Ave,Gregory,SD,57533,1 605-630-2694,,4.5,26,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",43.229006,-99.4262573
+Front Runners Track Club,"The Riverview Building, 545 Mainstream Dr #104",Nashville,TN,37228,1 615-481-9526,,,,,,,,,,,36.2003575,-86.811503
+Chattanooga Track Club,1014 Dallas Rd suite 101,Chattanooga,TN,37405,,,5,5,,,,,,,,35.075009,-85.3041169
+Precision Track Club,4244 Longfellow Dr,Nashville,TN,37214,1 615-885-1508,,,,,,,,,,,36.239551,-86.6902918
+Flatrock Motorclub,545 Motorclub Drive,Rockwood,TN,37854,1 865-500-0000,,4.4,55,,,,,,,,35.8809605,-84.7508029
+Blount County Track Club,219 County Farm Rd,Maryville,TN,37801,1 630-220-3294,,,,"[""8:30AM-12PM""]","[""8:30AM-12PM""]","[""8:30AM-12PM""]","[""8:30AM-12PM""]","[""8:30AM-12PM""]","[""Closed""]","[""Closed""]",35.7325364,-84.0368242
+Tennessee Downs Auto Club,US-231,Bell Buckle,TN,37020,1 931-492-4148,,,,,,,,,,,35.5926854,-86.4416172
+The Kindersport Foundation,330 Franklin Rd Ste 131A-151,Brentwood,TN,37027,1 615-584-8989,,5,3,"[""2-8PM""]","[""2-8PM""]","[""2-8PM""]","[""2-8PM""]","[""2-8PM""]","[""10AM-4PM""]","[""1-6PM""]",36.0265724,-86.7899384
+Clarksville Athletic Club,220 Athletic Ave,Clarksville,TN,37040,1 931-645-4313,,3.9,755,"[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-9PM""]","[""8AM-5PM""]","[""12-6PM""]",36.5841277,-87.287234
+Sports Club Complex,2111 E Main St,Murfreesboro,TN,37130,1 615-898-2300,,3.8,16,,,,,,,,35.8417407,-86.3575598
+Southern Speed Youth Track Club,,,,,1 615-510-1961,,5,2,"[""9-11:30AM""]","[""Closed""]","[""9-11:30AM""]","[""Closed""]","[""9-11:30AM""]","[""Closed""]","[""Closed""]",36.1866404,-86.785147
+Sharrieffa Barksdale Track,,Harriman,TN,37748,,,4.5,2,,,,,,,,35.9399477,-84.5417311
+Polecat Training Center,1054 Polecat Hollow,Fayetteville,TN,37334,1 615-619-2808,,5,27,,,,,,,,35.3021986,-86.4754692
+"LiveWire Athletics, LLC",3923 Richard Reeves Dr I,Murfreesboro,TN,37127,1 615-813-0100,,4.9,15,"[""4-8:30PM""]","[""4-8:30PM""]","[""5-7:30PM""]","[""4-8:30PM""]","[""4-7:30PM""]","[""Closed""]","[""Closed""]",35.7772532,-86.3600319
+East Nashville Athletics,1800 Davidson St,Nashville,TN,37206,1 615-339-5732,,3.9,14,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]",36.1664242,-86.7278237
+Flat Rock RC Park,247 Gregory Mill Rd,Shelbyville,TN,37160,1 931-212-9758,,5,2,,,,,,,,35.5445619,-86.5190305
+Olympus Athletic Club,810 NW Broad St #206,Murfreesboro,TN,37129,1 615-895-0604,,4.3,672,"[""4AM-12AM""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""12AM-10PM""]","[""8AM-8PM""]","[""8AM-8PM""]",35.8535032,-86.4007702
+"Rudderville Running Track and Field Club, Inc",,,,,,,,,,,,,,,,35.903624,-86.849478
+East Nasty Running Club Wednesday Run,201 S 12th St,Nashville,TN,37206,,,5,22,"[""Closed""]","[""Closed""]","[""6-7:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",36.175852,-86.748353
+Chattanooga Track Club,1014 Dallas Rd suite 101,Chattanooga,TN,37405,,,5,5,,,,,,,,35.075009,-85.3041169
+Girls on the Run of Middle Tennessee,1451 Elm Hill Pike Ste 110,Nashville,TN,37210,1 615-356-4829,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",36.143501,-86.721665
+Nashville Running Company,820 Woodland St,Nashville,TN,37206,1 615-228-9191,,4.9,164,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-3PM""]",36.1745795,-86.7569377
+The Exchange Running Collective,966 Woodland St,Nashville,TN,37206,1 615-232-4941,,4.9,65,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""12-4PM""]",36.1766179,-86.7520505
+Lehigh Valley Road Runners (LVRR) Club House,1696 Park Dr,Allentown,PA,18103,,,4.7,131,"[""3-5PM""]","[""3-5PM""]","[""3-5PM""]","[""3-5PM""]","[""8AM-10PM""]","[""7AM-5PM""]","[""7AM-5PM""]",40.5790587,-75.4935453
+Knoxville Endurance,2260 Sutherland Ave,Knoxville,TN,37919,1 865-643-2840,,5,1,"[""5-7AM""]","[""5-10AM""]","[""5-7AM""]","[""5-10AM""]","[""Closed""]","[""6-10AM""]","[""Closed""]",35.9553114,-83.9530503
+Fleet Feet Nashville - Green Hills,3900 Hillsboro Pike #18,Nashville,TN,37215,1 615-988-2196,,4.8,746,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""12-5PM""]",36.1055671,-86.8129387
+Fleet Feet Nashville - Murfreesboro,544 N Thompson Ln C,Murfreesboro,TN,37129,1 615-494-3141,,4.9,882,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""12-5PM""]",35.8570271,-86.4289629
+"Rudderville Running Track and Field Club, Inc",,,,,,,,,,,,,,,,35.903624,-86.849478
+Texas Thunder Track,915 Flanagan Dr,Leander,TX,78641,,,4,1,,,,,,,,30.5937147,-97.8772834
+Texas Stallions Track Club,1010 Spring Cypress Rd,Spring,TX,77373,1 832-791-1085,,3.7,3,,,,,,,,30.0780711,-95.429018
+DESOTO NITRO TRACK CLUB,800 N Westmoreland Rd,DeSoto,TX,75115,,,4.7,11,,,,,,,,32.601946,-96.872505
+Texas Torch Track Club,201 Benwynd Dr,Mesquite,TX,75149,1 469-607-9747,,5,1,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""Closed""]","[""Closed""]","[""Closed""]",32.7574162,-96.5990475
+Texas Express Track Club,277 W Princeton Dr,Princeton,TX,75407,1 214-870-3821,,4.9,10,,,,,,,,33.1735398,-96.5021494
+North Texas Cheetahs Track Club,408 Cobblestone Dr,DeSoto,TX,75123,1 214-476-0061,,5,7,,,,,,,,32.61813,-96.8993076
+Greater Houston Track Club,3355 FM 1960 W,Houston,TX,77068,1 281-406-0161,,4.6,10,"[""6-8PM""]","[""6-8PM""]","[""Closed""]","[""6-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",29.9959312,-95.4808364
+Speed Legion Track Club,1625 Powder Horn Ln,Arlington,TX,76018,1 682-302-5255,,4.5,2,,,,,,,,32.6469533,-97.0811528
+Dallas Elite Track,2450 Lakeside Pkwy #150,Flower Mound,TX,75022,1 972-802-1963,,4.3,11,"[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""8AM-8PM""]","[""7AM-8PM""]","[""3-6:30PM""]",32.9942876,-97.065383
+Garland Track Club,901 Sylvan Dr,Garland,TX,75040,,,1,1,,,,,,,,32.9215445,-96.6435416
+Fusion Track Club,,Round Rock,TX,78683,1 512-310-1499,,5,1,,,,,,,,30.4962672,-97.6454534
+BornToRun Track Club,2201 Lake Austin Blvd,Austin,TX,78703,1 512-500-7999,,5,1,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-4PM""]","[""10AM-4PM""]","[""10AM-5PM""]",30.276919,-97.7709977
+Atascocita Titans Track Club,18450 Timber Forest Dr,Humble,TX,77346,1 281-883-6606,,1,1,,,,,,,,29.989492,-95.1915547
+"Stampede Track Club, Inc.",11700 Preston Rd #600-160,Dallas,TX,75230,1 214-664-7861,,1,1,,,,,,,,32.9082624,-96.8028444
+Team Quest Track Club,109 N Greenville Ave A,Allen,TX,75002,1 469-667-4369,,5,2,"[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]","[""8AM-6PM""]",33.102732,-96.6624958
+Legacy Elite Athletics of Texas,3030 Stag Rd,Dallas,TX,75241,1 469-682-0804,,,,"[""6-8PM""]","[""6-8PM""]","[""Closed""]","[""6-8PM""]","[""Closed""]","[""Closed""]","[""Closed""]",32.6925137,-96.7653582
+Fort Worth Flyers Track Club,7200 Ranger Way,Fort Worth,TX,76133,1 678-860-2341,,,,,,,,,,,32.6403424,-97.3550493
+Carment Kiara Track Club,7603 Providence Ave,Austin,TX,78752,1 512-453-2728,,3.7,3,,,,,,,,30.3343053,-97.6939888
+AP Ranch,1590 Ranch to Market Rd 2871,Fort Worth,TX,76126,1 214-538-9086,,4.8,31,"[""9AM-8PM""]","[""9AM-9PM""]","[""Closed""]","[""9AM-9PM""]","[""9AM-6PM""]","[""Closed""]","[""Closed""]",32.6874413,-97.5062705
+San Antonio Stunners Track & Field Club,11914 Dragon Ln,San Antonio,TX,78252,1 210-857-4648,,5,2,,,,,,,,29.3080759,-98.6661179
+McKinney Running Club,,,,,,,5,5,"[""Closed""]","[""Closed""]","[""6:30-8PM""]","[""6:30-10PM""]","[""Closed""]","[""6-9AM""]","[""Closed""]",33.215695,-96.653329
+sat running club,"Precinct 2 Hike and Bike Trail, 1901 S Cage Blvd",Pharr,TX,78577,,,5,8,"[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]","[""7-8:30AM""]","[""Closed""]",26.1707237,-98.1849576
+Cox Running Club,2300 W 7th St,Fort Worth,TX,76107,1 682-552-9555,,3.7,12,,,,,,,,32.7513197,-97.3501788
+Lake Grapevine Runners and Walkers,2615 Dove Loop Rd,Grapevine,TX,76051,,,4.9,13,"[""Closed""]","[""6:30-10PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""7AM-12PM""]","[""7AM-12PM""]",32.9659313,-97.0907444
+Blaze Trails Running,,,,,,,4.8,32,,,,,,,,33.214132,-96.963595
+DESOTO NITRO TRACK CLUB,800 N Westmoreland Rd,DeSoto,TX,75115,,,4.7,11,,,,,,,,32.601946,-96.872505
+Lake Cities Track Club,,,,,,,5,3,,,,,,,,33.0427184,-96.9557715
+"RISE Runners & Walkers Sugar Land, Texas",,,,,1 832-344-6051,,,,"[""9AM-5PM""]","[""6:30-7PM""]","[""9AM-5PM""]","[""6:30-7PM""]","[""9AM-5PM""]","[""5-8:30AM""]","[""9AM-5PM""]",29.709249,-95.5507745
+Irving Marathon Running Series,640 Courtyard Ln,Irving,TX,75039,1 972-891-8280,,4.6,54,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",32.9034841,-96.9555334
+Texas Thunder Track,915 Flanagan Dr,Leander,TX,78641,,,4,1,,,,,,,,30.5937147,-97.8772834
+Tier1Athlete,,,,,1 817-914-1231,,5,25,"[""5-7PM""]","[""5-7PM""]","[""5-7PM""]","[""5-7PM""]","[""5-7PM""]","[""Closed""]","[""Closed""]",33.1516709,-96.7026722
+Girls on the Run DFW,4653 Nall Rd,Farmers Branch,TX,75244,1 214-484-3082,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",32.9363407,-96.8280765
+Frisco Running Company,9359 Legacy Dr #300a,Frisco,TX,75033,1 469-823-0444,,4.7,124,"[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""11AM-6PM""]","[""Closed""]",33.1554658,-96.8485873
+IMPACT Run Club,,,,,1 469-667-4182,,,,"[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""Closed""]","[""Closed""]",33.0580075,-97.1310546
+Rogue Running,"w/Dynamic Sports Medicine, 507 Pressler St #1000",Austin,TX,78703,,,4.6,154,,,,,,,,30.2724975,-97.7597924
+New Braunfels Run Club,,,,,1 512-550-4281,,,,,,,,,,,29.850971,-98.1705181
+Garland Track Club,901 Sylvan Dr,Garland,TX,75040,,,1,1,,,,,,,,32.9215445,-96.6435416
+Bridgeland Chinese Running Club,,,,,1 317-457-9348,,,,"[""7AM-9PM""]","[""7AM-9PM""]","[""7AM-9PM""]","[""7AM-9PM""]","[""Closed""]","[""6AM-2PM""]","[""6AM-2PM""]",29.9629075,-95.6972863
+Velocity Running Club,4117 1250 N,West Point,UT,84015,1 385-384-7111,,5,1,,,,,,,,41.131711,-112.105487
+RUNNING CLUB,10618 Pine Shadow Rd,South Jordan,UT,84095,,,5,1,"[""1:08AM-9:55PM""]","[""4:08AM-9:01PM""]","[""5:06AM-4:16PM""]","[""8AM-1:59PM""]","[""4:01AM-4PM""]","[""5:08AM-5:13PM""]","[""9AM-5PM""]",40.5594179,-111.9889748
+SLRC: Salt Lake Running Company,2454 S 700 E,Salt Lake City,UT,84106,1 801-484-9144,,4.9,2011,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-6PM""]","[""Closed""]",40.7177205,-111.8716768
+Twenty One Run,10690 S River Front Pkwy,South Jordan,UT,84095,1 385-554-2121,,5,37,"[""5AM-8PM""]","[""5AM-8PM""]","[""5AM-8PM""]","[""5AM-8PM""]","[""5AM-8PM""]","[""8AM-12PM""]","[""Closed""]",40.5572725,-111.9123974
+Run Vermont,1 Main St #304,Burlington,VT,5401,1 802-863-8412,,4.8,5,"[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""Closed""]","[""Closed""]",44.475761,-73.2195587
+Girls On the Run Vermont,188 Allen Brook Ln Suite 2,Williston,VT,5495,1 802-871-5664,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",44.452315,-73.1024862
+Fleet Feet Vermont,77 Pearl St,Essex Junction,VT,5452,1 802-872-8662,,4.5,146,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""12-4PM""]",44.4947068,-73.1193002
+Front Runner Athletic Medicine,16B Morse Dr,Essex Junction,VT,5452,1 802-578-6981,,5,3,"[""8:30AM-6:30PM""]","[""Closed""]","[""8:30AM-6:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]","[""Closed""]",44.5105328,-73.1397535
+Northeast Kingdom Running Camp,114 Vail Dr,Lyndonville,VT,5851,1 802-265-0004,,4.6,11,,,,,,,,44.5357505,-72.0248232
+Northern Virginia Athletic Club (NOVAAC),119 Balch Springs Cir SE,Leesburg,VA,20175,1 571-799-6024,,,,,,,,,,,39.0914452,-77.568121
+NVA Track,21750 Red Rum Dr #177,Ashburn,VA,20147,,,3.7,3,,,,,,,,39.0159755,-77.4744097
+Legacy Track and Field,,,,,1 703-898-5960,,4.4,7,"[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""9AM-9PM""]","[""Closed""]","[""Closed""]",39.0853856,-77.6452605
+Alexandria City Titans XC and Track & Field Booster Club,3330 King St,Alexandria,VA,22302,1 703-824-6869,,3,2,,,,,,,,38.8245877,-77.0845048
+Virginia Pride Track Club,,,,,1 404-513-9530,,,,,,,,,,,38.8259434,-77.53722
+Virginia,,US,VA,,,,,,,,,,,,,37.4315734,-78.6568942
+TROTTIN OXEN RUN CLUB,21140 Ashburn Crossing Dr suite 135,Ashburn,VA,20147,1 703-729-8375,,,,,,,,,,,39.0315872,-77.4494614
+Road Runners Club of America,1501 Langston Blvd. # 140,Arlington,VA,22209,91 70352 53890,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",38.8993226,-77.0756158
+Pack Training Team ​,2914 Pacific Ave,Virginia Beach,VA,23451,,,5,2,,,,,,,,36.8577936,-75.9791912
+District Running Collective,733 11th St NE,Washington,DC,20002,,,4.7,12,,,,,,,,38.8997611,-76.9912782
+Girls On the Run Nova,10301 Democracy Ln #100,Fairfax,VA,22030,1 703-273-3153,,5,2,"[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""9AM-4PM""]","[""Closed""]","[""Closed""]",38.8496879,-77.3002819
+Richmond Trail Runners,,,,,1 434-465-7789,,,,,,,,,,,37.5246815,-77.493343
+Girls on the Run Central Virginia & Blue Ridge,1713 12th St,Lynchburg,VA,24501,1 434-528-3767,,4.8,4,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",37.4045244,-79.1545596
+Midcity Runners running club,2900 Mt Pleasant St NW,Washington,DC,20009,,,,,,,,,,,,38.92668,-77.03693
+Colonial Road Runners,,,,,,,,,"[""10AM-4PM""]","[""10AM-4PM""]","[""10AM-4PM""]","[""10AM-5PM""]","[""10AM-4PM""]","[""10AM-4PM""]","[""10AM-4PM""]",36.8278828,-76.4750504
+Girls on the Run Greater Richmond,5806 Grove Ave,Richmond,VA,23226,,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",37.573258,-77.518733
+NVA Track,21750 Red Rum Dr #177,Ashburn,VA,20147,,,3.7,3,,,,,,,,39.0159755,-77.4744097
+Top Notch Running,12456 Gayton Rd,Henrico,VA,23238,1 804-741-7976,,5,2,,,,,,,,37.6236101,-77.6385982
+Kingstowne Striders Run Club,,,,,,,,,"[""Closed""]","[""Closed""]","[""Closed""]","[""6:30-8:30PM""]","[""Closed""]","[""8-10AM""]","[""Closed""]",38.7876901,-77.1451802
+Acceleration Track Club,3011 S Huson St Suite B,Tacoma,WA,98409,1 253-292-1103,,5,1,"[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""5-9PM""]","[""Closed""]","[""Closed""]",47.2176328,-122.5044042
+District Running Collective,733 11th St NE,Washington,DC,20002,,,4.7,12,,,,,,,,38.8997611,-76.9912782
+Midcity Runners running club,2900 Mt Pleasant St NW,Washington,DC,20009,,,,,,,,,,,,38.92668,-77.03693
+Pacers Running,2104 14th St NW,Washington,DC,20009,1 202-506-2029,,4.7,183,"[""11AM-8PM""]","[""11AM-8PM""]","[""11AM-8PM""]","[""11AM-8PM""]","[""11AM-8PM""]","[""11AM-6PM""]","[""11AM-5PM""]",38.9183299,-77.032154
+Running Start,1310 L St NW #820,Washington,DC,20005,1 202-407-9977,,5,1,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""Closed""]","[""Closed""]",38.903334,-77.030666
+Silver Spring Run Club,,,,,,,5,1,"[""Closed""]","[""Closed""]","[""7-9PM""]","[""Closed""]","[""Closed""]","[""10AM-12PM""]","[""Closed""]",38.9775232,-77.0242343
+Girls on the Run - DC,900 Brentwood Rd NE #90824,Washington,DC,20090,1 202-607-2288,,5,1,"[""8:30AM-5:30PM""]","[""8:30AM-5:30PM""]","[""8:30AM-5:30PM""]","[""8:30AM-5:30PM""]","[""Closed""]","[""Closed""]","[""Closed""]",38.9177326,-76.9952737
+Pacers Running,300 Tingey St SE #160,Washington,DC,20003,1 202-554-1216,,4.8,101,"[""Closed""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-7PM""]","[""11AM-6PM""]","[""11AM-5PM""]",38.8750832,-77.0010415
+Cascade Run Club Seattle,7210 East Green Lake Dr N,Seattle,WA,98115,1 206-799-5253,,5,2,,,,,,,,47.6806701,-122.3259131
+WVU Track,Mylan Park Ln,Morgantown,WV,26501,,,4.7,3,,,,,,,,39.6442397,-80.0453645
+Achilles Running Club,953 Point Marion Rd,Morgantown,WV,26508,1 304-276-2866,,5,6,"[""6AM-9PM""]","[""Closed""]","[""6AM-9PM""]","[""Closed""]","[""1-8PM""]","[""12AM-10PM""]","[""Closed""]",39.6799398,-79.9197277
+Bridgeport Running,317 S Virginia Ave,Bridgeport,WV,26330,1 304-848-8021,,4.7,31,"[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""12-5PM""]",39.2811949,-80.2569157
+Morgantown Running,709 Beechurst Ave,Morgantown,WV,26505,1 304-241-5223,,4.7,91,"[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""12-5PM""]",39.6414678,-79.962809
+De Pere Track and Cross Country Booster Club,1700 Chicago St,De Pere,WI,54115,,,,,,,,,,,,44.4410144,-88.0442557
+Milwaukee Speed Academy,330 Glenview Ave,Milwaukee,WI,53213,1 414-333-1131,,5,4,"[""6:30-7:30PM""]","[""6:30-7:30PM""]","[""6:30-7:30PM""]","[""6:30-7:30PM""]","[""6:30-7:30PM""]","[""Closed""]","[""Closed""]",43.0343998,-88.0156513
+Wisconsin Athletic Club | Downtown Milwaukee,411 E Wisconsin Ave,Milwaukee,WI,53202,1 414-212-2000,,4.6,241,"[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-9PM""]","[""5AM-8PM""]","[""7AM-6PM""]","[""7AM-6PM""]",43.0383555,-87.9058576
+Glacier Track Club,Glacial Drumlin State Trail,Waukesha,WI,53188,,,,,,,,,,,,43.0029851,-88.2454292
+Road America®,N 7390 WI-67,Plymouth,WI,53073,1 920-892-4576,,4.9,4861,,,,,,,,43.8054625,-87.991733
+Badger Track Club,,,,,1 608-622-7602,,,,"[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""Closed""]","[""10AM-5PM""]",43.0696169,-89.4236519
+Wisconsin Athletic Club | Greenfield,5020 S 110 St,Greenfield,WI,53228,1 414-427-6500,,4.7,307,"[""4:30AM-9PM""]","[""4:30AM-9PM""]","[""4:30AM-9PM""]","[""4:30AM-9PM""]","[""4:30AM-8PM""]","[""6:30AM-6PM""]","[""6:30AM-6PM""]",42.9527775,-88.0485179
+"Beaver Cycle Club, Inc.",N9898 County Rd I,Burnett,WI,53922,1 920-319-6889,,4.9,56,,,,,,,,43.5527238,-88.7221419
+Harbor Athletic Club,2529 Allen Blvd,Middleton,WI,53562,1 608-831-6500,,4.5,305,"[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-11PM""]","[""5AM-10PM""]","[""5AM-9PM""]","[""5AM-9PM""]",43.1030636,-89.4855034
+Badgerland Striders Running Club,12650 W Arden Pl,Butler,WI,53007,,,5,1,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",43.0996098,-88.0691484
+Wisconsin International Raceway,W1460 County Hwy KK,Kaukauna,WI,54130,1 920-766-5577,,4.6,1098,,,,,,,,44.2453462,-88.2595023
+Aztalan Cycle Club,Gomoll Rd,Lake Mills,WI,53551,1 414-265-1582,,4.7,68,,,,,,,,43.0861642,-88.8674466
+Plymouth Dirt Track Racing,229 Fairview Dr,Plymouth,WI,53073,1 920-893-5751,,4.6,534,,,,,,,,43.7502029,-87.9682965
+McClimon Track and Soccer Fields,750 Walnut St,Madison,WI,53705,,,4.6,41,"[""9AM-7:30PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-8PM""]","[""9AM-7:30PM""]","[""9AM-7:30PM""]",43.078293,-89.4253991
+Milwaukee Running Group OMG,1572 E Capitol Dr,Milwaukee,WI,53211,1 414-207-8471,,,,"[""5AM-9PM""]","[""5:15AM-9PM""]","[""5:30AM-9PM""]","[""5:15AM-9PM""]","[""6-8AM""]","[""8AM-12PM""]","[""9AM-6PM""]",43.0895322,-87.8903398
+UW-Stout Track and Field,220 13th Ave E,Menomonie,WI,54751,,,,,,,,,,,,44.8698084,-91.9269394
+Four Lakes Athletic Club,351 E Morrissy Dr,Elkhorn,WI,53121,1 262-743-2000,,4.5,143,"[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-10PM""]","[""5AM-9PM""]","[""7AM-6PM""]","[""7AM-6PM""]",42.6471824,-88.5378417
+The Janesville Athletic Club,1301 Black Bridge Rd,Janesville,WI,53545,1 608-756-3737,,4.7,594,"[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]","[""Open 24 hours""]",42.7054901,-89.0078781
+Movin' Shoes,528 S Park St,Madison,WI,53715,1 608-251-0125,,4.9,313,"[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-8PM""]","[""10AM-6PM""]","[""10AM-5PM""]","[""11AM-4PM""]",43.0612749,-89.4009908
+Road Runners MC,"w224 s8490, W224S8490 Industrial Dr",Big Bend,WI,53103,,,4.7,19,"[""Closed""]","[""6-11PM""]","[""Closed""]","[""Closed""]","[""6-11PM""]","[""Closed""]","[""12-6PM""]",42.8903165,-88.1969433
+GIRLS ON THE RUN of NORTHEAST WISCONSIN,1806 Bond St #163,Green Bay,WI,54303,1 920-370-2958,,,,,,,,,,,44.5410189,-88.0657709
+Girls on the Run of Southeastern Wisconsin,5775 N Glen Park Rd Suite 203,Milwaukee,WI,53209,1 414-367-8171,,5,1,,,,,,,,43.1221897,-87.9320744
+Stevens Point Area Run Club (SPARC),,,,,,,,,,,,,,,,44.464631,-89.534164
+WisconsinRuns,1152 Ensell Rd,Lake Zurich,IL,60047,1 224-757-5425,,,,,,,,,,,42.205202,-88.066935
+Infinity Running Company,,,,,1 414-563-7556,,5,14,,,,,,,,46.423669,-129.9427086
+The Run Club,960 N 12th St,Milwaukee,WI,53233,1 414-219-6044,,,,,,,,,,,43.0428251,-87.9262942
+Fleet Feet Madison,8440 Old Sauk Rd,Middleton,WI,53562,1 608-833-9999,,4.9,692,"[""10AM-5PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""10AM-5PM""]","[""11AM-5PM""]",43.075287,-89.5292395
+Fleet Feet Fox Valley,3404 W College Ave,Appleton,WI,54914,1 920-964-2145,,4.9,645,"[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-7PM""]","[""10AM-5PM""]","[""12-4PM""]",44.2635167,-88.4575111
+Runfit MKE,316 N Milwaukee St #535,Milwaukee,WI,53202,1 414-491-5853,,5,28,"[""5:30AM-7PM""]","[""5:30AM-7PM""]","[""5:30AM-7PM""]","[""5:30AM-7PM""]","[""5:30AM-6PM""]","[""Closed""]","[""Closed""]",43.0344275,-87.9056366
+Kenosha Running Company,,,,,1 262-925-0300,,4.7,58,,,,,,,,46.423669,-129.9427086
+Forever Fighters Running Club,,,,,1 608-445-9273,,,,,,,,,,,43.0851225,-89.4091475
+Moms on the Run Woodbury,,,,,,,5,1,,,,,,,,44.905633,-92.923537
+South East Wyoming Racing Club,3801 Archer Pkwy,Cheyenne,WY,82009,1 307-421-9667,,4.9,21,,,,,,,,41.1514112,-104.6504645
+UNIVERSITY OF WYOMING WOMEN'S TRACK & FIELD,Memorial Fieldhouse,Laramie,WY,82070,,,,,,,,,,,,41.3118267,-105.5703055
