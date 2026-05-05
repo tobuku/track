@@ -8,32 +8,35 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://trackclubfinder.com/">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Track Club Finder — Find Running &amp; Track Clubs Near You">
   <meta property="og:description" content="The national directory of track and running clubs in the United States. Find a club near you, get gear recommendations, and access race results.">
   <meta property="og:url" content="https://trackclubfinder.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://trackclubfinder.com/images/IMG_5760.JPG">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --red:    #c0392b;
-      --dark:   #1a1a2e;
-      --mid:    #16213e;
-      --accent: #e74c3c;
-      --gold:   #f39c12;
-      --light:  #ecf0f1;
-      --muted:  #95a5a6;
+      --red:    #d63031;
+      --dark:   #111118;
+      --mid:    #1c1c28;
+      --gold:   #f0a500;
+      --light:  #f0f2f5;
+      --muted:  #8a9ab0;
       --white:  #ffffff;
-      --radius: 8px;
+      --radius: 6px;
       --max:    1200px;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f5f6fa;
-      color: #2d3436;
+      font-family: "Barlow", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f0f2f5;
+      color: #1c1c28;
       line-height: 1.6;
     }
 
@@ -44,6 +47,10 @@
     header {
       background: var(--dark);
       padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .header-inner {
       max-width: var(--max);
@@ -51,431 +58,534 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
+      height: 58px;
     }
     .logo {
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 900;
       color: var(--white);
-      letter-spacing: -0.3px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
     .logo span { color: var(--gold); }
     nav a {
-      color: #bdc3c7;
-      font-size: 0.9rem;
-      margin-left: 1.5rem;
+      color: #9aaab8;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-left: 1.75rem;
+      letter-spacing: 0.3px;
     }
     nav a:hover { color: var(--white); text-decoration: none; }
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(135deg, var(--dark) 0%, var(--mid) 60%, #0f3460 100%);
-      padding: 5rem 1.5rem 4rem;
-      text-align: center;
       position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
       overflow: hidden;
+      background: var(--dark);
     }
-    .hero::before {
-      content: "";
+    .hero-bg {
       position: absolute;
       inset: 0;
+      background-image: url('/images/IMG_5760.JPG');
+      background-size: cover;
+      background-position: center 55%;
+      filter: brightness(0.45) saturate(0.85);
+    }
+    /* Lane stripe decoration at bottom of hero */
+    .hero-lanes {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
       background: repeating-linear-gradient(
         90deg,
-        transparent,
-        transparent 60px,
-        rgba(255,255,255,0.02) 60px,
-        rgba(255,255,255,0.02) 61px
+        var(--red) 0px, var(--red) 40px,
+        transparent 40px, transparent 50px
       );
+      opacity: 0.7;
     }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-eyebrow {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 1.5rem 4.5rem;
+    }
+    .hero-tag {
       display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-size: 0.75rem;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 1.25rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
     }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 900;
       color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
     }
     .hero h1 em {
       font-style: normal;
       color: var(--gold);
     }
-    .hero p {
-      color: #a0aec0;
-      font-size: 1.1rem;
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
+    .hero-sub {
+      color: #c0ccd8;
+      font-size: 1.05rem;
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
     }
 
     /* Search box */
     .search-box {
       display: flex;
-      max-width: 540px;
-      margin: 0 auto;
+      max-width: 500px;
       background: var(--white);
-      border-radius: 50px;
+      border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
     }
     .search-box select {
       flex: 1;
       border: none;
-      padding: 0.9rem 1.25rem;
-      font-size: 1rem;
+      padding: 0.875rem 1.25rem;
+      font-family: "Barlow", sans-serif;
+      font-size: 0.95rem;
       background: transparent;
       outline: none;
-      color: #2d3436;
+      color: #1c1c28;
       cursor: pointer;
     }
     .search-box button {
       background: var(--red);
       color: var(--white);
       border: none;
-      padding: 0.9rem 1.75rem;
+      padding: 0.875rem 1.75rem;
+      font-family: "Barlow Condensed", sans-serif;
       font-size: 1rem;
       font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       cursor: pointer;
       white-space: nowrap;
-      transition: background 0.2s;
+      transition: background 0.15s;
     }
-    .search-box button:hover { background: #a93226; }
+    .search-box button:hover { background: #b52828; }
 
     .hero-stats {
       display: flex;
-      justify-content: center;
       gap: 2.5rem;
-      margin-top: 2.5rem;
+      margin-top: 2.75rem;
       flex-wrap: wrap;
     }
-    .hero-stat { color: var(--white); }
     .hero-stat strong {
       display: block;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gold);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--white);
       line-height: 1;
     }
     .hero-stat span {
-      font-size: 0.8rem;
-      color: #a0aec0;
+      font-size: 0.75rem;
+      color: #7a8fa8;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
+    .hero-stat .accent { color: var(--gold); }
 
     /* ── Section base ── */
-    section { padding: 4rem 1.5rem; }
+    section { padding: 4.5rem 1.5rem; }
     .section-inner { max-width: var(--max); margin: 0 auto; }
-    .section-label {
-      font-size: 0.75rem;
+    .section-kicker {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--red);
       margin-bottom: 0.5rem;
     }
     .section-title {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 800;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 900;
       color: var(--dark);
-      line-height: 1.2;
+      line-height: 1.05;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
     .section-sub {
-      color: #636e72;
+      color: #5a6a7a;
       font-size: 1rem;
-      max-width: 560px;
+      max-width: 540px;
       margin-bottom: 2.5rem;
     }
 
     /* ── State grid ── */
+    #browse { background: var(--white); }
     .state-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.6rem;
     }
     .state-card {
-      background: var(--white);
-      border: 1px solid #e0e0e0;
+      background: #f7f8fa;
+      border: 1px solid #e4e8ed;
+      border-left: 3px solid transparent;
       border-radius: var(--radius);
-      padding: 0.9rem 1rem;
+      padding: 0.8rem 1rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--dark);
-      transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
-      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
     }
     .state-card:hover {
-      border-color: var(--red);
-      box-shadow: 0 2px 12px rgba(192,57,43,0.12);
+      border-left-color: var(--red);
+      background: var(--white);
       color: var(--red);
       text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
     .state-abbr {
-      background: var(--light);
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
       color: var(--muted);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      min-width: 28px;
-      text-align: center;
+      min-width: 26px;
     }
-    .state-card:hover .state-abbr {
-      background: var(--red);
-      color: var(--white);
+    .state-card:hover .state-abbr { color: var(--red); }
+
+    /* ── Photo strip ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 300px;
+      gap: 3px;
+      padding: 0;
     }
+    .photo-strip-item {
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .photo-strip-item:hover img { transform: scale(1.04); }
 
     /* ── Resources ── */
-    .resources-section { background: var(--dark); }
+    .resources-section {
+      background: var(--dark);
+      padding: 4.5rem 1.5rem;
+    }
     .resources-section .section-title { color: var(--white); }
-    .resources-section .section-sub { color: #a0aec0; }
-    .resources-section .section-label { color: var(--gold); }
+    .resources-section .section-sub { color: #7a8fa8; }
+    .resources-section .section-kicker { color: var(--gold); }
 
     .resource-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      overflow: hidden;
     }
     .resource-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: background 0.2s, border-color 0.2s;
+      background: var(--dark);
+      padding: 1.75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: background 0.15s;
     }
     .resource-card:hover {
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.04);
       text-decoration: none;
     }
     .resource-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
+      opacity: 0.85;
     }
-    .resource-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
+    .resource-icon svg { width: 28px; height: 28px; }
+    .resource-text h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
       color: var(--white);
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.3rem;
     }
-    .resource-card p {
-      font-size: 0.875rem;
-      color: #a0aec0;
+    .resource-text p {
+      font-size: 0.85rem;
+      color: #7a8fa8;
       line-height: 1.5;
     }
     .resource-tag {
       display: inline-block;
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.3px;
-    }
-
-    /* ── Gear ── */
-    .gear-section { background: #f8f9fa; }
-    .gear-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-    .gear-card {
-      background: var(--white);
-      border: 1px solid #e0e0e0;
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .gear-card:hover {
-      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    .gear-img {
-      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-    }
-    .gear-body { padding: 1rem; }
-    .gear-cat {
-      font-size: 0.7rem;
+      margin-top: 0.6rem;
+      font-size: 0.72rem;
       font-weight: 700;
+      font-family: "Barlow Condensed", sans-serif;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
-    }
-    .gear-body h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-    }
-    .gear-cta {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--red);
+      color: var(--gold);
     }
 
-    /* ── About ── */
+    /* ── About / Photo feature ── */
     .about-section { background: var(--white); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
     }
-    @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
     .about-text p {
-      color: #555;
+      color: #4a5568;
       margin-bottom: 1rem;
+      font-size: 0.975rem;
     }
-    .about-highlights { list-style: none; }
+    .about-highlights { list-style: none; margin-top: 1.5rem; }
     .about-highlights li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid #f0f0f0;
-      color: #555;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #edf0f3;
+      color: #4a5568;
       display: flex;
       align-items: flex-start;
-      gap: 0.6rem;
+      gap: 0.75rem;
+      font-size: 0.95rem;
     }
     .about-highlights li::before {
-      content: "–";
-      color: var(--red);
-      font-weight: 700;
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--red);
+      margin-top: 0.55rem;
       flex-shrink: 0;
     }
-    .about-box {
-      background: linear-gradient(135deg, var(--dark), var(--mid));
-      border-radius: 12px;
-      padding: 2rem;
-      color: var(--white);
+
+    .about-photo {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
     }
-    .about-box h3 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 1rem;
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
-    .stat-row {
+    .about-photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(17,17,24,0.85));
+      padding: 2rem 1.5rem 1.25rem;
+    }
+    .about-photo-stat {
       display: flex;
-      justify-content: space-between;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.9rem;
+      gap: 2rem;
     }
-    .stat-row:last-child { border-bottom: none; }
-    .stat-row span:first-child { color: #a0aec0; }
-    .stat-row span:last-child { font-weight: 700; color: var(--white); }
+    .about-photo-stat div strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--white);
+      display: block;
+      line-height: 1;
+    }
+    .about-photo-stat div span {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ── Gear ── */
+    .gear-section { background: #f0f2f5; }
+    .gear-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .gear-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #e4e8ed;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .gear-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .gear-accent {
+      height: 3px;
+    }
+    .gear-body { padding: 1.1rem 1.25rem 1.25rem; }
+    .gear-cat {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .gear-body h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.3px;
+    }
+    .gear-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--red);
+    }
 
     /* ── FAQ ── */
-    .faq-section { background: #f8f9fa; }
-    .faq-list { max-width: 760px; }
+    .faq-section { background: var(--white); }
+    .faq-list { max-width: 720px; }
     details {
-      background: var(--white);
-      border: 1px solid #e0e0e0;
-      border-radius: var(--radius);
-      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #edf0f3;
     }
     summary {
-      padding: 1.1rem 1.25rem;
+      padding: 1.1rem 0;
       font-weight: 600;
+      font-size: 0.975rem;
       cursor: pointer;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: var(--dark);
     }
     summary::-webkit-details-marker { display: none; }
     summary::after {
       content: "+";
       color: var(--red);
-      font-size: 1.25rem;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.4rem;
       font-weight: 400;
       margin-left: 1rem;
       flex-shrink: 0;
     }
     details[open] summary::after { content: "–"; }
     details p {
-      padding: 0 1.25rem 1.1rem;
-      color: #555;
+      padding: 0 0 1.1rem;
+      color: #5a6a7a;
       font-size: 0.95rem;
     }
 
     /* ── CTA Banner ── */
     .cta-section {
-      background: linear-gradient(135deg, var(--red), #922b21);
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      padding: 3.5rem 1.5rem;
+      padding: 5rem 1.5rem;
+      background-image: url('/images/IMG_9680.JPG');
+      background-size: cover;
+      background-position: center 40%;
     }
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(17,17,24,0.82);
+    }
+    .cta-inner { position: relative; z-index: 1; }
     .cta-section h2 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 800;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
       color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 0.75rem;
     }
     .cta-section p {
-      color: rgba(255,255,255,0.8);
-      max-width: 480px;
-      margin: 0 auto 1.75rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 440px;
+      margin: 0 auto 2rem;
     }
     .btn {
       display: inline-block;
-      background: var(--white);
-      color: var(--red);
+      background: var(--red);
+      color: var(--white);
+      font-family: "Barlow Condensed", sans-serif;
       font-weight: 800;
       font-size: 1rem;
-      padding: 0.85rem 2rem;
-      border-radius: 50px;
-      transition: opacity 0.2s;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.85rem 2.25rem;
+      border-radius: 3px;
+      transition: background 0.15s;
     }
-    .btn:hover { opacity: 0.9; text-decoration: none; }
+    .btn:hover { background: #b52828; text-decoration: none; }
     .btn-outline {
       background: transparent;
       color: var(--white);
-      border: 2px solid rgba(255,255,255,0.6);
+      border: 2px solid rgba(255,255,255,0.5);
       margin-left: 0.75rem;
     }
-    .btn-outline:hover { border-color: var(--white); }
+    .btn-outline:hover { border-color: var(--white); background: transparent; }
 
     /* ── Footer ── */
     footer {
-      background: var(--dark);
+      background: #0c0c12;
       padding: 2.5rem 1.5rem;
       text-align: center;
     }
     .footer-inner { max-width: var(--max); margin: 0 auto; }
     .footer-logo {
-      font-size: 1.1rem;
-      font-weight: 800;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       color: var(--white);
       margin-bottom: 0.75rem;
     }
@@ -484,26 +594,27 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.25rem 1rem;
+      gap: 0.25rem 1.25rem;
       margin-bottom: 1.25rem;
     }
-    .footer-links a { color: #a0aec0; font-size: 0.875rem; }
-    .footer-links a:hover { color: var(--white); text-decoration: none; }
+    .footer-links a { color: #5a6a7a; font-size: 0.875rem; }
+    .footer-links a:hover { color: #9aaab8; text-decoration: none; }
     .footer-disc {
-      font-size: 0.78rem;
-      color: #636e72;
-      max-width: 600px;
+      font-size: 0.77rem;
+      color: #3a4a5a;
+      max-width: 580px;
       margin: 0 auto;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     @media (max-width: 600px) {
-      .hero-stats { gap: 1.5rem; }
       nav { display: none; }
+      .hero-stats { gap: 1.75rem; }
+      .photo-strip { height: 180px; }
+      .state-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 
-  <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -526,7 +637,7 @@
   <div class="header-inner">
     <div class="logo">Track<span>Club</span>Finder</div>
     <nav>
-      <a href="#browse">Browse by State</a>
+      <a href="#browse">Browse States</a>
       <a href="#resources">Resources</a>
       <a href="#gear">Gear</a>
       <a href="#about">About</a>
@@ -536,10 +647,12 @@
 
 <!-- ── Hero ── -->
 <section class="hero">
+  <div class="hero-bg" role="img" aria-label="Track and field lanes at a stadium in Honolulu, Hawaii"></div>
+  <div class="hero-lanes" aria-hidden="true"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">National Directory</div>
-    <h1>Find a <em>Track Club</em> Near You</h1>
-    <p>The most complete directory of track and running clubs across all 50 states. Browse local clubs, find races, and get the gear you need.</p>
+    <div class="hero-tag">National Directory — All 50 States</div>
+    <h1>Find a <em>Track Club</em><br>Near You</h1>
+    <p class="hero-sub">The most complete directory of track and running clubs across the United States. Browse local clubs, check race results, and get the gear you need.</p>
 
     <div class="search-box">
       <select id="stateSelect" aria-label="Select a state">
@@ -600,16 +713,16 @@
 
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>50</strong>
+        <strong class="accent">50</strong>
         <span>States Covered</span>
       </div>
       <div class="hero-stat">
         <strong>1,000+</strong>
-        <span>Track Clubs Listed</span>
+        <span>Clubs Listed</span>
       </div>
       <div class="hero-stat">
         <strong>Free</strong>
-        <span>Always Free to Search</span>
+        <span>Always Free</span>
       </div>
     </div>
   </div>
@@ -618,7 +731,7 @@
 <!-- ── Browse by State ── -->
 <section id="browse">
   <div class="section-inner">
-    <div class="section-label">Browse the Directory</div>
+    <div class="section-kicker">The Directory</div>
     <h2 class="section-title">Track Clubs by State</h2>
     <p class="section-sub">Select a state to view all track clubs and running clubs in that area, including contact info, websites, and Google ratings.</p>
 
@@ -677,161 +790,117 @@
   </div>
 </section>
 
+<!-- ── Photo Strip ── -->
+<div class="photo-strip" aria-hidden="true">
+  <div class="photo-strip-item">
+    <img src="/images/IMG_5761.JPG" alt="Track meet in Honolulu" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9683.JPG" alt="Athlete sprinting on blue track" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9696.JPG" alt="Track stadium elevated view" loading="lazy">
+  </div>
+</div>
+
 <!-- ── Resources ── -->
 <section id="resources" class="resources-section">
   <div class="section-inner">
-    <div class="section-label">Essential Links</div>
+    <div class="section-kicker">Essential Links</div>
     <h2 class="section-title">Track &amp; Field Resources</h2>
-    <p class="section-sub">The best external tools and sites for runners, track athletes, and coaches.</p>
+    <p class="section-sub">The best tools and sites for runners, track athletes, and coaches.</p>
 
     <div class="resource-grid">
 
       <a class="resource-card" href="https://www.athletic.net/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(52,152,219,0.15);">&#127939;</div>
-        <h3>Athletic.net</h3>
-        <p>Look up race results, personal records, athlete profiles, and upcoming track &amp; cross country meets across the country.</p>
-        <span class="resource-tag">Race Results &amp; Records &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3b9ddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l7 7-7 7"/><path d="M5 12h14"/><circle cx="6" cy="12" r="2" fill="#3b9ddd" stroke="none"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>Athletic.net</h3>
+          <p>Race results, personal records, athlete profiles, and upcoming track &amp; cross country meets nationwide.</p>
+          <span class="resource-tag">Race Results &amp; Records &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.usatf.org/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(231,76,60,0.15);">&#127942;</div>
-        <h3>USATF</h3>
-        <p>USA Track &amp; Field — the national governing body for track and field, long-distance running, and race walking in the US.</p>
-        <span class="resource-tag">Official Governing Body &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e8000d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="none"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>USATF</h3>
+          <p>USA Track &amp; Field — the national governing body for track and field, long-distance running, and race walking.</p>
+          <span class="resource-tag">Official Governing Body &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.runnerspace.com/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(46,204,113,0.15);">&#127916;</div>
-        <h3>RunnerSpace</h3>
-        <p>Watch live and on-demand track &amp; field meet coverage, plus news and athlete interviews from the track community.</p>
-        <span class="resource-tag">Live Meet Coverage &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="none"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>RunnerSpace</h3>
+          <p>Live and on-demand track &amp; field meet coverage, news, and athlete interviews from the track community.</p>
+          <span class="resource-tag">Live Meet Coverage &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.milesplit.com/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(243,156,18,0.15);">&#128200;</div>
-        <h3>MileSplit</h3>
-        <p>High school and college track &amp; field rankings, results, athlete profiles, and state championship coverage nationwide.</p>
-        <span class="resource-tag">HS &amp; College Rankings &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>MileSplit</h3>
+          <p>High school and college track &amp; field rankings, results, athlete profiles, and state championship coverage.</p>
+          <span class="resource-tag">HS &amp; College Rankings &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.letsrun.com/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(155,89,182,0.15);">&#128240;</div>
-        <h3>LetsRun</h3>
-        <p>Running news, analysis, elite athlete coverage, and the most active running forum community on the internet.</p>
-        <span class="resource-tag">Running News &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#a29bfe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v2"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>LetsRun</h3>
+          <p>Running news, analysis, elite athlete coverage, and the most active running forum community online.</p>
+          <span class="resource-tag">Running News &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.strava.com/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(252,100,45,0.15);">&#128241;</div>
-        <h3>Strava</h3>
-        <p>Track your runs, find local segments and routes, connect with your club members, and compare your performance over time.</p>
-        <span class="resource-tag">Activity Tracking &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fc742d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>Strava</h3>
+          <p>Track your runs, find local segments and routes, connect with club members, and compare performance.</p>
+          <span class="resource-tag">Activity Tracking &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.runningusa.org/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(52,152,219,0.1);">&#127758;</div>
-        <h3>Running USA</h3>
-        <p>National statistics on running participation, road race calendars, and industry reports for coaches and race directors.</p>
-        <span class="resource-tag">Industry Data &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3b9ddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div class="resource-text">
+          <h3>Running USA</h3>
+          <p>National statistics on running participation, road race calendars, and industry reports for coaches.</p>
+          <span class="resource-tag">Industry Data &#8599;</span>
+        </div>
       </a>
 
       <a class="resource-card" href="https://www.worldathletics.org/" target="_blank" rel="noopener">
-        <div class="resource-icon" style="background: rgba(231,76,60,0.1);">&#127760;</div>
-        <h3>World Athletics</h3>
-        <p>International governing body for track and field. World records, global rankings, and international competition schedules.</p>
-        <span class="resource-tag">World Records &amp; Rankings &#8599;</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Gear ── -->
-<section id="gear" class="gear-section">
-  <div class="section-inner">
-    <div class="section-label">Affiliate Partners</div>
-    <h2 class="section-title">Recommended Track Gear</h2>
-    <p class="section-sub">The right equipment makes every training session count. These are top-rated picks for track athletes at every level.</p>
-
-    <div class="gear-grid">
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=track+spikes&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#128099;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Footwear</div>
-          <h3>Track Spikes</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
+        <div class="resource-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e8000d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l-4 4 4 4 4-4-4-4z"/></svg>
         </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=running+shoes+track&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#128099;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Footwear</div>
-          <h3>Performance Running Shoes</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=gps+running+watch&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#8987;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Technology</div>
-          <h3>GPS Running Watches</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=track+and+field+uniform&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#128084;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Apparel</div>
-          <h3>Track Uniforms &amp; Shorts</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=running+hydration+vest&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#127950;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Hydration</div>
-          <h3>Hydration Vests &amp; Bottles</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=foam+roller+running+recovery&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#129298;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Recovery</div>
-          <h3>Recovery &amp; Stretching Tools</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=running+socks+athletic&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#129387;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Apparel</div>
-          <h3>Athletic Running Socks</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
-        </div>
-      </a>
-
-      <a class="gear-card" href="https://www.amazon.com/s?k=running+sunglasses+sport&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="gear-img">&#128526;</div>
-        <div class="gear-body">
-          <div class="gear-cat">Accessories</div>
-          <h3>Sport Sunglasses</h3>
-          <span class="gear-cta">Shop on Amazon &#8599;</span>
+        <div class="resource-text">
+          <h3>World Athletics</h3>
+          <p>International governing body for track and field. World records, global rankings, and competition schedules.</p>
+          <span class="resource-tag">World Records &amp; Rankings &#8599;</span>
         </div>
       </a>
 
     </div>
-
-    <p style="margin-top:1.5rem; font-size:0.8rem; color:var(--muted);">
-      As an Amazon Associate, TrackClubFinder earns from qualifying purchases. Prices and availability are subject to change.
-    </p>
   </div>
 </section>
 
@@ -840,39 +909,125 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-text">
-        <div class="section-label">About This Directory</div>
-        <h2 class="section-title">Built for Runners, by Runners</h2>
+        <div class="section-kicker">About This Directory</div>
+        <h2 class="section-title">Built for Runners,<br>by Runners</h2>
         <p>TrackClubFinder is a free national directory designed to make it easy for athletes of every level to find a local track club or running group in their area.</p>
-        <p>Whether you're a sprinter looking for a club with structured workouts, a distance runner seeking group long runs, or a parent searching for a youth track program, this directory covers clubs across all 50 states.</p>
-        <p>Each listing includes contact information, website links, Google ratings, and links to tools like Athletic.net so you can dig into race results before you commit.</p>
+        <p>Whether you're a sprinter looking for structured workouts, a distance runner seeking group long runs, or a parent searching for a youth track program — this directory covers clubs across all 50 states.</p>
         <ul class="about-highlights">
-          <li>Track clubs, running clubs, and cross country clubs all in one place</li>
+          <li>Track clubs, running clubs, and cross country clubs in one place</li>
           <li>Contact info, website, and Google rating for each listing</li>
-          <li>Links to Athletic.net profiles and race results where available</li>
+          <li>Links to Athletic.net profiles and race results</li>
           <li>Gear recommendations for beginners through competitive athletes</li>
-          <li>Regularly updated from Google Maps data via Outscraper</li>
+          <li>Sourced from Google Maps data via Outscraper, updated regularly</li>
         </ul>
       </div>
-      <div>
-        <div class="about-box">
-          <h3>Directory At a Glance</h3>
-          <div class="stat-row"><span>States Covered</span><span>All 50</span></div>
-          <div class="stat-row"><span>Club Types</span><span>Track, Running, XC</span></div>
-          <div class="stat-row"><span>Data Source</span><span>Google Maps</span></div>
-          <div class="stat-row"><span>Listings Include</span><span>Phone, Website, Rating</span></div>
-          <div class="stat-row"><span>Race Results</span><span>Via Athletic.net</span></div>
-          <div class="stat-row"><span>Cost to Search</span><span>Free</span></div>
-          <div class="stat-row"><span>Last Updated</span><span>2025</span></div>
+      <div class="about-photo">
+        <img src="/images/IMG_5761.JPG" alt="Track meet in Hawaii with athletes and spectators" loading="lazy">
+        <div class="about-photo-overlay">
+          <div class="about-photo-stat">
+            <div><strong>50</strong><span>States</span></div>
+            <div><strong>1,000+</strong><span>Clubs</span></div>
+            <div><strong>Free</strong><span>Forever</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── Gear ── -->
+<section id="gear" class="gear-section">
+  <div class="section-inner">
+    <div class="section-kicker">Affiliate Partners</div>
+    <h2 class="section-title">Recommended Track Gear</h2>
+    <p class="section-sub">Top-rated picks for track athletes at every level.</p>
+
+    <div class="gear-grid">
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=track+spikes&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:var(--red);"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Footwear</div>
+          <h3>Track Spikes</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=running+shoes+track&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#e67e22;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Footwear</div>
+          <h3>Performance Running Shoes</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=gps+running+watch&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#3b9ddd;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Technology</div>
+          <h3>GPS Running Watches</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=track+and+field+uniform&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#2ecc71;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Apparel</div>
+          <h3>Track Uniforms &amp; Shorts</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=running+hydration+vest&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#a29bfe;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Hydration</div>
+          <h3>Hydration Vests &amp; Bottles</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=foam+roller+running+recovery&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#fd79a8;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Recovery</div>
+          <h3>Recovery &amp; Stretching Tools</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=running+socks+athletic&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#f0a500;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Apparel</div>
+          <h3>Athletic Running Socks</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=running+sunglasses+sport&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-accent" style="background:#00b894;"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Accessories</div>
+          <h3>Sport Sunglasses</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+    </div>
+
+    <p style="margin-top:1.25rem; font-size:0.78rem; color:var(--muted);">
+      As an Amazon Associate, TrackClubFinder earns from qualifying purchases. Prices and availability subject to change.
+    </p>
+  </div>
+</section>
+
 <!-- ── FAQ ── -->
 <section class="faq-section">
   <div class="section-inner">
-    <div class="section-label">FAQ</div>
+    <div class="section-kicker">FAQ</div>
     <h2 class="section-title">Common Questions</h2>
     <p class="section-sub">Everything you need to know about finding a track club.</p>
 
@@ -905,7 +1060,7 @@
 
       <details>
         <summary>Can I add or update my club's listing?</summary>
-        <p>If your club is missing or has outdated information, the fastest way to update it is to make sure your Google Maps / Google Business Profile listing is accurate — our data pulls directly from that source. You can also contact us with corrections.</p>
+        <p>If your club is missing or has outdated information, the fastest way to update it is to make sure your Google Maps / Google Business Profile listing is accurate — our data pulls directly from that source.</p>
       </details>
 
       <details>
@@ -919,10 +1074,12 @@
 
 <!-- ── CTA ── -->
 <section class="cta-section">
-  <h2>Ready to Find Your Club?</h2>
-  <p>Browse listings across all 50 states — it's free and takes 30 seconds.</p>
-  <a class="btn" href="#browse">Browse by State</a>
-  <a class="btn btn-outline" href="https://www.athletic.net/" target="_blank" rel="noopener">Race Results on Athletic.net</a>
+  <div class="cta-inner">
+    <h2>Ready to Find Your Club?</h2>
+    <p>Browse listings across all 50 states — free to search, no account required.</p>
+    <a class="btn" href="#browse">Browse by State</a>
+    <a class="btn btn-outline" href="https://www.athletic.net/" target="_blank" rel="noopener">Race Results on Athletic.net</a>
+  </div>
 </section>
 
 <!-- ── Footer ── -->
@@ -947,8 +1104,6 @@
     if (!val) { alert('Please select a state first.'); return; }
     window.location.href = '/' + val + '/';
   }
-
-  // Allow Enter key on select
   document.getElementById('stateSelect').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') browseState();
   });
