@@ -423,7 +423,6 @@ function generateStatePage(stateData) {
     '    <div class="state-stats">\n' +
     '      <div class="state-stat"><strong>' + count + '</strong><span>Clubs Listed</span></div>\n' +
     '      <div class="state-stat"><strong>' + stateAbbr + '</strong><span>' + escapeHTML(stateName) + '</span></div>\n' +
-    '      <div class="state-stat"><strong>Free</strong><span>To Search</span></div>\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</section>\n\n' +
@@ -444,7 +443,7 @@ function generateStatePage(stateData) {
     '<!-- CTA -->\n' +
     '<section class="cta-section">\n' +
     '  <h2>Browse Other States</h2>\n' +
-    '  <p>Find track clubs in all 50 states — free to search.</p>\n' +
+    '  <p>Find track clubs in all 50 states.</p>\n' +
     '  <a class="btn" href="/#browse">Back to State Directory</a>\n' +
     '</section>\n\n' +
 
