@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Club | TrackClubFinder</title>
+  <meta name="description" content="Add your track club or running club to the TrackClubFinder national directory. Free listing for clubs across all 50 states.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://trackclubfinder.com/submit/">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC8M82YBSN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LC8M82YBSN');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #d63031;
+      --dark:   #111118;
+      --mid:    #1c1c28;
+      --gold:   #f0a500;
+      --light:  #f0f2f5;
+      --muted:  #8a9ab0;
+      --white:  #ffffff;
+      --radius: 6px;
+      --max:    1200px;
+    }
+
+    body {
+      font-family: "Barlow", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f0f2f5;
+      color: #1c1c28;
+      line-height: 1.6;
+    }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    header {
+      background: var(--dark);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .logo {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .logo span { color: var(--gold); }
+    nav a {
+      color: #9aaab8;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-left: 1.75rem;
+      letter-spacing: 0.3px;
+    }
+    nav a:hover { color: var(--white); text-decoration: none; }
+
+    /* ── Page Hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #1a1a30 60%, #0f1f40 100%);
+      padding: 3.5rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0px, var(--red) 40px,
+        transparent 40px, transparent 50px
+      );
+      opacity: 0.7;
+    }
+    .page-hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .page-kicker {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .page-hero h1 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero h1 em { font-style: normal; color: var(--gold); }
+    .page-hero p {
+      color: #9aaab8;
+      font-size: 1rem;
+      max-width: 520px;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-bar {
+      background: var(--white);
+      border-bottom: 1px solid #e0e4ea;
+      padding: 0.6rem 1.5rem;
+    }
+    .breadcrumbs {
+      max-width: var(--max);
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: #6a7a8a;
+    }
+    .breadcrumbs a { color: var(--red); }
+    .breadcrumbs span { margin: 0 0.4rem; color: #b0bec5; }
+
+    /* ── Form Section ── */
+    .form-section {
+      padding: 3.5rem 1.5rem 4rem;
+    }
+    .form-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .form-intro {
+      margin-bottom: 2rem;
+    }
+    .form-intro h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--dark);
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .form-intro p {
+      color: #5a6a7a;
+      font-size: 0.95rem;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid #dde3ea;
+      border-radius: 8px;
+      padding: 2rem 2rem 2.25rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #3a4a5a;
+      margin-bottom: 0.35rem;
+    }
+    label .req { color: var(--red); margin-left: 2px; }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d0d8e0;
+      border-radius: 4px;
+      padding: 0.65rem 0.9rem;
+      font-family: "Barlow", sans-serif;
+      font-size: 0.95rem;
+      color: #1c1c28;
+      background: #fafbfc;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(214,48,49,0.1);
+      background: var(--white);
+    }
+    textarea { resize: vertical; min-height: 90px; }
+
+    .form-divider {
+      border: none;
+      border-top: 1px solid #eaecf0;
+      margin: 1.75rem 0 1.5rem;
+    }
+    .form-section-label {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 0.875rem 2.5rem;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: #b52828; }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: #8a9ab0;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    /* ── Success message (shown after submit) ── */
+    .success-msg {
+      display: none;
+      background: #eafaf1;
+      border: 1px solid #a9dfbf;
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      color: #1e8449;
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ── Info aside ── */
+    .info-aside {
+      max-width: 680px;
+      margin: 2rem auto 0;
+      background: var(--dark);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .info-aside svg { flex-shrink: 0; margin-top: 2px; }
+    .info-aside p {
+      color: #9aaab8;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .info-aside strong { color: var(--white); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--dark);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .footer-inner { max-width: var(--max); margin: 0 auto; }
+    .footer-logo {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .footer-links a { color: #5a6a7a; font-size: 0.875rem; }
+    .footer-links a:hover { color: #9aaab8; text-decoration: none; }
+    .footer-disc {
+      font-size: 0.77rem;
+      color: #3a4a5a;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-card { padding: 1.25rem; }
+      .info-aside { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">Track<span>Club</span>Finder</a>
+    <nav>
+      <a href="/#browse">Browse States</a>
+      <a href="/#resources">Resources</a>
+      <a href="/#gear">Gear</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb-bar">
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>/</span> <strong>Submit Your Club</strong>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-kicker">Free Club Listing</div>
+    <h1>Submit Your <em>Club</em></h1>
+    <p>Add your track or running club to the national directory. All submissions are reviewed before being added.</p>
+  </div>
+</div>
+
+<section class="form-section">
+  <div class="form-wrap">
+
+    <div class="form-intro">
+      <h2>Club Submission Form</h2>
+      <p>Fill out the details below. Fields marked <span style="color:var(--red)">*</span> are required. We'll review your submission and add it to the directory within a few days.</p>
+    </div>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <div class="form-section-label">Club Information</div>
+
+        <div class="form-group">
+          <label for="club_name">Club Name <span class="req">*</span></label>
+          <input type="text" id="club_name" name="club_name" required placeholder="e.g. Spartan Track Club">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" name="city" required placeholder="e.g. Honolulu">
+          </div>
+          <div class="form-group">
+            <label for="state">State <span class="req">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">Select state...</option>
+              <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+              <option>Arkansas</option><option>California</option><option>Colorado</option>
+              <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+              <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+              <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+              <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+              <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+              <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+              <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+              <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+              <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+              <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+              <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+              <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+              <option>Texas</option><option>Utah</option><option>Vermont</option>
+              <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+              <option>Wisconsin</option><option>Wyoming</option>
+              <option>District of Columbia</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(808) 555-0100">
+          </div>
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" placeholder="https://yourclub.org">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Street Address</label>
+          <input type="text" id="address" name="address" placeholder="123 Track Blvd">
+        </div>
+
+        <hr class="form-divider">
+        <div class="form-section-label">Your Contact Info</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact_name">Your Name <span class="req">*</span></label>
+            <input type="text" id="contact_name" name="contact_name" required placeholder="First and last name">
+          </div>
+          <div class="form-group">
+            <label for="contact_email">Your Email <span class="req">*</span></label>
+            <input type="email" id="contact_email" name="contact_email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" placeholder="Anything else we should know — training schedule, age groups served, USATF affiliation, etc."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Club</button>
+
+        <p class="form-note">By submitting this form you confirm the information is accurate and that you are authorized to represent this club. Listings are free and at the discretion of TrackClubFinder.</p>
+
+      </form>
+    </div>
+
+    <div class="info-aside">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p><strong>Already on Google Maps?</strong> The fastest way to appear in this directory is to make sure your club has an accurate <strong>Google Business Profile</strong>. Our data pulls from Google Maps — a complete profile with address, phone, and website will be picked up in our next data refresh automatically.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Track<span>Club</span>Finder</div>
+    <div class="footer-links">
+      <a href="/#browse">Browse by State</a>
+      <a href="/#resources">Resources</a>
+      <a href="/#gear">Gear</a>
+      <a href="/submit/">Submit Your Club</a>
+      <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>
+      <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>
+    </div>
+    <p class="footer-disc">TrackClubFinder is an independent directory and is not affiliated with USA Track &amp; Field, Athletic.net, or any club listed. Club information is sourced from publicly available data and may not be current — verify details directly with each club. Some links on this site are affiliate links; we may earn a commission on qualifying purchases at no extra cost to you.</p>
+  </div>
+</footer>
+
+</body>
+</html>

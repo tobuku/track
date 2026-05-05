@@ -247,6 +247,7 @@ function footerHTML() {
     '      <a href="/#browse">Browse by State</a>\n' +
     '      <a href="/#resources">Resources</a>\n' +
     '      <a href="/#gear">Gear</a>\n' +
+    '      <a href="/submit/">Submit Your Club</a>\n' +
     '      <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>\n' +
     '      <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>\n' +
     '    </div>\n' +
