@@ -37,6 +37,61 @@ var STATE_NAMES = {
   "WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","DC":"District of Columbia"
 };
 
+// Geographically adjacent states (max 6 per state)
+var STATE_NEIGHBORS = {
+  "AL":["FL","GA","TN","MS"],
+  "AK":["WA","OR"],
+  "AZ":["CA","NV","UT","NM"],
+  "AR":["MO","TN","MS","LA","TX","OK"],
+  "CA":["OR","NV","AZ"],
+  "CO":["WY","NE","KS","OK","NM","UT"],
+  "CT":["NY","MA","RI"],
+  "DC":["MD","VA"],
+  "DE":["MD","PA","NJ"],
+  "FL":["GA","AL"],
+  "GA":["FL","AL","TN","NC","SC"],
+  "HI":["CA","OR"],
+  "ID":["MT","WY","UT","NV","OR","WA"],
+  "IL":["WI","IA","MO","KY","IN"],
+  "IN":["IL","KY","OH","MI"],
+  "IA":["MN","WI","IL","MO","NE","SD"],
+  "KS":["NE","CO","OK","MO"],
+  "KY":["OH","IN","IL","MO","TN","VA"],
+  "LA":["TX","AR","MS"],
+  "ME":["NH"],
+  "MD":["VA","DC","DE","PA","WV"],
+  "MA":["NY","CT","RI","NH","VT"],
+  "MI":["WI","IN","OH"],
+  "MN":["ND","SD","IA","WI"],
+  "MS":["LA","AR","TN","AL"],
+  "MO":["IA","IL","KY","TN","AR","OK"],
+  "MT":["ND","SD","WY","ID"],
+  "NE":["SD","IA","MO","KS","CO","WY"],
+  "NV":["CA","OR","ID","UT","AZ"],
+  "NH":["ME","VT","MA"],
+  "NJ":["NY","PA","DE"],
+  "NM":["CO","OK","TX","AZ"],
+  "NY":["VT","MA","CT","NJ","PA"],
+  "NC":["VA","TN","SC","GA"],
+  "ND":["MT","SD","MN"],
+  "OH":["MI","IN","KY","WV","PA"],
+  "OK":["KS","MO","AR","TX","NM","CO"],
+  "OR":["WA","ID","NV","CA"],
+  "PA":["NY","NJ","DE","MD","WV","OH"],
+  "RI":["CT","MA"],
+  "SC":["NC","GA"],
+  "SD":["ND","MN","IA","NE","WY","MT"],
+  "TN":["KY","VA","NC","GA","AL","MS"],
+  "TX":["NM","OK","AR","LA"],
+  "UT":["ID","WY","CO","NM","AZ","NV"],
+  "VT":["NY","NH","MA"],
+  "VA":["MD","DC","WV","KY","TN","NC"],
+  "WA":["OR","ID"],
+  "WV":["OH","PA","MD","VA","KY"],
+  "WI":["MN","IA","IL","MI"],
+  "WY":["MT","SD","NE","CO","UT","ID"]
+};
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function slugify(str) {
@@ -440,6 +495,25 @@ function generateStatePage(stateData) {
     '</section>\n\n' +
 
     gearSectionHTML() +
+
+    (function() {
+      var neighbors = STATE_NEIGHBORS[stateAbbr] || [];
+      if (!neighbors.length) return '';
+      var links = neighbors.map(function(abbr) {
+        var name = STATE_NAMES[abbr] || abbr;
+        var nslug = slugify(name);
+        return '    <a class="nearby-link" href="/' + nslug + '/">' + escapeHTML(name) + '</a>';
+      }).join('\n');
+      return '<!-- Nearby States -->\n' +
+        '<section class="nearby-section">\n' +
+        '  <div class="section-inner">\n' +
+        '    <h2 class="nearby-title">Nearby States</h2>\n' +
+        '    <div class="nearby-links">\n' +
+        links + '\n' +
+        '    </div>\n' +
+        '  </div>\n' +
+        '</section>\n\n';
+    })() +
 
     '<!-- CTA -->\n' +
     '<section class="cta-section">\n' +

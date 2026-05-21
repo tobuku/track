@@ -188,6 +188,23 @@ nav a:hover { color: var(--white); text-decoration: none; }
 .club-link--secondary { color: #888; border-color: #ccc; font-weight: 400; }
 .club-link--secondary:hover { background: #888; color: var(--white); }
 
+/* ── Nearby states ── */
+.nearby-section { padding: 2rem 0; border-top: 1px solid #eee; }
+.nearby-title { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.nearby-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.nearby-link {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: var(--dark);
+  text-decoration: none;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.nearby-link:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+
 /* ── Gear section ── */
 .gear-section {
   background: #f8f9fa;
