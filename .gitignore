@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+scraped-clubs.csv
+.scrape-checkpoint.json
+.gsc-credentials/
