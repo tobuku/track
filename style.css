@@ -185,6 +185,8 @@ nav a:hover { color: var(--white); text-decoration: none; }
 .club-link:hover { background: var(--red); color: var(--white); text-decoration: none; }
 .club-link.athletic { color: #2980b9; }
 .club-link.athletic:hover { background: #2980b9; color: var(--white); }
+.club-link--secondary { color: #888; border-color: #ccc; font-weight: 400; }
+.club-link--secondary:hover { background: #888; color: var(--white); }
 
 /* ── Gear section ── */
 .gear-section {

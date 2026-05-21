@@ -328,13 +328,14 @@ function generateStatePage(stateData) {
       phoneHTML = '<a class="club-phone" href="tel:' + c.phoneTel + '">&#128222; ' + escapeHTML(c.phoneFmt) + '</a>\n';
     }
 
+    var athleticSearch = 'https://www.athletic.net/search?q=' + encodeURIComponent(c.name + ' ' + stateAbbr);
     var linksHTML = '<div class="club-links">\n';
     if (c.website) {
-      var displayUrl = c.website.replace(/^https?:\/\//, "").replace(/\/$/, "");
       linksHTML += '  <a class="club-link" href="' + escapeHTML(c.website) + '" target="_blank" rel="noopener">Website &#8599;</a>\n';
+      linksHTML += '  <a class="club-link club-link--secondary" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
+    } else {
+      linksHTML += '  <a class="club-link athletic" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
     }
-    var athleticSearch = 'https://www.athletic.net/search?q=' + encodeURIComponent(c.name + ' ' + stateAbbr);
-    linksHTML += '  <a class="club-link athletic" href="' + athleticSearch + '" target="_blank" rel="noopener">Athletic.net &#8599;</a>\n';
     linksHTML += '</div>\n';
 
     // Schema.org LocalBusiness for this club
