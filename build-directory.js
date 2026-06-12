@@ -433,6 +433,7 @@ function generateStatePage(stateData) {
     '  <meta name="description" content="Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + '. Browse contact info, websites, Google ratings, and links to race results on Athletic.net.">\n' +
     '  <meta name="robots" content="index, follow">\n' +
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
+    '  <link rel="icon" type="image/png" href="/favicon.png">\n' +
     '  <meta property="og:title" content="Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder">\n' +
     '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
