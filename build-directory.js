@@ -287,7 +287,7 @@ function headerHTML() {
     '    <a class="logo" href="/">Track<span>Club</span>Finder</a>\n' +
     '    <nav>\n' +
     '      <a href="/#browse">Browse by State</a>\n' +
-    '      <a href="/#resources">Resources</a>\n' +
+    '      <a href="/essentials/">Essentials</a>\n' +
     '      <a href="/#gear">Gear</a>\n' +
     '    </nav>\n' +
     '  </div>\n' +
@@ -300,13 +300,13 @@ function footerHTML() {
     '    <div class="footer-logo">Track<span>Club</span>Finder</div>\n' +
     '    <div class="footer-links">\n' +
     '      <a href="/#browse">Browse by State</a>\n' +
-    '      <a href="/#resources">Resources</a>\n' +
+    '      <a href="/essentials/">Essentials</a>\n' +
     '      <a href="/#gear">Gear</a>\n' +
     '      <a href="/submit/">Submit Your Club</a>\n' +
     '      <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>\n' +
     '      <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>\n' +
     '    </div>\n' +
-    '    <p class="footer-disc">TrackClubFinder is an independent directory and is not affiliated with USA Track &amp; Field, Athletic.net, or any club listed. Club information is sourced from publicly available data and may not be current — verify details directly with each club. Some links on this site are affiliate links; we may earn a commission on qualifying purchases at no extra cost to you.</p>\n' +
+    '    <p class="footer-disc">TrackClubFinder is an independent directory and is not affiliated with USA Track &amp; Field, Athletic.net, or any club listed. Club information is sourced from publicly available data and may not be current - verify details directly with each club. Some links on this site are affiliate links; we may earn a commission on qualifying purchases at no extra cost to you. This includes Amazon Associates and other affiliate partners.</p>\n' +
     '  </div>\n' +
     '</footer>\n';
 }
@@ -537,7 +537,8 @@ function generateSitemap(states) {
   var xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     '  <url><loc>' + SITE_DOMAIN + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' +
-    '  <url><loc>' + SITE_DOMAIN + '/submit/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n';
+    '  <url><loc>' + SITE_DOMAIN + '/submit/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' +
+    '  <url><loc>' + SITE_DOMAIN + '/essentials/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n';
 
   var stateKeys = Object.keys(states).sort();
   for (var i = 0; i < stateKeys.length; i++) {
