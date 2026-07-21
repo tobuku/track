@@ -87,6 +87,14 @@
       letter-spacing: 0.3px;
     }
     nav a:hover { color: var(--white); text-decoration: none; }
+    nav a.nav-highlight {
+      color: #fff;
+      background: var(--gold);
+      padding: 0.3rem 0.75rem;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+    nav a.nav-highlight:hover { background: #e08e0b; }
 
     /* ── Hero ── */
     .hero {
@@ -658,7 +666,7 @@
     <div class="logo">Track<span>Club</span>Finder</div>
     <nav>
       <a href="#browse">Browse States</a>
-      <a href="/essentials/">Essentials</a>
+      <a href="/essentials/" class="nav-highlight">Essentials</a>
       <a href="#gear">Gear</a>
       <a href="#about">About</a>
     </nav>
@@ -1109,7 +1117,7 @@
     <div class="footer-logo">Track<span>Club</span>Finder</div>
     <div class="footer-links">
       <a href="#browse">Browse by State</a>
-      <a href="/essentials/">Essentials</a>
+      <a href="/essentials/" class="nav-highlight">Essentials</a>
       <a href="#gear">Gear</a>
       <a href="#about">About</a>
       <a href="/submit/">Submit Your Club</a>

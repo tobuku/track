@@ -50,6 +50,14 @@ nav a {
   margin-left: 1.5rem;
 }
 nav a:hover { color: var(--white); text-decoration: none; }
+nav a.nav-highlight {
+  color: #fff;
+  background: var(--gold);
+  padding: 0.3rem 0.75rem;
+  border-radius: 3px;
+  font-weight: 700;
+}
+nav a.nav-highlight:hover { background: #e08e0b; }
 
 /* ── Section base ── */
 .section-inner { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }

@@ -287,7 +287,7 @@ function headerHTML() {
     '    <a class="logo" href="/">Track<span>Club</span>Finder</a>\n' +
     '    <nav>\n' +
     '      <a href="/#browse">Browse by State</a>\n' +
-    '      <a href="/essentials/">Essentials</a>\n' +
+    '      <a href="/essentials/" class="nav-highlight">Essentials</a>\n' +
     '      <a href="/#gear">Gear</a>\n' +
     '    </nav>\n' +
     '  </div>\n' +
