@@ -159,8 +159,7 @@
       background: var(--white);
       border: 1px solid #e0e0e0;
       border-radius: var(--radius);
-      padding: 1.5rem;
-      text-align: center;
+      overflow: hidden;
       transition: box-shadow 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
@@ -170,9 +169,24 @@
       transform: translateY(-2px);
       text-decoration: none;
     }
-    .product-icon {
-      font-size: 2.2rem;
-      margin-bottom: 0.75rem;
+    .product-img {
+      height: 140px;
+      overflow: hidden;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img img { transform: scale(1.05); }
+    .product-body {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
     .product-card h3 {
       font-family: "Barlow Condensed", sans-serif;
@@ -486,87 +500,111 @@
     <div class="products-grid">
 
       <a class="product-card" href="https://www.amazon.com/s?k=stadium+seat+bleacher+back+support+padded&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#128378;</div>
-        <h3>Bleacher Seats</h3>
-        <p>Padded stadium seats with back support. Folds flat, carries with a shoulder strap.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0805.JPG" alt="Track meet spectator area" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Bleacher Seats</h3>
+          <p>Padded stadium seats with back support. Folds flat, carries with a shoulder strap.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=portable+folding+chair+lightweight+outdoor+camp&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#129681;</div>
-        <h3>Folding Chairs</h3>
-        <p>Lightweight folding chairs with cup holders for trackside and grass areas.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0724.JPG" alt="Track meet setup area" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Folding Chairs</h3>
+          <p>Lightweight folding chairs with cup holders for trackside and grass areas.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=pop+up+canopy+tent+10x10+UV+UPF+50&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#9978;</div>
-        <h3>Canopy Tents</h3>
-        <p>Pop-up shade tents with UV protection. Essential for venues with no overhead cover.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0836.JPG" alt="Sunny track with no shade" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Canopy Tents</h3>
+          <p>Pop-up shade tents with UV protection. Essential for venues with no overhead cover.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=UV+umbrella+UPF+50+sport+large+sun&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#9748;</div>
-        <h3>UV Umbrellas</h3>
-        <p>UPF 50+ sport umbrellas for personal shade. Works for sun and unexpected rain.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0751.JPG" alt="Open track in direct sunlight" loading="lazy"></div>
+        <div class="product-body">
+          <h3>UV Umbrellas</h3>
+          <p>UPF 50+ sport umbrellas for personal shade. Works for sun and unexpected rain.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=wheeled+cooler+portable+outdoor+rolling&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#129482;</div>
-        <h3>Coolers</h3>
-        <p>Rolling and soft-sided coolers to keep drinks and snacks cold through an all-day meet.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_9680.JPG" alt="All-day outdoor track event" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Coolers</h3>
+          <p>Rolling and soft-sided coolers to keep drinks and snacks cold through an all-day meet.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=insulated+water+bottle+stainless+steel+32oz&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#127861;</div>
-        <h3>Water Bottles &amp; Flasks</h3>
-        <p>Insulated stainless steel bottles that keep water cold for 24 hours.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0723.JPG" alt="Track surface close-up" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Water Bottles &amp; Flasks</h3>
+          <p>Insulated stainless steel bottles that keep water cold for 24 hours.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=sport+sunscreen+SPF+50+sweat+resistant&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#9728;</div>
-        <h3>Sunscreen SPF 50+</h3>
-        <p>Sweat-resistant sport formula. Reapply every 2 hours during meets.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_5760.JPG" alt="Sunny track with Honolulu skyline" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Sunscreen SPF 50+</h3>
+          <p>Sweat-resistant sport formula. Reapply every 2 hours during meets.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=sport+visor+UV+protection+running+outdoor&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#129506;</div>
-        <h3>Visors &amp; Hats</h3>
-        <p>UV-protection visors and wide-brim hats for parents watching in direct sun.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0735.JPG" alt="Athletes on the track in the sun" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Visors &amp; Hats</h3>
+          <p>UV-protection visors and wide-brim hats for parents watching in direct sun.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=compact+binoculars+sports+8x21+lightweight&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#128301;</div>
-        <h3>Binoculars</h3>
-        <p>Compact 8x21 binoculars for watching field events across the venue.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_5761.JPG" alt="Track meet venue view" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Binoculars</h3>
+          <p>Compact 8x21 binoculars for watching field events across the venue.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=collapsible+wagon+folding+all+terrain+utility&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#128722;</div>
-        <h3>Collapsible Wagons</h3>
-        <p>All-terrain folding wagons to haul chairs, coolers, and gear from the lot.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0747.JPG" alt="Track meet equipment" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Collapsible Wagons</h3>
+          <p>All-terrain folding wagons to haul chairs, coolers, and gear from the lot.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=portable+battery+fan+clip+on+rechargeable+outdoor&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#127744;</div>
-        <h3>Portable Fans</h3>
-        <p>Rechargeable clip-on or handheld fans for hot days with no breeze.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0745.JPG" alt="Running shoes on hot track" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Portable Fans</h3>
+          <p>Rechargeable clip-on or handheld fans for hot days with no breeze.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
       <a class="product-card" href="https://www.amazon.com/s?k=portable+phone+charger+power+bank+10000mAh&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-icon">&#128267;</div>
-        <h3>Portable Chargers</h3>
-        <p>Keep your phone alive for photos, videos, and live results all day.</p>
-        <span class="product-cta">Shop on Amazon &#8599;</span>
+        <div class="product-img"><img src="/images/IMG_0740.JPG" alt="Timing technology at a meet" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Portable Chargers</h3>
+          <p>Keep your phone alive for photos, videos, and live results all day.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
       </a>
 
     </div>
@@ -574,7 +612,8 @@
   </div>
 </section>
 
-<!-- JD Sports Partner Section -->
+<!-- JD Sports Partner Section — DISABLED: Rakuten links returning "Invalid Publisher" error.
+     Re-enable once Rakuten partnership is fully activated. All link code preserved below.
 <section class="partner-section">
   <div class="section-inner">
     <div class="partner-banner">
@@ -600,6 +639,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- Pro Tips -->
 <section class="tips-section">
