@@ -23,6 +23,18 @@ var AFFILIATE_TAG = "dwelldoc-20";
 var SITE_DOMAIN   = "https://trackclubfinder.com";
 var GA4_ID        = "G-LC8M82YBSN";
 
+// Featured clubs with extra links and badge
+var FEATURED_CLUBS = {
+  "Quick Track Club": {
+    badge: "Featured Club",
+    description: "Home of the 2025 USATF Cross Country National Champions across multiple youth divisions.",
+    social: [
+      { label: "Facebook", url: "https://www.facebook.com/QuickTrackClub/" },
+      { label: "Yelp", url: "https://www.yelp.com/biz/quick-track-club-placentia" }
+    ]
+  }
+};
+
 var STATE_NAMES = {
   "AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California",
   "CO":"Colorado","CT":"Connecticut","DE":"Delaware","FL":"Florida","GA":"Georgia",
@@ -397,17 +409,34 @@ function generateStatePage(stateData) {
     var schemaName = c.name.replace(/"/g, '\\"');
     var schemaCity = c.city.replace(/"/g, '\\"');
 
-    listingsHTML += '<div class="club-card" itemscope itemtype="https://schema.org/LocalBusiness">\n' +
+    // Check if this club is featured
+    var featured = FEATURED_CLUBS[c.name];
+    var cardClass = 'club-card' + (featured ? ' club-card--featured' : '');
+    var badgeHTML = featured ? '  <span class="featured-badge">' + escapeHTML(featured.badge) + '</span>\n' : '';
+    var descHTML = featured && featured.description ? '  <p class="featured-desc">' + escapeHTML(featured.description) + '</p>\n' : '';
+    var socialHTML = '';
+    if (featured && featured.social) {
+      socialHTML = '  <div class="club-social">\n';
+      for (var s = 0; s < featured.social.length; s++) {
+        socialHTML += '    <a class="club-social-link" href="' + escapeHTML(featured.social[s].url) + '" target="_blank" rel="noopener">' + escapeHTML(featured.social[s].label) + ' &#8599;</a>\n';
+      }
+      socialHTML += '  </div>\n';
+    }
+
+    listingsHTML += '<div class="' + cardClass + '" itemscope itemtype="https://schema.org/LocalBusiness">\n' +
       '  <meta itemprop="name" content="' + escapeHTML(c.name) + '">\n' +
       (c.street ? '  <meta itemprop="streetAddress" content="' + escapeHTML(c.street) + '">\n' : '') +
       (c.city   ? '  <meta itemprop="addressLocality" content="' + escapeHTML(c.city) + '">\n' : '') +
       '  <meta itemprop="addressRegion" content="' + stateAbbr + '">\n' +
       (c.rating ? '  <meta itemprop="ratingValue" content="' + escapeHTML(c.rating) + '">\n' : '') +
+      badgeHTML +
       '  <h2 class="club-name" itemprop="name">' + escapeHTML(c.name) + '</h2>\n' +
       ratingHTML +
       addressHTML +
       phoneHTML +
+      descHTML +
       linksHTML +
+      socialHTML +
       '</div>\n\n';
   }
 
