@@ -129,6 +129,33 @@ nav a.nav-highlight:hover { background: #e08e0b; }
   letter-spacing: 0.5px;
 }
 
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.club-filter {
+  flex: 1;
+  max-width: 420px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.club-filter:focus {
+  border-color: var(--red);
+}
+.filter-count {
+  font-size: 0.85rem;
+  color: #636e72;
+  white-space: nowrap;
+}
+
 /* ── Listings ── */
 .listings-section {
   padding: 3rem 0;

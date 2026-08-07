@@ -140,6 +140,10 @@
   <div class="section-inner">
     <div class="section-label">Directory</div>
     <h2 class="section-title">All Track &amp; Running Clubs in Illinois</h2>
+    <div class="filter-bar">
+      <input type="text" id="club-filter" class="club-filter" placeholder="Filter by city or club name…" aria-label="Filter clubs">
+      <span id="filter-count" class="filter-count">57 clubs</span>
+    </div>
     <div class="clubs-grid">
 <div class="club-card" itemscope itemtype="https://schema.org/LocalBusiness">
   <meta itemprop="name" content="Chicago Run">
@@ -918,5 +922,26 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var input=document.getElementById("club-filter");
+  var countEl=document.getElementById("filter-count");
+  var cards=document.querySelectorAll(".club-card");
+  var total=cards.length;
+  input.addEventListener("input",function(){
+    var q=this.value.toLowerCase().trim();
+    var visible=0;
+    for(var i=0;i<cards.length;i++){
+      var name=cards[i].querySelector(".club-name").textContent.toLowerCase();
+      var addr=cards[i].querySelector(".club-address");
+      var loc=addr?addr.textContent.toLowerCase():"";
+      var show=!q||name.indexOf(q)!==-1||loc.indexOf(q)!==-1;
+      cards[i].style.display=show?"":"none";
+      if(show)visible++;
+    }
+    countEl.textContent=visible+(visible===1?" club":" clubs")+(q?" found":"");
+  });
+})();
+</script>
 </body>
 </html>

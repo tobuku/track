@@ -489,6 +489,10 @@ function generateStatePage(stateData) {
     '  <div class="section-inner">\n' +
     '    <div class="section-label">Directory</div>\n' +
     '    <h2 class="section-title">All Track &amp; Running Clubs in ' + escapeHTML(stateName) + '</h2>\n' +
+    '    <div class="filter-bar">\n' +
+    '      <input type="text" id="club-filter" class="club-filter" placeholder="Filter by city or club name\u2026" aria-label="Filter clubs">\n' +
+    '      <span id="filter-count" class="filter-count">' + count + ' clubs</span>\n' +
+    '    </div>\n' +
     '    <div class="clubs-grid">\n' +
     listingsHTML +
     '    </div>\n' +
@@ -525,7 +529,28 @@ function generateStatePage(stateData) {
 
     '</main>\n\n' +
     footerHTML() +
-    '\n</body>\n</html>\n';
+    '\n<script>\n' +
+    '(function(){\n' +
+    '  var input=document.getElementById("club-filter");\n' +
+    '  var countEl=document.getElementById("filter-count");\n' +
+    '  var cards=document.querySelectorAll(".club-card");\n' +
+    '  var total=cards.length;\n' +
+    '  input.addEventListener("input",function(){\n' +
+    '    var q=this.value.toLowerCase().trim();\n' +
+    '    var visible=0;\n' +
+    '    for(var i=0;i<cards.length;i++){\n' +
+    '      var name=cards[i].querySelector(".club-name").textContent.toLowerCase();\n' +
+    '      var addr=cards[i].querySelector(".club-address");\n' +
+    '      var loc=addr?addr.textContent.toLowerCase():"";\n' +
+    '      var show=!q||name.indexOf(q)!==-1||loc.indexOf(q)!==-1;\n' +
+    '      cards[i].style.display=show?"":"none";\n' +
+    '      if(show)visible++;\n' +
+    '    }\n' +
+    '    countEl.textContent=visible+(visible===1?" club":" clubs")+(q?" found":"");\n' +
+    '  });\n' +
+    '})();\n' +
+    '</script>\n' +
+    '</body>\n</html>\n';
 
   return html;
 }
