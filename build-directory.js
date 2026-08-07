@@ -332,7 +332,10 @@ function gearSectionHTML() {
     { cat: "Technology",  name: "GPS Running Watches",         img: "/images/IMG_0740.JPG", alt: "Timing technology at a meet",     q: "gps+running+watch" },
     { cat: "Apparel",     name: "Track Uniforms &amp; Shorts", img: "/images/IMG_0735.JPG", alt: "Athletes on the track",           q: "track+and+field+uniform" },
     { cat: "Recovery",    name: "Recovery &amp; Stretching",   img: "/images/IMG_0723.JPG", alt: "Track surface close-up",          q: "foam+roller+running+recovery" },
-    { cat: "Accessories", name: "Sport Sunglasses",            img: "/images/IMG_0836.JPG", alt: "Sunny track in Honolulu",         q: "running+sunglasses+sport" }
+    { cat: "Accessories", name: "Sport Sunglasses",            img: "/images/IMG_0836.JPG", alt: "Sunny track in Honolulu",         q: "running+sunglasses+sport" },
+    { cat: "Gear",        name: "Track Bags &amp; Backpacks", img: "/images/IMG_0690.JPG", alt: "Red track with Honolulu skyline",  q: "running+backpack+bag+track" },
+    { cat: "Training",    name: "Resistance Bands",           img: "/images/IMG_0736.JPG", alt: "Lane numbers on a track",          q: "resistance+bands+running+training" },
+    { cat: "Meet Day",    name: "Pop-Up Canopy Tents",        img: "/images/IMG_9748.JPG", alt: "Track meet with canopy tents",     q: "pop+up+canopy+tent+10x10+UV+UPF+50" }
   ];
 
   var html = '<section class="gear-section" id="gear">\n' +

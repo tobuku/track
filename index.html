@@ -296,10 +296,10 @@
     .photo-strip {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      height: 300px;
       gap: 3px;
       padding: 0;
     }
+    .photo-strip-item { height: 200px; }
     .photo-strip-item {
       overflow: hidden;
       position: relative;
@@ -638,7 +638,8 @@
     @media (max-width: 600px) {
       nav { display: none; }
       .hero-stats { gap: 1.75rem; }
-      .photo-strip { height: 180px; grid-template-columns: repeat(3, 1fr); }
+      .photo-strip { grid-template-columns: repeat(3, 1fr); }
+      .photo-strip-item { height: 140px; }
       .state-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
@@ -832,6 +833,21 @@
   <div class="photo-strip-item">
     <img src="/images/IMG_0805.JPG" alt="Meet day atmosphere in Honolulu" loading="lazy">
   </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0827.JPG" alt="Track lanes with Honolulu skyline and buildings" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_5766.JPG" alt="Blue track with dramatic clouds in Hawaii" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9683.JPG" alt="View from the bleachers at a track meet" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0690.JPG" alt="Empty red track with city skyline" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0754.JPG" alt="Lane numbers on a red track with bleachers and skyline" loading="lazy">
+  </div>
 </div>
 
 <!-- ── Resources ── -->
@@ -935,6 +951,25 @@
   </div>
 </section>
 
+<!-- ── Venue Photos ── -->
+<div class="photo-strip" aria-hidden="true">
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0695.JPG" alt="Track curve with high jump pit" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0701.JPG" alt="Lane markings with blue triangle stagger markers" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0706.JPG" alt="Close-up of blue stagger markers on red track" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9696.JPG" alt="Blue track from the bleachers on a cloudy day" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9070.jpg" alt="Track meet through the fence with canopy tents" loading="lazy">
+  </div>
+</div>
+
 <!-- ── About ── -->
 <section id="about" class="about-section">
   <div class="section-inner">
@@ -964,6 +999,25 @@
     </div>
   </div>
 </section>
+
+<!-- ── Lane Lines ── -->
+<div class="photo-strip" aria-hidden="true">
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0714.JPG" alt="Diagonal lane lines on a red track surface" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0715.JPG" alt="Track lane lines converging toward the infield" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0718.JPG" alt="Red track surface with white lane markings" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0778.JPG" alt="Lane numbers and timing equipment at the start line" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0797.JPG" alt="Timing system equipment positioned at the start line" loading="lazy">
+  </div>
+</div>
 
 <!-- ── Gear ── -->
 <section id="gear" class="gear-section">
@@ -1046,6 +1100,42 @@
         </div>
       </a>
 
+      <a class="gear-card" href="https://www.amazon.com/s?k=running+backpack+bag+track&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-img"><img src="/images/IMG_0825.JPG" alt="Track curve with lane numbers" loading="lazy"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Gear</div>
+          <h3>Track Bags &amp; Backpacks</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=resistance+bands+running+training&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-img"><img src="/images/IMG_0732.JPG" alt="Lane 6 number on a red track" loading="lazy"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Training</div>
+          <h3>Resistance Bands</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=compression+sleeves+running+arm+leg&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-img"><img src="/images/IMG_0734.JPG" alt="Lane numbers 6 and 7 on the track" loading="lazy"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Apparel</div>
+          <h3>Compression Sleeves</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="gear-card" href="https://www.amazon.com/s?k=agility+ladder+cones+training+set&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="gear-img"><img src="/images/IMG_0823.JPG" alt="Track lane with blue triangle marker" loading="lazy"></div>
+        <div class="gear-body">
+          <div class="gear-cat">Training</div>
+          <h3>Agility &amp; Speed Training</h3>
+          <span class="gear-cta">Shop Amazon &#8599;</span>
+        </div>
+      </a>
+
     </div>
 
     <p style="margin-top:1.25rem; font-size:0.78rem; color:var(--muted);">
@@ -1053,6 +1143,31 @@
     </p>
   </div>
 </section>
+
+<!-- ── Track Surface Gallery ── -->
+<div class="photo-strip" aria-hidden="true">
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0699.JPG" alt="Close-up of red track surface curve" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0708.JPG" alt="Blue stagger markers with grass infield edge" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0780.JPG" alt="Track lane numbers from a low angle" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0781.JPG" alt="Starting line lane numbers at a track stadium" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0709.JPG" alt="Wide view of blue stagger markers on red track" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_9748.JPG" alt="Blue track with canopy tents and dramatic clouds" loading="lazy">
+  </div>
+  <div class="photo-strip-item">
+    <img src="/images/IMG_0736.JPG" alt="Lane numbers 5, 6, and 7 on a red track" loading="lazy">
+  </div>
+</div>
 
 <!-- ── FAQ ── -->
 <section class="faq-section">

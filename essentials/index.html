@@ -329,6 +329,10 @@
       line-height: 1.5;
     }
 
+    @media (max-width: 768px) {
+      .partner-info > a:first-of-type { display: none !important; }
+      .jd-banner-medium { display: block !important; }
+    }
     @media (max-width: 600px) {
       .kits-grid { grid-template-columns: 1fr; }
       .products-grid { grid-template-columns: repeat(2, 1fr); }
@@ -389,7 +393,10 @@
 
       <!-- Solo Parent Kit -->
       <div class="kit-card kit-card--solo">
-        <img src="/images/one-parent-kit.jpg" alt="Parent sitting under an umbrella at a track meet" style="width:100%;height:180px;object-fit:cover;border-radius:4px;margin-bottom:1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:1rem;">
+          <img src="/images/one-parent-kit.jpg" alt="Parent sitting under an umbrella at a track meet" style="width:100%;height:120px;object-fit:cover;border-radius:4px;">
+          <img src="/images/bleacher-seats.jpg" alt="Padded bleacher seat with back support" style="width:100%;height:120px;object-fit:cover;border-radius:4px;">
+        </div>
         <span class="kit-badge">Solo Parent</span>
         <h3>One Parent Kit</h3>
         <p class="kit-desc">Light, portable, and easy to carry from the parking lot. Everything one parent needs to stay comfortable through a full meet day.</p>
@@ -503,7 +510,7 @@
     <div class="products-grid">
 
       <a class="product-card" href="https://www.amazon.com/s?k=stadium+seat+bleacher+back+support+padded&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
-        <div class="product-img"><img src="/images/bleacher-seats.jpg" alt="Bleacher seat with back support" loading="lazy"></div>
+        <div class="product-img"><img src="/images/usatf/portable-stadium-seat-cushions-with-sunshade-canopy-and-back-support.JPG" alt="Stadium seats with sunshade canopies at a track meet" loading="lazy"></div>
         <div class="product-body">
           <h3>Bleacher Seats</h3>
           <p>Padded stadium seats with back support. Folds flat, carries with a shoulder strap.</p>
@@ -619,8 +626,66 @@
         </div>
       </a>
 
+      <a class="product-card" href="https://www.amazon.com/s?k=mophie+power+bank+portable+charger&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="product-img"><img src="/images/portable-chargers.JPG" alt="Mophie portable power bank" loading="lazy"></div>
+        <div class="product-body">
+          <h3>High-Capacity Power Banks</h3>
+          <p>Slim, pocketable power banks with 10,000+ mAh for all-day charging.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
+      </a>
+
+      <a class="product-card" href="https://www.amazon.com/s?k=spotting+scope+monocular+HD+high+power&tag=dwelldoc-20" target="_blank" rel="noopener sponsored">
+        <div class="product-img"><img src="/images/single-sight binoculars.JPG" alt="HD spotting scope monocular" loading="lazy"></div>
+        <div class="product-body">
+          <h3>Monocular Scopes</h3>
+          <p>High-power monocular scopes for watching field events from across the stadium.</p>
+          <span class="product-cta">Shop on Amazon &#8599;</span>
+        </div>
+      </a>
+
     </div>
     <p style="margin-top:1.25rem;font-size:.8rem;color:#95a5a6;">As an Amazon Associate, TrackClubFinder earns from qualifying purchases.</p>
+  </div>
+</section>
+
+<!-- Cooler Size Guide -->
+<section class="products-section" style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-label">Cooler Comparison</div>
+    <h2 class="section-title">Cooler Size Guide</h2>
+    <p style="max-width:640px;color:#636e72;font-size:0.95rem;line-height:1.6;margin-bottom:2rem;">Not sure what size cooler to bring? Solo parents need something light and portable. Families need capacity for drinks, snacks, and ice that lasts all day. Here are real coolers we have used at meets.</p>
+
+    <div class="kits-grid">
+      <div class="kit-card kit-card--solo">
+        <span class="kit-badge">Solo Parent</span>
+        <h3>Personal Coolers</h3>
+        <p class="kit-desc">Compact coolers that fit beside you on the bleachers. Holds 4-6 drinks and a few snacks.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;">
+          <img src="/images/igloo-one-parent-kit-cooler.JPG" alt="Igloo MiniMate personal cooler closed" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/igloo-one-parent-kit-cooler-open.JPG" alt="Igloo MiniMate personal cooler open" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/rubbermaid-one-parent-kit-cooler-square.JPG" alt="Rubbermaid personal cooler closed" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/rubbermaid-one-parent-kit-cooler-square-open.JPG" alt="Rubbermaid personal cooler open" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+        </div>
+        <a href="https://www.amazon.com/s?k=personal+cooler+small+portable+6+can&tag=dwelldoc-20" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:1rem;font-size:0.85rem;font-weight:700;color:var(--red);">Shop Personal Coolers &#8599;</a>
+      </div>
+
+      <div class="kit-card kit-card--family">
+        <span class="kit-badge">Family</span>
+        <h3>Full-Size Coolers</h3>
+        <p class="kit-desc">Wheeled coolers with cup holders, spouts, and room for the whole crew. 30-50 quart capacity.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;">
+          <img src="/images/igloo-family-kit-cooler-with-wheels-open.JPG" alt="Igloo wheeled cooler open" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/igloo-family-kit-cooler-with-flip-handle-spout.JPG" alt="Igloo cooler with flip handle and spout" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/rubbermaid-family-kit-cooler-cup-holder-dual-top.JPG" alt="Rubbermaid cooler with cup holders and dual top" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/rubbermaid-family-kit-cooler-cup-holder-dual-top-closed.JPG" alt="Rubbermaid cooler with cup holders closed" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/rubbermaid-family-kit-cooler-cup-holder-dual-top-opened.JPG" alt="Rubbermaid cooler with dual top opened" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/igloo-family-kit-cooler-with-spout.JPG" alt="Igloo cooler with drink spout" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+          <img src="/images/igloo-family-kit-cooler-with-wheels-opned.JPG" alt="Igloo wheeled cooler inside view" style="width:100%;height:130px;object-fit:cover;border-radius:4px;" loading="lazy">
+        </div>
+        <a href="https://www.amazon.com/s?k=wheeled+cooler+50+quart+cup+holder&tag=dwelldoc-20" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:1rem;font-size:0.85rem;font-weight:700;color:var(--red);">Shop Family Coolers &#8599;</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -646,6 +711,10 @@
         </div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+        <!-- 468x60 banner for smaller screens -->
+        <a href="https://click.linksynergy.com/fs-bin/click?id=aL0LDHdVwa8&offerid=1181408.7&subid=0&type=4" target="_blank" rel="noopener sponsored" onclick="gtag('event','affiliate_click',{affiliate:'jd_sports',link_type:'banner_medium'});" style="display:none;margin-bottom:1rem;" class="jd-banner-medium">
+          <img src="/images/jd-sports-banner-468x60.jpg" alt="JD Sports - Shop Now" style="width:100%;max-width:468px;height:auto;border-radius:4px;">
+        </a>
         <!-- 300x250 rectangle banner (Shop JD Sports, ID 6) -->
         <a href="https://click.linksynergy.com/fs-bin/click?id=aL0LDHdVwa8&offerid=1181408.6&subid=0&type=4" target="_blank" rel="noopener sponsored" onclick="gtag('event','affiliate_click',{affiliate:'jd_sports',link_type:'banner_rectangle'});">
           <img src="/images/jd-sports-banner-300x250.jpg" alt="JD Sports - Shop Now" style="width:300px;height:auto;border-radius:4px;">
@@ -660,6 +729,11 @@
     </div>
   </div>
 </section>
+
+<!-- Stadium Atmosphere -->
+<div style="width:100%;height:200px;overflow:hidden;">
+  <img src="/images/usatf/portable-stadium-seat-with-sunshade-canopy-and-back-support-2.jpeg" alt="Spectators with shade canopies in the bleachers at a USATF meet" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" loading="lazy">
+</div>
 
 <!-- Pro Tips -->
 <section class="tips-section">
