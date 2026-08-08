@@ -287,6 +287,8 @@ nav a.nav-highlight:hover { background: #e08e0b; }
   transition: background .15s, color .15s, border-color .15s;
 }
 .nearby-link:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+.nearby-count { font-weight: 400; color: #888; font-size: 0.75rem; }
+.nearby-link:hover .nearby-count { color: rgba(255,255,255,0.7); }
 
 /* ── Gear section ── */
 .gear-section {
@@ -344,6 +346,26 @@ nav a.nav-highlight:hover { background: #e08e0b; }
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--red);
+}
+
+/* ── FAQ ── */
+.faq-section { padding: 3rem 0; background: #f8f9fa; }
+.faq-list { max-width: 750px; }
+.faq-list details { border-bottom: 1px solid #dee2e6; }
+.faq-list summary {
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-list summary::before { content: "+ "; color: var(--red); font-weight: 800; }
+.faq-list details[open] summary::before { content: "- "; }
+.faq-list details p {
+  padding: 0 0 1rem 1.2rem;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
 /* ── CTA Banner ── */

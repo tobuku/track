@@ -317,6 +317,8 @@ function footerHTML() {
     '      <a href="/guide/">Guide</a>\n' +
     '      <a href="/#gear">Gear</a>\n' +
     '      <a href="/submit/">Submit Your Club</a>\n' +
+    '      <a href="/choosing-a-club/">Choosing a Club</a>\n' +
+    '      <a href="/track-vs-running-club/">Track vs Running Club</a>\n' +
     '      <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>\n' +
     '      <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>\n' +
     '    </div>\n' +
@@ -366,12 +368,24 @@ function gearSectionHTML() {
 
 // ── State Page Generator ──────────────────────────────────────────────────────
 
-function generateStatePage(stateData) {
+function getTopCities(clubs, max) {
+  var counts = {};
+  for (var i = 0; i < clubs.length; i++) {
+    var city = clubs[i].city;
+    if (city) counts[city] = (counts[city] || 0) + 1;
+  }
+  return Object.keys(counts).sort(function(a, b) {
+    return counts[b] - counts[a];
+  }).slice(0, max || 4);
+}
+
+function generateStatePage(stateData, allStates) {
   var clubs = stateData.clubs;
   var stateName = stateData.name;
   var stateAbbr = stateData.abbr;
   var stateSlug = stateData.slug;
   var count = clubs.length;
+  var topCities = getTopCities(clubs, 4);
 
   // Build listing cards
   var listingsHTML = "";
@@ -463,13 +477,13 @@ function generateStatePage(stateData) {
     '  </script>\n' +
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-    '  <title>Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder</title>\n' +
-    '  <meta name="description" content="Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + '. Browse contact info, websites, Google ratings, and links to race results on Athletic.net.">\n' +
+    '  <title>' + count + ' Track Clubs in ' + escapeHTML(stateName) + ' — Find Clubs Near You | TrackClubFinder</title>\n' +
+    '  <meta name="description" content="Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '. Phone numbers, websites, ratings, and Athletic.net race results.">\n' +
     '  <meta name="robots" content="index, follow">\n' +
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <link rel="icon" type="image/png" href="/favicon.png">\n' +
-    '  <meta property="og:title" content="Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder">\n' +
-    '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.">\n' +
+    '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder">\n' +
+    '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <meta property="og:type" content="website">\n' +
     '  <link rel="stylesheet" href="/style.css">\n' +
@@ -492,6 +506,19 @@ function generateStatePage(stateData) {
     '    "itemListElement": [\n      ' + itemListItems + '\n    ]\n' +
     '  }\n' +
     '  </script>\n' +
+    '  <script type="application/ld+json">\n' +
+    '  {\n' +
+    '    "@context": "https://schema.org",\n' +
+    '    "@type": "FAQPage",\n' +
+    '    "mainEntity": [\n' +
+    '      {"@type":"Question","name":"How many track clubs are in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"There are currently ' + count + ' track clubs and running clubs listed in ' + escapeHTML(stateName) + ' on TrackClubFinder."}},\n' +
+    '      {"@type":"Question","name":"How do I find a track club near me in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"Use the search filter on the ' + escapeHTML(stateName) + ' page to type your city or club name. All ' + count + ' clubs are listed with addresses, phone numbers, and website links."}},\n' +
+    '      {"@type":"Question","name":"What is the difference between a track club and a running club?","acceptedAnswer":{"@type":"Answer","text":"Track clubs typically train on a track facility and focus on sprints, hurdles, jumps, and middle distance events. Running clubs tend to focus on road running and group long runs. Many clubs offer both."}},\n' +
+    '      {"@type":"Question","name":"Do I need experience to join a track club in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"Most track clubs welcome beginners. Many clubs have programs for all ages and ability levels, from youth development to adult recreational to competitive athletes."}},\n' +
+    '      {"@type":"Question","name":"How can I check race results for ' + escapeHTML(stateName) + ' track clubs?","acceptedAnswer":{"@type":"Answer","text":"Athletic.net is the best resource for US track and cross country results. Each club listing includes a link to search Athletic.net for that club\'s athletes and meet results."}}\n' +
+    '    ]\n' +
+    '  }\n' +
+    '  </script>\n' +
     '</head>\n' +
     '<body>\n\n' +
     headerHTML() +
@@ -509,8 +536,8 @@ function generateStatePage(stateData) {
     '<!-- State Hero -->\n' +
     '<section class="state-hero">\n' +
     '  <div class="section-inner">\n' +
-    '    <h1>Track Clubs in ' + escapeHTML(stateName) + '</h1>\n' +
-    '    <p class="hero-sub">' + count + ' track club' + (count !== 1 ? 's' : '') + ' and running club' + (count !== 1 ? 's' : '') + ' listed in ' + escapeHTML(stateName) + '. Includes contact info, website links, and Google ratings. Check race results and athlete profiles on Athletic.net.</p>\n' +
+    '    <h1>Find Track Clubs Near You in ' + escapeHTML(stateName) + '</h1>\n' +
+    '    <p class="hero-sub">' + count + ' track club' + (count !== 1 ? 's' : '') + ' and running club' + (count !== 1 ? 's' : '') + ' near you in ' + escapeHTML(stateName) + (topCities.length ? ', including ' + topCities.join(', ') : '') + '. Browse phone numbers, websites, Google ratings, and links to race results on Athletic.net.</p>\n' +
     '    <div class="state-stats">\n' +
     '      <div class="state-stat"><strong>' + count + '</strong><span>Clubs Listed</span></div>\n' +
     '      <div class="state-stat"><strong>' + stateAbbr + '</strong><span>' + escapeHTML(stateName) + '</span></div>\n' +
@@ -541,7 +568,9 @@ function generateStatePage(stateData) {
       var links = neighbors.map(function(abbr) {
         var name = STATE_NAMES[abbr] || abbr;
         var nslug = slugify(name);
-        return '    <a class="nearby-link" href="/' + nslug + '/">' + escapeHTML(name) + '</a>';
+        var neighborState = allStates[abbr];
+        var ncount = neighborState ? neighborState.clubs.length : '';
+        return '    <a class="nearby-link" href="/' + nslug + '/">' + escapeHTML(name) + (ncount ? ' <span class="nearby-count">(' + ncount + ')</span>' : '') + '</a>';
       }).join('\n');
       return '<!-- Nearby States -->\n' +
         '<section class="nearby-section">\n' +
@@ -553,6 +582,21 @@ function generateStatePage(stateData) {
         '  </div>\n' +
         '</section>\n\n';
     })() +
+
+    '<!-- FAQ -->\n' +
+    '<section class="faq-section">\n' +
+    '  <div class="section-inner">\n' +
+    '    <div class="section-label">FAQ</div>\n' +
+    '    <h2 class="section-title">Common Questions About Track Clubs in ' + escapeHTML(stateName) + '</h2>\n' +
+    '    <div class="faq-list">\n' +
+    '      <details><summary>How many track clubs are in ' + escapeHTML(stateName) + '?</summary><p>There are currently ' + count + ' track clubs and running clubs listed in ' + escapeHTML(stateName) + ' on TrackClubFinder. This includes youth, adult, and competitive clubs' + (topCities.length ? ' in cities like ' + topCities.join(', ') : '') + '.</p></details>\n' +
+    '      <details><summary>How do I find a track club near me in ' + escapeHTML(stateName) + '?</summary><p>Use the search filter above to type your city or club name. All ' + count + ' ' + escapeHTML(stateName) + ' clubs are listed with addresses, phone numbers, and website links so you can contact them directly.</p></details>\n' +
+    '      <details><summary>What is the difference between a track club and a running club?</summary><p>Track clubs typically train on a track facility and focus on sprints, hurdles, jumps, and middle distance events. Running clubs tend to focus on road running, group long runs, and race training. Many clubs in ' + escapeHTML(stateName) + ' offer both. Check each club\'s website for their specific programs.</p></details>\n' +
+    '      <details><summary>Do I need experience to join a track club in ' + escapeHTML(stateName) + '?</summary><p>Most track clubs welcome beginners. Many ' + escapeHTML(stateName) + ' clubs have programs for all ages and ability levels, from youth development to adult recreational to competitive athletes. Contact the club directly to ask about their requirements and fee structure.</p></details>\n' +
+    '      <details><summary>How can I check race results for ' + escapeHTML(stateName) + ' track clubs?</summary><p>Athletic.net is the best resource for US track and cross country results. Each club listing on this page includes a link to search Athletic.net for that club\'s athletes and meet results.</p></details>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
 
     '<!-- CTA -->\n' +
     '<section class="cta-section">\n' +
@@ -598,7 +642,9 @@ function generateSitemap(states) {
     '  <url><loc>' + SITE_DOMAIN + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' +
     '  <url><loc>' + SITE_DOMAIN + '/submit/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' +
     '  <url><loc>' + SITE_DOMAIN + '/essentials/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' +
-    '  <url><loc>' + SITE_DOMAIN + '/guide/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n';
+    '  <url><loc>' + SITE_DOMAIN + '/guide/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' +
+    '  <url><loc>' + SITE_DOMAIN + '/choosing-a-club/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n' +
+    '  <url><loc>' + SITE_DOMAIN + '/track-vs-running-club/</loc><lastmod>' + today + '</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n';
 
   var stateKeys = Object.keys(states).sort();
   for (var i = 0; i < stateKeys.length; i++) {
@@ -627,7 +673,7 @@ function build() {
     var state = states[stateKeys[i]];
     var dir = path.join(__dirname, state.slug);
     mkdirp(dir);
-    fs.writeFileSync(path.join(dir, "index.html"), generateStatePage(state));
+    fs.writeFileSync(path.join(dir, "index.html"), generateStatePage(state, states));
     pagesCreated++;
     console.log("  " + state.name + " (" + state.abbr + "): " + state.clubs.length + " clubs");
   }
