@@ -506,19 +506,34 @@ function generateStatePage(stateData, allStates) {
     '    "itemListElement": [\n      ' + itemListItems + '\n    ]\n' +
     '  }\n' +
     '  </script>\n' +
-    '  <script type="application/ld+json">\n' +
-    '  {\n' +
-    '    "@context": "https://schema.org",\n' +
-    '    "@type": "FAQPage",\n' +
-    '    "mainEntity": [\n' +
-    '      {"@type":"Question","name":"How many track clubs are in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"There are currently ' + count + ' track clubs and running clubs listed in ' + escapeHTML(stateName) + ' on TrackClubFinder."}},\n' +
-    '      {"@type":"Question","name":"How do I find a track club near me in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"Use the search filter on the ' + escapeHTML(stateName) + ' page to type your city or club name. All ' + count + ' clubs are listed with addresses, phone numbers, and website links."}},\n' +
-    '      {"@type":"Question","name":"What is the difference between a track club and a running club?","acceptedAnswer":{"@type":"Answer","text":"Track clubs typically train on a track facility and focus on sprints, hurdles, jumps, and middle distance events. Running clubs tend to focus on road running and group long runs. Many clubs offer both."}},\n' +
-    '      {"@type":"Question","name":"Do I need experience to join a track club in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"Most track clubs welcome beginners. Many clubs have programs for all ages and ability levels, from youth development to adult recreational to competitive athletes."}},\n' +
-    '      {"@type":"Question","name":"How can I check race results for ' + escapeHTML(stateName) + ' track clubs?","acceptedAnswer":{"@type":"Answer","text":"Athletic.net is the best resource for US track and cross country results. Each club listing includes a link to search Athletic.net for that club\'s athletes and meet results."}}\n' +
-    '    ]\n' +
-    '  }\n' +
-    '  </script>\n' +
+    (function() {
+      var stateIdx = stateAbbr.charCodeAt(0) + stateAbbr.charCodeAt(1);
+      var variant = stateIdx % 3;
+      var schemaFaqs = [];
+      schemaFaqs.push('{"@type":"Question","name":"How many track clubs are in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"We list ' + count + ' track and running clubs in ' + escapeHTML(stateName) + ', including youth programs, adult clubs, and competitive teams."}}');
+      if (count > 50) {
+        schemaFaqs.push('{"@type":"Question","name":"How do I narrow down ' + count + ' clubs to find the right one?","acceptedAnswer":{"@type":"Answer","text":"Use the search filter to type your city name. Then compare Google ratings and visit each club website to check programs, fees, and schedules."}}');
+      } else {
+        schemaFaqs.push('{"@type":"Question","name":"How do I find a track club near me in ' + escapeHTML(stateName) + '?","acceptedAnswer":{"@type":"Answer","text":"Use the search filter to type your city or club name. All ' + count + ' listings include addresses, phone numbers, and website links."}}');
+      }
+      if (variant === 0) {
+        schemaFaqs.push('{"@type":"Question","name":"What is the difference between a track club and a running club?","acceptedAnswer":{"@type":"Answer","text":"Track clubs train on a track with coaches and compete at organized meets. Running clubs are more casual, focused on group road runs and social running."}}');
+        schemaFaqs.push('{"@type":"Question","name":"How do I check race results for ' + escapeHTML(stateName) + ' athletes?","acceptedAnswer":{"@type":"Answer","text":"Athletic.net tracks results for track and cross country meets across the US. Each club listing has a link to search for that club on Athletic.net."}}');
+      } else if (variant === 1) {
+        schemaFaqs.push('{"@type":"Question","name":"Do track clubs in ' + escapeHTML(stateName) + ' accept beginners?","acceptedAnswer":{"@type":"Answer","text":"Most do. Many clubs have beginner-friendly groups or trial periods where you can attend a few practices before committing."}}');
+        schemaFaqs.push('{"@type":"Question","name":"What should I look for when choosing a club?","acceptedAnswer":{"@type":"Answer","text":"Coaching credentials, training schedule, fees, and culture. Check the club website, read reviews, and attend a practice before signing up."}}');
+      } else {
+        schemaFaqs.push('{"@type":"Question","name":"How much does it cost to join a track club?","acceptedAnswer":{"@type":"Answer","text":"Youth clubs typically charge $50 to $200 per season. Adult clubs range from free to $400 per year. Ask for the full breakdown before signing up."}}');
+        schemaFaqs.push('{"@type":"Question","name":"Are these clubs USATF sanctioned?","acceptedAnswer":{"@type":"Answer","text":"Some are, some are not. USATF-sanctioned clubs have background-checked coaches and liability insurance. Check each club website or call to confirm."}}');
+      }
+      return '  <script type="application/ld+json">\n' +
+        '  {\n' +
+        '    "@context": "https://schema.org",\n' +
+        '    "@type": "FAQPage",\n' +
+        '    "mainEntity": [\n      ' + schemaFaqs.join(',\n      ') + '\n    ]\n' +
+        '  }\n' +
+        '  </script>\n';
+    })() +
     '</head>\n' +
     '<body>\n\n' +
     headerHTML() +
@@ -583,20 +598,45 @@ function generateStatePage(stateData, allStates) {
         '</section>\n\n';
     })() +
 
-    '<!-- FAQ -->\n' +
-    '<section class="faq-section">\n' +
-    '  <div class="section-inner">\n' +
-    '    <div class="section-label">FAQ</div>\n' +
-    '    <h2 class="section-title">Common Questions About Track Clubs in ' + escapeHTML(stateName) + '</h2>\n' +
-    '    <div class="faq-list">\n' +
-    '      <details><summary>How many track clubs are in ' + escapeHTML(stateName) + '?</summary><p>There are currently ' + count + ' track clubs and running clubs listed in ' + escapeHTML(stateName) + ' on TrackClubFinder. This includes youth, adult, and competitive clubs' + (topCities.length ? ' in cities like ' + topCities.join(', ') : '') + '.</p></details>\n' +
-    '      <details><summary>How do I find a track club near me in ' + escapeHTML(stateName) + '?</summary><p>Use the search filter above to type your city or club name. All ' + count + ' ' + escapeHTML(stateName) + ' clubs are listed with addresses, phone numbers, and website links so you can contact them directly.</p></details>\n' +
-    '      <details><summary>What is the difference between a track club and a running club?</summary><p>Track clubs typically train on a track facility and focus on sprints, hurdles, jumps, and middle distance events. Running clubs tend to focus on road running, group long runs, and race training. Many clubs in ' + escapeHTML(stateName) + ' offer both. Check each club\'s website for their specific programs.</p></details>\n' +
-    '      <details><summary>Do I need experience to join a track club in ' + escapeHTML(stateName) + '?</summary><p>Most track clubs welcome beginners. Many ' + escapeHTML(stateName) + ' clubs have programs for all ages and ability levels, from youth development to adult recreational to competitive athletes. Contact the club directly to ask about their requirements and fee structure.</p></details>\n' +
-    '      <details><summary>How can I check race results for ' + escapeHTML(stateName) + ' track clubs?</summary><p>Athletic.net is the best resource for US track and cross country results. Each club listing on this page includes a link to search Athletic.net for that club\'s athletes and meet results.</p></details>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n\n' +
+    (function() {
+      // Vary FAQ content across states to avoid identical templated feel
+      var faqs = [];
+      // Q1: always include count (unique per state)
+      faqs.push('<details><summary>How many track clubs are in ' + escapeHTML(stateName) + '?</summary><p>We currently list ' + count + ' track and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ', including clubs in ' + topCities.join(', ') : '') + '. The directory covers youth programs, adult recreational clubs, and competitive teams.</p></details>');
+      // Q2: varies by state count
+      if (count > 50) {
+        faqs.push('<details><summary>How do I narrow down ' + count + ' clubs to find the right one?</summary><p>Use the search filter at the top of the listings to type your city name. That will cut the list down fast. From there, check Google ratings and visit each club\'s website to compare programs, fees, and schedules.</p></details>');
+      } else {
+        faqs.push('<details><summary>How do I find a track club near me in ' + escapeHTML(stateName) + '?</summary><p>Use the search filter above to type your city or club name. You can also scroll through all ' + count + ' listings, each one has an address, phone number, and website link so you can reach out directly.</p></details>');
+      }
+      // Q3: rotate between 3 different questions based on state index
+      var stateIdx = stateAbbr.charCodeAt(0) + stateAbbr.charCodeAt(1);
+      var variant = stateIdx % 3;
+      if (variant === 0) {
+        faqs.push('<details><summary>What is the difference between a track club and a running club?</summary><p>Track clubs train on a track with coaches and compete at organized meets. Running clubs are more casual, focused on group road runs and social running. Some clubs in ' + escapeHTML(stateName) + ' do both. We have a <a href="/track-vs-running-club/">full comparison guide</a> if you want the details.</p></details>');
+      } else if (variant === 1) {
+        faqs.push('<details><summary>Do track clubs in ' + escapeHTML(stateName) + ' accept beginners?</summary><p>Most do. Many clubs have beginner-friendly groups, intro programs, or trial periods where you can attend a few practices before committing. Call the club directly and ask. The worst they can say is that they are full.</p></details>');
+      } else {
+        faqs.push('<details><summary>How much does it cost to join a track club?</summary><p>It varies. Youth clubs in ' + escapeHTML(stateName) + ' typically charge $50 to $200 per season. Adult clubs range from free to $400 per year. Some fees include USATF membership and meet entries, others do not. Always ask for the full breakdown before signing up.</p></details>');
+      }
+      // Q4: rotate a second set
+      if (variant === 0) {
+        faqs.push('<details><summary>How do I check race results for ' + escapeHTML(stateName) + ' athletes?</summary><p>Athletic.net tracks results for track and cross country meets across the US. Each club listing on this page has a link to search Athletic.net for that club\'s athletes and recent performances.</p></details>');
+      } else if (variant === 1) {
+        faqs.push('<details><summary>What should I look for when choosing a club?</summary><p>Coaching credentials, training schedule, fees, and culture. We wrote a <a href="/choosing-a-club/">complete guide to choosing a track club</a> that covers what to ask, what to look for, and red flags to avoid.</p></details>');
+      } else {
+        faqs.push('<details><summary>Are these clubs USATF sanctioned?</summary><p>Some are, some are not. USATF-sanctioned clubs have background-checked coaches and liability insurance. Check each club\'s website or call them to confirm. For youth athletes who want to compete at regional and national meets, USATF sanctioning is important.</p></details>');
+      }
+      return '<!-- FAQ -->\n' +
+        '<section class="faq-section">\n' +
+        '  <div class="section-inner">\n' +
+        '    <div class="section-label">FAQ</div>\n' +
+        '    <h2 class="section-title">Questions About Track Clubs in ' + escapeHTML(stateName) + '</h2>\n' +
+        '    <div class="faq-list">\n      ' + faqs.join('\n      ') + '\n' +
+        '    </div>\n' +
+        '  </div>\n' +
+        '</section>\n\n';
+    })() +
 
     '<!-- CTA -->\n' +
     '<section class="cta-section">\n' +
