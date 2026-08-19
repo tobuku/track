@@ -552,10 +552,16 @@ function generateStatePage(stateData, allStates, stateCities) {
     '  <script type="application/ld+json">\n' +
     '  {\n' +
     '    "@context": "https://schema.org",\n' +
-    '    "@type": "ItemList",\n' +
+    '    "@type": "CollectionPage",\n' +
     '    "name": "Track Clubs in ' + escapeHTML(stateName) + '",\n' +
-    '    "numberOfItems": ' + count + ',\n' +
-    '    "itemListElement": [\n      ' + itemListItems + '\n    ]\n' +
+    '    "url": "' + SITE_DOMAIN + '/' + stateSlug + '/",\n' +
+    '    "description": "Directory of ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.",\n' +
+    '    "isPartOf": {"@type":"WebSite","name":"TrackClubFinder","url":"' + SITE_DOMAIN + '"},\n' +
+    '    "mainEntity": {\n' +
+    '      "@type": "ItemList",\n' +
+    '      "numberOfItems": ' + count + ',\n' +
+    '      "itemListElement": [\n      ' + itemListItems + '\n      ]\n' +
+    '    }\n' +
     '  }\n' +
     '  </script>\n' +
     (function() {
@@ -847,10 +853,26 @@ function generateCityPage(cityData, stateData, otherCities) {
     '  <script type="application/ld+json">\n' +
     '  {\n' +
     '    "@context": "https://schema.org",\n' +
-    '    "@type": "ItemList",\n' +
+    '    "@type": "CollectionPage",\n' +
     '    "name": "Track Clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '",\n' +
-    '    "numberOfItems": ' + count + ',\n' +
-    '    "itemListElement": [\n      ' + itemListItems + '\n    ]\n' +
+    '    "url": "' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/",\n' +
+    '    "description": "Directory of ' + count + ' track and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '.",\n' +
+    '    "isPartOf": {"@type":"WebSite","name":"TrackClubFinder","url":"' + SITE_DOMAIN + '"},\n' +
+    '    "mainEntity": {\n' +
+    '      "@type": "ItemList",\n' +
+    '      "numberOfItems": ' + count + ',\n' +
+    '      "itemListElement": [\n      ' + itemListItems + '\n      ]\n' +
+    '    }\n' +
+    '  }\n' +
+    '  </script>\n' +
+    '  <script type="application/ld+json">\n' +
+    '  {\n' +
+    '    "@context": "https://schema.org",\n' +
+    '    "@type": "FAQPage",\n' +
+    '    "mainEntity": [\n' +
+    '      {"@type":"Question","name":"How many track clubs are in ' + escapeHTML(cityName) + ', ' + stateAbbr + '?","acceptedAnswer":{"@type":"Answer","text":"We list ' + count + ' track and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + ', including youth programs, adult clubs, and competitive teams."}},\n' +
+    '      {"@type":"Question","name":"How do I find a track club near me in ' + escapeHTML(cityName) + '?","acceptedAnswer":{"@type":"Answer","text":"Browse the ' + count + ' listings on this page. Each one includes an address, phone number, and website link so you can reach out directly."}}\n' +
+    '    ]\n' +
     '  }\n' +
     '  </script>\n' +
     '</head>\n' +
