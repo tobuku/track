@@ -690,6 +690,19 @@ function generateStatePage(stateData, allStates) {
         '</section>\n\n';
     })() +
 
+    '<!-- Related Guides -->\n' +
+    '<section class="nearby-section">\n' +
+    '  <div class="section-inner">\n' +
+    '    <h2 class="nearby-title">Related Guides</h2>\n' +
+    '    <div class="nearby-links">\n' +
+    '      <a class="nearby-link" href="/guide/">Track Meet Guide</a>\n' +
+    '      <a class="nearby-link" href="/choosing-a-club/">How to Choose a Club</a>\n' +
+    '      <a class="nearby-link" href="/track-vs-running-club/">Track vs Running Club</a>\n' +
+    '      <a class="nearby-link" href="/essentials/">Meet Day Essentials</a>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
+
     '<!-- CTA -->\n' +
     '<section class="cta-section">\n' +
     '  <h2>Browse Other States</h2>\n' +

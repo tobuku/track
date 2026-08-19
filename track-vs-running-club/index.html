@@ -389,6 +389,44 @@
       color: #e65100;
     }
 
+    /* ── Popular States ── */
+    .popular-states {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #e4e8ed;
+    }
+    .popular-states h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    .popular-states-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .popular-states-links a {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .popular-states-links a:hover {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+
     /* ── CTA Bar ── */
     .article-cta {
       background: var(--dark);
@@ -660,9 +698,24 @@
 
   <p>You can also search <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a> to find teams and view their recent meet results. This is especially useful for checking how active a track club is before you commit.</p>
 
-  <p>Once you narrow down your options, check out our guide on <a href="/essentials/">essential gear</a> to make sure you show up prepared for your first practice.</p>
+  <p>Once you narrow down your options, read our <a href="/choosing-a-club/">complete guide to choosing a track club</a> for what to look for in coaching, fees, and red flags. Then check our <a href="/essentials/">essential gear guide</a> to make sure you show up prepared for your first practice.</p>
 
 </article>
+
+<!-- Popular States -->
+<section class="popular-states">
+  <h2>Find Clubs in Popular States</h2>
+  <div class="popular-states-links">
+    <a href="/california/">California</a>
+    <a href="/texas/">Texas</a>
+    <a href="/florida/">Florida</a>
+    <a href="/new-york/">New York</a>
+    <a href="/tennessee/">Tennessee</a>
+    <a href="/maryland/">Maryland</a>
+    <a href="/georgia/">Georgia</a>
+    <a href="/ohio/">Ohio</a>
+  </div>
+</section>
 
 <section class="article-cta">
   <h2>Ready to Find a Club?</h2>
@@ -679,6 +732,8 @@
       <a href="/guide/">Guide</a>
       <a href="/#gear">Gear</a>
       <a href="/submit/">Submit Your Club</a>
+      <a href="/choosing-a-club/">Choosing a Club</a>
+      <a href="/track-vs-running-club/">Track vs Running Club</a>
       <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>
       <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>
     </div>

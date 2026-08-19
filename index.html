@@ -554,6 +554,44 @@
       font-size: 0.95rem;
     }
 
+    /* ── Guides ── */
+    .guides-section { background: var(--white); }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .guide-card {
+      background: #f8f9fb;
+      border: 1px solid #e4e8ed;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .guide-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-color: var(--red);
+      text-decoration: none;
+    }
+    .guide-card h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+    .guide-card p {
+      font-size: 0.88rem;
+      color: #5a6a7a;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+    .guide-card-cta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+
     /* ── CTA Banner ── */
     .cta-section {
       position: relative;
@@ -1247,7 +1285,7 @@
 
       <details>
         <summary>What's the difference between a track club and a running club?</summary>
-        <p>Track clubs typically focus on structured workouts at a track facility — sprints, hurdles, jumps, and middle distance training. Running clubs tend to be more casual and road-focused, centered on group long runs. Many clubs do both. This directory includes all types so you can find the right fit.</p>
+        <p>Track clubs typically focus on structured workouts at a track facility — sprints, hurdles, jumps, and middle distance training. Running clubs tend to be more casual and road-focused, centered on group long runs. Many clubs do both. This directory includes all types so you can find the right fit. We wrote a <a href="/track-vs-running-club/">full comparison of track clubs vs running clubs</a> if you want the details.</p>
       </details>
 
       <details>
@@ -1272,9 +1310,34 @@
 
       <details>
         <summary>What gear do I need to join a track club?</summary>
-        <p>Most clubs just need you to show up in comfortable athletic wear and running shoes. If you plan to run on a track, spikes are eventually worth investing in for sprint events. Check the Gear section of this site for recommended beginner and advanced equipment.</p>
+        <p>Most clubs just need you to show up in comfortable athletic wear and running shoes. If you plan to run on a track, spikes are eventually worth investing in for sprint events. Check our <a href="/essentials/">essentials page</a> for recommended beginner and advanced equipment.</p>
       </details>
 
+    </div>
+  </div>
+</section>
+
+<!-- ── Guides ── -->
+<section class="guides-section">
+  <div class="section-inner">
+    <div class="section-kicker">Guides</div>
+    <h2 class="section-title">Articles for Athletes &amp; Parents</h2>
+    <div class="guides-grid">
+      <a class="guide-card" href="/guide/">
+        <h3>What to Expect at a Track Meet</h3>
+        <p>First-hand guide with real photos from the 2026 USATF Junior Olympics. Parking, shade, seating, wristbands, and tips from a real track parent.</p>
+        <span class="guide-card-cta">Read the Guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="/choosing-a-club/">
+        <h3>How to Choose a Track Club</h3>
+        <p>What to look for in coaching, fees, training philosophy, and red flags to avoid before you commit to a club.</p>
+        <span class="guide-card-cta">Read the Guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="/track-vs-running-club/">
+        <h3>Track Club vs Running Club</h3>
+        <p>Side-by-side comparison of coaching, competition, cost, and commitment so you pick the right fit.</p>
+        <span class="guide-card-cta">Read the Guide &rarr;</span>
+      </a>
     </div>
   </div>
 </section>

@@ -387,6 +387,44 @@
       margin: 0;
     }
 
+    /* ── Popular States ── */
+    .popular-states {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #e4e8ed;
+    }
+    .popular-states h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    .popular-states-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .popular-states-links a {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .popular-states-links a:hover {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+
     /* ── CTA Bar ── */
     .guide-cta {
       background: var(--dark);
@@ -621,7 +659,7 @@
   <h3>Competitive Track vs Road Racing</h3>
   <p>Know what you are training for. If you want to run fast 200s and compete in the long jump, you need a track club with field event coaching. If you want to PR in a half marathon, a road-focused club or distance-oriented track club is a better match. Some athletes do both, and that is fine, but make sure the club you choose actually supports the events you care about.</p>
 
-  <p>The best way to start is simple: find clubs near you, reach out, attend a practice, and see how it feels. Use our <a href="/#browse" style="color: var(--red); font-weight: 600;">state-by-state directory</a> to find track clubs in your area, and check our <a href="/essentials/" style="color: var(--red); font-weight: 600;">essentials page</a> for gear recommendations to get started.</p>
+  <p>The best way to start is simple: find clubs near you, reach out, attend a practice, and see how it feels. Use our <a href="/#browse" style="color: var(--red); font-weight: 600;">state-by-state directory</a> to find track clubs in your area, and check our <a href="/essentials/" style="color: var(--red); font-weight: 600;">essentials page</a> for gear recommendations to get started. If you are still deciding between a track club and a running club, read our <a href="/track-vs-running-club/" style="color: var(--red); font-weight: 600;">track club vs running club comparison</a>.</p>
 
 </article>
 
@@ -652,10 +690,25 @@
   </div>
 </section>
 
+<!-- Popular States -->
+<section class="popular-states">
+  <h2>Find Clubs in Popular States</h2>
+  <div class="popular-states-links">
+    <a href="/california/">California</a>
+    <a href="/texas/">Texas</a>
+    <a href="/florida/">Florida</a>
+    <a href="/new-york/">New York</a>
+    <a href="/pennsylvania/">Pennsylvania</a>
+    <a href="/maryland/">Maryland</a>
+    <a href="/georgia/">Georgia</a>
+    <a href="/illinois/">Illinois</a>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="guide-cta">
   <h2>Find a Track Club Near You</h2>
-  <p>Browse our directory of over 2,300 track and running clubs across all 50 states.</p>
+  <p>Browse our directory of over 2,350 track and running clubs across all 50 states.</p>
   <a href="/#browse">Browse by State</a>
 </section>
 
@@ -668,6 +721,8 @@
       <a href="/guide/">Guide</a>
       <a href="/#gear">Gear</a>
       <a href="/submit/">Submit Your Club</a>
+      <a href="/choosing-a-club/">Choosing a Club</a>
+      <a href="/track-vs-running-club/">Track vs Running Club</a>
       <a href="https://www.athletic.net/" target="_blank" rel="noopener">Athletic.net</a>
       <a href="https://www.usatf.org/" target="_blank" rel="noopener">USATF</a>
     </div>
