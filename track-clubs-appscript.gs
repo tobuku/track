@@ -23,7 +23,7 @@
 // ── Configuration ─────────────────────────────────────────────────────────────
 
 var CONFIG = {
-  OUTSCRAPER_API_KEY: "MjVjMTU4YmYxNzdlNGZlNGEzZjI4N2U0NzA4Y2Y4OTd8MjNlYzYwOTdmZg",
+  OUTSCRAPER_API_KEY: "YOUR_API_KEY_HERE",
   SHEET_NAME: "track-club-directory",
   RESULTS_PER_QUERY: 20,
   DELAY_MS: 2000
