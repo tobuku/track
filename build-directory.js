@@ -368,29 +368,10 @@ function gearSectionHTML() {
   return html;
 }
 
-// ── State Page Generator ──────────────────────────────────────────────────────
+// ── Shared Builders ──────────────────────────────────────────────────────────
 
-function getTopCities(clubs, max) {
-  var counts = {};
-  for (var i = 0; i < clubs.length; i++) {
-    var city = clubs[i].city;
-    if (city) counts[city] = (counts[city] || 0) + 1;
-  }
-  return Object.keys(counts).sort(function(a, b) {
-    return counts[b] - counts[a];
-  }).slice(0, max || 4);
-}
-
-function generateStatePage(stateData, allStates) {
-  var clubs = stateData.clubs;
-  var stateName = stateData.name;
-  var stateAbbr = stateData.abbr;
-  var stateSlug = stateData.slug;
-  var count = clubs.length;
-  var topCities = getTopCities(clubs, 4);
-
-  // Build listing cards
-  var listingsHTML = "";
+function buildClubCardsHTML(clubs, stateAbbr) {
+  var html = "";
   for (var i = 0; i < clubs.length; i++) {
     var c = clubs[i];
 
@@ -426,11 +407,6 @@ function generateStatePage(stateData, allStates) {
     }
     linksHTML += '</div>\n';
 
-    // Schema.org LocalBusiness for this club
-    var schemaName = c.name.replace(/"/g, '\\"');
-    var schemaCity = c.city.replace(/"/g, '\\"');
-
-    // Check if this club is featured
     var featured = FEATURED_CLUBS[c.name];
     var cardClass = 'club-card' + (featured ? ' club-card--featured' : '');
     var badgeHTML = featured ? '  <span class="featured-badge">' + escapeHTML(featured.badge) + '</span>\n' : '';
@@ -444,7 +420,7 @@ function generateStatePage(stateData, allStates) {
       socialHTML += '  </div>\n';
     }
 
-    listingsHTML += '<div class="' + cardClass + '" itemscope itemtype="https://schema.org/LocalBusiness">\n' +
+    html += '<div class="' + cardClass + '" itemscope itemtype="https://schema.org/LocalBusiness">\n' +
       '  <meta itemprop="name" content="' + escapeHTML(c.name) + '">\n' +
       (c.street ? '  <meta itemprop="streetAddress" content="' + escapeHTML(c.street) + '">\n' : '') +
       (c.city   ? '  <meta itemprop="addressLocality" content="' + escapeHTML(c.city) + '">\n' : '') +
@@ -460,14 +436,15 @@ function generateStatePage(stateData, allStates) {
       socialHTML +
       '</div>\n\n';
   }
+  return html;
+}
 
-  // ItemList schema — each ListItem wraps a SportsOrganization with real data
-  var itemListItems = clubs.map(function(c, idx) {
+function buildItemListSchema(clubs, stateAbbr) {
+  return clubs.map(function(c, idx) {
     var eName = c.name.replace(/"/g, '\\"');
     var item = '{"@type":"SportsOrganization","name":"' + eName + '"';
     if (c.website) item += ',"url":"' + c.website.replace(/"/g, '\\"') + '"';
     if (c.phone) item += ',"telephone":"' + c.phone.replace(/"/g, '\\"') + '"';
-    // Address
     var addrParts = [];
     if (c.street) addrParts.push('"streetAddress":"' + c.street.replace(/"/g, '\\"') + '"');
     if (c.city) addrParts.push('"addressLocality":"' + c.city.replace(/"/g, '\\"') + '"');
@@ -475,11 +452,9 @@ function generateStatePage(stateData, allStates) {
     if (c.zip) addrParts.push('"postalCode":"' + c.zip.replace(/"/g, '\\"') + '"');
     addrParts.push('"addressCountry":"US"');
     item += ',"address":{"@type":"PostalAddress",' + addrParts.join(',') + '}';
-    // Geo
     if (c.lat && c.lng) {
       item += ',"geo":{"@type":"GeoCoordinates","latitude":' + c.lat + ',"longitude":' + c.lng + '}';
     }
-    // AggregateRating only when both rating and reviews are present
     if (c.rating && c.reviews) {
       var r = parseFloat(c.rating);
       var rv = parseInt(c.reviews, 10);
@@ -490,6 +465,31 @@ function generateStatePage(stateData, allStates) {
     item += '}';
     return '{"@type":"ListItem","position":' + (idx + 1) + ',"item":' + item + '}';
   }).join(",\n      ");
+}
+
+// ── State Page Generator ──────────────────────────────────────────────────────
+
+function getTopCities(clubs, max) {
+  var counts = {};
+  for (var i = 0; i < clubs.length; i++) {
+    var city = clubs[i].city;
+    if (city) counts[city] = (counts[city] || 0) + 1;
+  }
+  return Object.keys(counts).sort(function(a, b) {
+    return counts[b] - counts[a];
+  }).slice(0, max || 4);
+}
+
+function generateStatePage(stateData, allStates, stateCities) {
+  var clubs = stateData.clubs;
+  var stateName = stateData.name;
+  var stateAbbr = stateData.abbr;
+  var stateSlug = stateData.slug;
+  var count = clubs.length;
+  var topCities = getTopCities(clubs, 4);
+
+  var listingsHTML = buildClubCardsHTML(clubs, stateAbbr);
+  var itemListItems = buildItemListSchema(clubs, stateAbbr);
 
   var html = '<!DOCTYPE html>\n' +
     '<html lang="en">\n' +
@@ -627,6 +627,22 @@ function generateStatePage(stateData, allStates) {
     '  </div>\n' +
     '</section>\n\n' +
 
+    (function() {
+      if (!stateCities || !stateCities.length) return '';
+      var links = stateCities.map(function(city) {
+        return '    <a class="nearby-link" href="/' + stateSlug + '/' + city.slug + '/">' + escapeHTML(city.name) + ' <span class="nearby-count">(' + city.count + ')</span></a>';
+      }).join('\n');
+      return '<!-- Browse by City -->\n' +
+        '<section class="nearby-section">\n' +
+        '  <div class="section-inner">\n' +
+        '    <h2 class="nearby-title">Browse ' + escapeHTML(stateName) + ' by City</h2>\n' +
+        '    <div class="nearby-links">\n' +
+        links + '\n' +
+        '    </div>\n' +
+        '  </div>\n' +
+        '</section>\n\n';
+    })() +
+
     gearSectionHTML() +
 
     (function() {
@@ -738,9 +754,190 @@ function generateStatePage(stateData, allStates) {
   return html;
 }
 
+// ── City Page Generator ──────────────────────────────────────────────────────
+
+function getCitiesForState(clubs) {
+  var cityMap = {};
+  for (var i = 0; i < clubs.length; i++) {
+    var c = clubs[i];
+    if (!c.city) continue;
+    if (!cityMap[c.city]) {
+      cityMap[c.city] = { name: c.city, slug: slugify(c.city), clubs: [] };
+    }
+    cityMap[c.city].clubs.push(c);
+  }
+  // Return only cities with 2+ clubs, sorted by count desc then name asc
+  var cities = [];
+  for (var key in cityMap) {
+    if (cityMap[key].clubs.length >= 2) {
+      cityMap[key].count = cityMap[key].clubs.length;
+      cities.push(cityMap[key]);
+    }
+  }
+  cities.sort(function(a, b) {
+    if (b.count !== a.count) return b.count - a.count;
+    return a.name.localeCompare(b.name);
+  });
+  return cities;
+}
+
+function generateCityPage(cityData, stateData, otherCities) {
+  var clubs = cityData.clubs;
+  var cityName = cityData.name;
+  var citySlug = cityData.slug;
+  var stateName = stateData.name;
+  var stateAbbr = stateData.abbr;
+  var stateSlug = stateData.slug;
+  var count = clubs.length;
+
+  var listingsHTML = buildClubCardsHTML(clubs, stateAbbr);
+  var itemListItems = buildItemListSchema(clubs, stateAbbr);
+
+  // Title and description
+  var pageTitle = count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + ' | TrackClubFinder';
+  if (pageTitle.length > 60) pageTitle = count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr;
+  var metaDesc = 'Find ' + count + ' track clubs and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '. Ratings, phone numbers, websites.';
+
+  var html = '<!DOCTYPE html>\n' +
+    '<html lang="en">\n' +
+    '<head>\n' +
+    '  <!-- Google tag (gtag.js) -->\n' +
+    '  <script async src="https://www.googletagmanager.com/gtag/js?id=' + GA4_ID + '"></script>\n' +
+    '  <script>\n' +
+    '    window.dataLayer = window.dataLayer || [];\n' +
+    '    function gtag(){dataLayer.push(arguments);}\n' +
+    '    gtag(\'js\', new Date());\n' +
+    '    gtag(\'config\', \'' + GA4_ID + '\');\n' +
+    '  </script>\n' +
+    '  <meta charset="UTF-8">\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+    '  <title>' + pageTitle + '</title>\n' +
+    '  <meta name="description" content="' + metaDesc + '">\n' +
+    '  <meta name="robots" content="index, follow">\n' +
+    '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/">\n' +
+    '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
+    '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
+    '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + '">\n' +
+    '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '.">\n' +
+    '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/">\n' +
+    '  <meta property="og:type" content="website">\n' +
+    '  <meta property="og:image" content="' + SITE_DOMAIN + '/images/IMG_5760.JPG">\n' +
+    '  <meta property="og:site_name" content="TrackClubFinder">\n' +
+    '  <meta name="twitter:card" content="summary_large_image">\n' +
+    '  <meta name="twitter:title" content="' + count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + '">\n' +
+    '  <meta name="twitter:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '.">\n' +
+    '  <meta name="twitter:image" content="' + SITE_DOMAIN + '/images/IMG_5760.JPG">\n' +
+    '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+    '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+    '  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap">\n' +
+    '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" media="print" onload="this.media=\'all\'">\n' +
+    '  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap"></noscript>\n' +
+    '  <link rel="stylesheet" href="/style.css">\n' +
+    '  <script type="application/ld+json">\n' +
+    '  {\n' +
+    '    "@context": "https://schema.org",\n' +
+    '    "@type": "BreadcrumbList",\n' +
+    '    "itemListElement": [\n' +
+    '      {"@type":"ListItem","position":1,"name":"Home","item":"' + SITE_DOMAIN + '/"},\n' +
+    '      {"@type":"ListItem","position":2,"name":"' + escapeHTML(stateName) + '","item":"' + SITE_DOMAIN + '/' + stateSlug + '/"},\n' +
+    '      {"@type":"ListItem","position":3,"name":"' + escapeHTML(cityName) + '","item":"' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/"}\n' +
+    '    ]\n' +
+    '  }\n' +
+    '  </script>\n' +
+    '  <script type="application/ld+json">\n' +
+    '  {\n' +
+    '    "@context": "https://schema.org",\n' +
+    '    "@type": "ItemList",\n' +
+    '    "name": "Track Clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '",\n' +
+    '    "numberOfItems": ' + count + ',\n' +
+    '    "itemListElement": [\n      ' + itemListItems + '\n    ]\n' +
+    '  }\n' +
+    '  </script>\n' +
+    '</head>\n' +
+    '<body>\n\n' +
+    headerHTML() +
+    '\n<main>\n\n' +
+
+    '<!-- Breadcrumb -->\n' +
+    '<div class="breadcrumb-bar">\n' +
+    '  <div class="section-inner">\n' +
+    '    <nav class="breadcrumbs" aria-label="Breadcrumb">\n' +
+    '      <a href="/">Home</a> <span>/</span> <a href="/' + stateSlug + '/">' + escapeHTML(stateName) + '</a> <span>/</span> <strong>' + escapeHTML(cityName) + '</strong>\n' +
+    '    </nav>\n' +
+    '  </div>\n' +
+    '</div>\n\n' +
+
+    '<!-- City Hero -->\n' +
+    '<section class="state-hero">\n' +
+    '  <div class="section-inner">\n' +
+    '    <h1>Track Clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '</h1>\n' +
+    '    <p class="hero-sub">' + count + ' track club' + (count !== 1 ? 's' : '') + ' and running club' + (count !== 1 ? 's' : '') + ' in ' + escapeHTML(cityName) + ', ' + stateAbbr + '. Browse phone numbers, websites, Google ratings, and links to race results on Athletic.net.</p>\n' +
+    '    <div class="state-stats">\n' +
+    '      <div class="state-stat"><strong>' + count + '</strong><span>Clubs Listed</span></div>\n' +
+    '      <div class="state-stat"><strong>' + stateAbbr + '</strong><span>' + escapeHTML(cityName) + '</span></div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
+
+    '<!-- Club Listings -->\n' +
+    '<section class="listings-section">\n' +
+    '  <div class="section-inner">\n' +
+    '    <div class="section-label">Directory</div>\n' +
+    '    <h2 class="section-title">All Track &amp; Running Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + '</h2>\n' +
+    '    <div class="clubs-grid">\n' +
+    listingsHTML +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
+
+    // Other cities in this state
+    (function() {
+      var others = otherCities.filter(function(c) { return c.name !== cityName; });
+      if (!others.length) return '';
+      var links = others.map(function(c) {
+        return '    <a class="nearby-link" href="/' + stateSlug + '/' + c.slug + '/">' + escapeHTML(c.name) + ' <span class="nearby-count">(' + c.count + ')</span></a>';
+      }).join('\n');
+      return '<!-- Other Cities -->\n' +
+        '<section class="nearby-section">\n' +
+        '  <div class="section-inner">\n' +
+        '    <h2 class="nearby-title">Other Cities in ' + escapeHTML(stateName) + '</h2>\n' +
+        '    <div class="nearby-links">\n' +
+        links + '\n' +
+        '    </div>\n' +
+        '  </div>\n' +
+        '</section>\n\n';
+    })() +
+
+    '<!-- Back to State -->\n' +
+    '<section class="nearby-section">\n' +
+    '  <div class="section-inner">\n' +
+    '    <h2 class="nearby-title">Related</h2>\n' +
+    '    <div class="nearby-links">\n' +
+    '      <a class="nearby-link" href="/' + stateSlug + '/">All ' + escapeHTML(stateName) + ' Clubs (' + stateData.clubs.length + ')</a>\n' +
+    '      <a class="nearby-link" href="/guide/">Track Meet Guide</a>\n' +
+    '      <a class="nearby-link" href="/choosing-a-club/">How to Choose a Club</a>\n' +
+    '      <a class="nearby-link" href="/track-vs-running-club/">Track vs Running Club</a>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
+
+    '<!-- CTA -->\n' +
+    '<section class="cta-section">\n' +
+    '  <h2>Browse Other States</h2>\n' +
+    '  <p>Find track clubs in all 50 states.</p>\n' +
+    '  <a class="btn" href="/#browse">Back to State Directory</a>\n' +
+    '</section>\n\n' +
+
+    '</main>\n\n' +
+    footerHTML() +
+    '</body>\n</html>\n';
+
+  return html;
+}
+
 // ── Sitemap ───────────────────────────────────────────────────────────────────
 
-function generateSitemap(states) {
+function generateSitemap(states, allCities) {
   var today = new Date().toISOString().slice(0, 10);
   var xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
@@ -755,6 +952,11 @@ function generateSitemap(states) {
   for (var i = 0; i < stateKeys.length; i++) {
     var s = states[stateKeys[i]];
     xml += '  <url><loc>' + SITE_DOMAIN + '/' + s.slug + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n';
+    // City pages for this state
+    var cities = allCities[stateKeys[i]] || [];
+    for (var j = 0; j < cities.length; j++) {
+      xml += '  <url><loc>' + SITE_DOMAIN + '/' + s.slug + '/' + cities[j].slug + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n';
+    }
   }
 
   xml += '</urlset>\n';
@@ -772,21 +974,39 @@ function build() {
   var stateKeys = Object.keys(states).sort();
   console.log("Found " + stateKeys.length + " states.");
 
-  var pagesCreated = 0;
+  // Build city data for all states
+  var allCities = {};
+  for (var i = 0; i < stateKeys.length; i++) {
+    allCities[stateKeys[i]] = getCitiesForState(states[stateKeys[i]].clubs);
+  }
+
+  var statePages = 0;
+  var cityPages = 0;
 
   for (var i = 0; i < stateKeys.length; i++) {
     var state = states[stateKeys[i]];
+    var cities = allCities[stateKeys[i]];
     var dir = path.join(__dirname, state.slug);
     mkdirp(dir);
-    fs.writeFileSync(path.join(dir, "index.html"), generateStatePage(state, states));
-    pagesCreated++;
-    console.log("  " + state.name + " (" + state.abbr + "): " + state.clubs.length + " clubs");
+    fs.writeFileSync(path.join(dir, "index.html"), generateStatePage(state, states, cities));
+    statePages++;
+
+    // Generate city pages
+    for (var j = 0; j < cities.length; j++) {
+      var cityDir = path.join(dir, cities[j].slug);
+      mkdirp(cityDir);
+      fs.writeFileSync(path.join(cityDir, "index.html"), generateCityPage(cities[j], state, cities));
+      cityPages++;
+    }
+
+    var citySuffix = cities.length ? " (" + cities.length + " city pages)" : "";
+    console.log("  " + state.name + " (" + state.abbr + "): " + state.clubs.length + " clubs" + citySuffix);
   }
 
-  var sitemap = generateSitemap(states);
+  var sitemap = generateSitemap(states, allCities);
   fs.writeFileSync(SITEMAP_FILE, sitemap);
 
-  console.log("\nDone! Created " + pagesCreated + " state pages + sitemap.xml");
+  console.log("\nDone! Created " + statePages + " state pages + " + cityPages + " city pages + sitemap.xml");
   console.log("Next: git add -A && git commit && git push");
 }
 
