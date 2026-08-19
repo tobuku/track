@@ -329,15 +329,15 @@ function footerHTML() {
 
 function gearSectionHTML() {
   var items = [
-    { cat: "Footwear",    name: "Track Spikes",                img: "/images/IMG_0747.JPG", alt: "Track spikes",                    q: "track+spikes" },
-    { cat: "Footwear",    name: "Performance Running Shoes",   img: "/images/IMG_0745.JPG", alt: "Running shoes",                   q: "running+shoes+track" },
-    { cat: "Technology",  name: "GPS Running Watches",         img: "/images/IMG_0740.JPG", alt: "Timing technology at a meet",     q: "gps+running+watch" },
-    { cat: "Apparel",     name: "Track Uniforms &amp; Shorts", img: "/images/IMG_0735.JPG", alt: "Athletes on the track",           q: "track+and+field+uniform" },
-    { cat: "Recovery",    name: "Recovery &amp; Stretching",   img: "/images/IMG_0723.JPG", alt: "Track surface close-up",          q: "foam+roller+running+recovery" },
-    { cat: "Accessories", name: "Sport Sunglasses",            img: "/images/IMG_0836.JPG", alt: "Sunny track in Honolulu",         q: "running+sunglasses+sport" },
-    { cat: "Gear",        name: "Track Bags &amp; Backpacks", img: "/images/IMG_0690.JPG", alt: "Red track with Honolulu skyline",  q: "running+backpack+bag+track" },
-    { cat: "Training",    name: "Resistance Bands",           img: "/images/IMG_0736.JPG", alt: "Lane numbers on a track",          q: "resistance+bands+running+training" },
-    { cat: "Meet Day",    name: "Pop-Up Canopy Tents",        img: "/images/IMG_9748.JPG", alt: "Track meet with canopy tents",     q: "pop+up+canopy+tent+10x10+UV+UPF+50" }
+    { cat: "Footwear",    name: "Track Spikes",                img: "/images/IMG_0747.JPG", webp: "/images/optimized/IMG_0747.webp", alt: "Track spikes",                    w: 440, h: 290, q: "track+spikes" },
+    { cat: "Footwear",    name: "Performance Running Shoes",   img: "/images/IMG_0745.JPG", webp: "/images/optimized/IMG_0745.webp", alt: "Running shoes",                   w: 440, h: 330, q: "running+shoes+track" },
+    { cat: "Technology",  name: "GPS Running Watches",         img: "/images/IMG_0740.JPG", webp: "/images/optimized/IMG_0740.webp", alt: "Timing technology at a meet",     w: 440, h: 330, q: "gps+running+watch" },
+    { cat: "Apparel",     name: "Track Uniforms &amp; Shorts", img: "/images/IMG_0735.JPG", webp: "/images/optimized/IMG_0735.webp", alt: "Athletes on the track",           w: 440, h: 330, q: "track+and+field+uniform" },
+    { cat: "Recovery",    name: "Recovery &amp; Stretching",   img: "/images/IMG_0723.JPG", webp: "/images/optimized/IMG_0723.webp", alt: "Track surface close-up",          w: 440, h: 330, q: "foam+roller+running+recovery" },
+    { cat: "Accessories", name: "Sport Sunglasses",            img: "/images/IMG_0836.JPG", webp: "/images/optimized/IMG_0836.webp", alt: "Sunny track in Honolulu",         w: 440, h: 330, q: "running+sunglasses+sport" },
+    { cat: "Gear",        name: "Track Bags &amp; Backpacks", img: "/images/IMG_0690.JPG", webp: "/images/optimized/IMG_0690.webp", alt: "Red track with Honolulu skyline",  w: 480, h: 360, q: "running+backpack+bag+track" },
+    { cat: "Training",    name: "Resistance Bands",           img: "/images/IMG_0736.JPG", webp: "/images/optimized/IMG_0736.webp", alt: "Lane numbers on a track",          w: 480, h: 360, q: "resistance+bands+running+training" },
+    { cat: "Meet Day",    name: "Pop-Up Canopy Tents",        img: "/images/IMG_9748.JPG", webp: "/images/optimized/IMG_9748.webp", alt: "Track meet with canopy tents",     w: 480, h: 360, q: "pop+up+canopy+tent+10x10+UV+UPF+50" }
   ];
 
   var html = '<section class="gear-section" id="gear">\n' +
@@ -349,7 +349,7 @@ function gearSectionHTML() {
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     html += '      <a class="gear-card" href="https://www.amazon.com/s?k=' + item.q + '&tag=' + AFFILIATE_TAG + '" target="_blank" rel="noopener sponsored">\n' +
-      '        <div class="gear-img"><img src="' + item.img + '" alt="' + item.alt + '" loading="lazy"></div>\n' +
+      '        <div class="gear-img"><picture><source srcset="' + item.webp + '" type="image/webp"><img src="' + item.img + '" alt="' + item.alt + '" loading="lazy" width="' + item.w + '" height="' + item.h + '"></picture></div>\n' +
       '        <div class="gear-body">\n' +
       '          <div class="gear-cat">' + item.cat + '</div>\n' +
       '          <h3>' + item.name + '</h3>\n' +
@@ -481,11 +481,17 @@ function generateStatePage(stateData, allStates) {
     '  <meta name="description" content="Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '. Phone numbers, websites, ratings, and Athletic.net race results.">\n' +
     '  <meta name="robots" content="index, follow">\n' +
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
-    '  <link rel="icon" type="image/png" href="/favicon.png">\n' +
+    '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
+    '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
     '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder">\n' +
     '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <meta property="og:type" content="website">\n' +
+    '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+    '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+    '  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap">\n' +
+    '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" media="print" onload="this.media=\'all\'">\n' +
+    '  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap"></noscript>\n' +
     '  <link rel="stylesheet" href="/style.css">\n' +
     '  <script type="application/ld+json">\n' +
     '  {\n' +

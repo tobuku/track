@@ -90,3 +90,116 @@ Real track meet photos in `/images/` — shot in Hawaii. Usage:
 - `IMG_0723.JPG` — abstract lane lines (recovery gear card)
 - `IMG_0836.JPG` — wide sunny track, skyline (sunglasses gear card)
 - `IMG_0541.JPG`, `IMG_0542.JPG` — telecom tools, not used on site
+
+---
+
+# SEO & Performance Remediation — August 2026
+
+Added after a full site audit. Sections below cover an in-progress remediation program.
+
+## Architectural rule that governs all of this work
+
+**State pages are generated. Never hand-edit `/{state}/index.html`.** Every fix that touches a
+state page must be made in the `build-directory.js` template and applied by re-running the build.
+Every fix to club *data* (duplicates, malformed URLs, missing cities) must be made in
+`track-clubs-data.csv` — and ideally in the Google Sheet, so it survives the next Outscraper export.
+
+`index.html` is hand-maintained and may be edited directly.
+
+Applies to each layer:
+
+| Change type | Where it belongs |
+|---|---|
+| Homepage markup, inline CSS, homepage schema | `index.html` directly |
+| State page markup, schema, outbound `rel` attributes | `build-directory.js` templates |
+| Shared styling for generated pages | `style.css` |
+| Club records — dupes, bad URLs, missing city | `track-clubs-data.csv` → then the Google Sheet |
+| New page types (city pages) | new generator in `build-directory.js` |
+
+## Zero-dependency constraint
+
+`node build-directory.js` must keep running with no `npm install`. Image optimization needs a
+library, so it lives in `/scripts/` as a **one-off local tool, never part of the build**. Run it
+manually when images change; the build itself stays dependency-free.
+
+## GitHub Pages constraints — do not fight these
+
+- **Custom HTTP headers are impossible.** `Cache-Control` is fixed at `max-age=600` by GitHub.
+  `_headers`, `.htaccess`, `netlify.toml`, `vercel.json` do nothing here. Do not create them.
+- **No server-side redirects**, no rewrites, no request-time computation.
+
+## Audit findings being remediated
+
+**Favicon** — `/favicon.png` is 4,598 KB, loaded via `<link rel="icon">` on every page. A single
+favicon costing more than the entire optimized image gallery. Needs a proper 32/180/ICO set.
+
+**Images** — 38 files in `/images/`, 20,243 KB total, average 533 KB, largest 799 KB
+(`IMG_0723.JPG`). All unprocessed camera originals, no WebP. Rendered at 116×200 thumbnails.
+The LCP element is `.hero-bg`, a CSS `background-image` the preload scanner cannot discover.
+Note: every `<img>` sits below a 560px-min-height hero, so `loading="lazy"` on them is **correct
+and should be left alone** — the LCP problem is the CSS background, not the img tags.
+
+**Structured data** — `ItemList` entries on all 51 state pages are bare `{"@type":"ListItem",
+"name":"..."}` with no `item`/`url`, which is a schema.org validation error and produces no rich
+result. The homepage `WebSite` schema declares a `SearchAction` targeting `/search?state={state}`,
+which 404s. Homepage `FAQPage` schema lists 5 questions; the page renders 7.
+
+**Link equity** — `/california/` emits 293 external links, 284 dofollow, 189 of them to
+athletic.net from that single page (~9,600 site-wide). Only 18 internal links, 3 to other states.
+Homepage gear links already carry `rel="noopener sponsored"` correctly — the gap is in the
+generated state page template.
+
+**Mobile navigation is hidden entirely** — `@media (max-width: 600px) { nav { display: none; } }`.
+Under mobile-first indexing that is the version Google evaluates.
+
+**Architecture** — 57 indexable pages for ~2,350 clubs. All 188 California clubs on one page.
+No city-level pages, which is where the actual search demand lives.
+
+**Backlinks** — DR 0.1 from 436 referring domains: 97.9% nofollow, zero above UR 10, all acquired
+in a single spike. Treat the referring-domain count as a vanity metric, not progress.
+
+**Count inconsistency** — hero stat says "1,000+ Clubs Listed"; title, meta description,
+og:description, and About section all say "2,350+".
+
+## Known data defects (fix in the Sheet, like the Spartan row)
+
+- Duplicate entries within a state — `/california/` lists CPRunners, Quicksilver Running Club,
+  and LA Running Club twice each
+- Malformed club URLs — `fleetfeetsantarosa` with no TLD; email addresses in the website column
+  (gmail.com); legacy eteamz.com links worth spot-checking
+
+## Repo hygiene — source files are publicly served
+
+GitHub Pages publishes the whole repo root. Confirmed live and downloadable:
+`track-clubs-data.csv` (268 KB, the full dataset), `build-directory.js`, `gsc_automation.py`.
+Audit the Python and Apps Script files for hardcoded credentials; rotate anything found, since
+it has been public. The structural fix is publishing from a `/docs` folder so only built output
+is served. Do not use robots.txt `Disallow` for this — it does not prevent access and advertises
+the paths.
+
+Stale files also being served: `track-clubs-data-OLD.csv`, `track-clubs-data-OLD2.csv`,
+`scraped-clubs.csv`, `scrape-clubs.py`.
+
+## Measured baselines
+
+| Metric | Baseline |
+|---|---|
+| Homepage image payload | 20,243 KB / 38 images |
+| Favicon | 4,598 KB |
+| Indexable pages | 57 |
+| Dofollow external links, `/california/` | 284 of 293 |
+| Internal links, `/california/` | 18 |
+| State pages with valid ItemList schema | 0 of 51 |
+| Domain Rating / referring domains | 0.1 / 436 |
+| Organic keywords / monthly traffic | 1 / ~2 |
+| AI citations (AI Overviews, ChatGPT, Gemini, Perplexity, Copilot) | 0 |
+
+## Working rules for remediation
+
+- One git branch per phase. Never mix phases in one session.
+- Before any change to `build-directory.js` templates: show the regenerated output for
+  `/california/index.html` and stop for approval.
+- Never fabricate club data — ratings, review counts, addresses. Omit missing fields.
+- Never invent or alter `alt` text.
+- After every template change, re-run `node build-directory.js` and confirm the diff is limited
+  to the intended change.
