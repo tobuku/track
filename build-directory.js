@@ -297,6 +297,8 @@ function headerHTML() {
   return '<header>\n' +
     '  <div class="header-inner">\n' +
     '    <a class="logo" href="/">Track<span>Club</span>Finder</a>\n' +
+    '    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">\n' +
+    '    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label>\n' +
     '    <nav>\n' +
     '      <a href="/#browse">Browse by State</a>\n' +
     '      <a href="/essentials/" class="nav-highlight">Essentials</a>\n' +
@@ -459,9 +461,34 @@ function generateStatePage(stateData, allStates) {
       '</div>\n\n';
   }
 
-  // ItemList schema
+  // ItemList schema — each ListItem wraps a SportsOrganization with real data
   var itemListItems = clubs.map(function(c, idx) {
-    return '{"@type":"ListItem","position":' + (idx + 1) + ',"name":"' + c.name.replace(/"/g, '\\"') + '"}';
+    var eName = c.name.replace(/"/g, '\\"');
+    var item = '{"@type":"SportsOrganization","name":"' + eName + '"';
+    if (c.website) item += ',"url":"' + c.website.replace(/"/g, '\\"') + '"';
+    if (c.phone) item += ',"telephone":"' + c.phone.replace(/"/g, '\\"') + '"';
+    // Address
+    var addrParts = [];
+    if (c.street) addrParts.push('"streetAddress":"' + c.street.replace(/"/g, '\\"') + '"');
+    if (c.city) addrParts.push('"addressLocality":"' + c.city.replace(/"/g, '\\"') + '"');
+    addrParts.push('"addressRegion":"' + stateAbbr + '"');
+    if (c.zip) addrParts.push('"postalCode":"' + c.zip.replace(/"/g, '\\"') + '"');
+    addrParts.push('"addressCountry":"US"');
+    item += ',"address":{"@type":"PostalAddress",' + addrParts.join(',') + '}';
+    // Geo
+    if (c.lat && c.lng) {
+      item += ',"geo":{"@type":"GeoCoordinates","latitude":' + c.lat + ',"longitude":' + c.lng + '}';
+    }
+    // AggregateRating only when both rating and reviews are present
+    if (c.rating && c.reviews) {
+      var r = parseFloat(c.rating);
+      var rv = parseInt(c.reviews, 10);
+      if (!isNaN(r) && !isNaN(rv) && rv > 0) {
+        item += ',"aggregateRating":{"@type":"AggregateRating","ratingValue":' + r + ',"reviewCount":' + rv + '}';
+      }
+    }
+    item += '}';
+    return '{"@type":"ListItem","position":' + (idx + 1) + ',"item":' + item + '}';
   }).join(",\n      ");
 
   var html = '<!DOCTYPE html>\n' +
@@ -477,16 +504,35 @@ function generateStatePage(stateData, allStates) {
     '  </script>\n' +
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-    '  <title>' + count + ' Track Clubs in ' + escapeHTML(stateName) + ' — Find Clubs Near You | TrackClubFinder</title>\n' +
-    '  <meta name="description" content="Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '. Phone numbers, websites, ratings, and Athletic.net race results.">\n' +
+    (function() {
+      // Build title — keep under ~60 chars
+      var titleBase = count + ' Track Clubs in ' + escapeHTML(stateName);
+      var pageTitle = titleBase + ' | TrackClubFinder';
+      if (pageTitle.length > 60) pageTitle = titleBase + ' | TCF';
+      if (pageTitle.length > 60) pageTitle = titleBase;
+      // Build description — keep under ~155 chars
+      var descBase = 'Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName);
+      var citySuffix = topCities.length ? ' including ' + topCities.slice(0, 3).join(', ') : '';
+      var metaDesc = descBase + citySuffix + '. Ratings, phone numbers, websites.';
+      if (metaDesc.length > 155) metaDesc = descBase + citySuffix + '. Ratings and contact info.';
+      if (metaDesc.length > 155) metaDesc = descBase + '. Ratings, phone numbers, websites.';
+      return '  <title>' + pageTitle + '</title>\n' +
+        '  <meta name="description" content="' + metaDesc + '">\n';
+    })() +
     '  <meta name="robots" content="index, follow">\n' +
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
     '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
-    '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder">\n' +
-    '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + (topCities.length ? ' — ' + topCities.join(', ') + ' &amp; more' : '') + '.">\n' +
+    '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + '">\n' +
+    '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <meta property="og:type" content="website">\n' +
+    '  <meta property="og:image" content="' + SITE_DOMAIN + '/images/IMG_5760.JPG">\n' +
+    '  <meta property="og:site_name" content="TrackClubFinder">\n' +
+    '  <meta name="twitter:card" content="summary_large_image">\n' +
+    '  <meta name="twitter:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + '">\n' +
+    '  <meta name="twitter:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.">\n' +
+    '  <meta name="twitter:image" content="' + SITE_DOMAIN + '/images/IMG_5760.JPG">\n' +
     '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
     '  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap">\n' +

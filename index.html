@@ -643,8 +643,48 @@
       line-height: 1.6;
     }
 
+    /* ── Mobile hamburger (CSS-only) ── */
+    .nav-toggle { display: none; }
+    .nav-toggle-label { display: none; cursor: pointer; }
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: var(--white);
+      height: 2px;
+      width: 22px;
+      border-radius: 2px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      position: absolute;
+    }
+    .nav-toggle-label span::before { top: -7px; }
+    .nav-toggle-label span::after { top: 7px; }
+    .nav-toggle:checked ~ nav { display: flex; }
+    .nav-toggle:checked + .nav-toggle-label span { background: transparent; }
+    .nav-toggle:checked + .nav-toggle-label span::before { top: 0; transform: rotate(45deg); }
+    .nav-toggle:checked + .nav-toggle-label span::after { top: 0; transform: rotate(-45deg); }
+
     @media (max-width: 600px) {
-      nav { display: none; }
+      .nav-toggle-label { display: flex; align-items: center; padding: 0.5rem; }
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        padding: 0.75rem 1.5rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        z-index: 99;
+      }
+      nav a { margin-left: 0; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      nav a:last-child { border-bottom: none; }
       .hero-stats { gap: 1.75rem; }
       .photo-strip { grid-template-columns: repeat(3, 1fr); }
       .photo-strip-item { height: 140px; }
@@ -658,12 +698,7 @@
     "@type": "WebSite",
     "name": "Track Club Finder",
     "url": "https://trackclubfinder.com",
-    "description": "National directory of track clubs and running clubs in the United States.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://trackclubfinder.com/search?state={state}",
-      "query-input": "required name=state"
-    }
+    "description": "National directory of track clubs and running clubs in the United States."
   }
   </script>
   <script type="application/ld+json">
@@ -675,7 +710,9 @@
       {"@type":"Question","name":"What's the difference between a track club and a running club?","acceptedAnswer":{"@type":"Answer","text":"Track clubs typically focus on structured workouts at a track facility, including sprints, hurdles, jumps, and middle distance training. Running clubs tend to be more casual and road-focused, centered on group long runs. Many clubs do both."}},
       {"@type":"Question","name":"How do I find race results for a specific athlete or club?","acceptedAnswer":{"@type":"Answer","text":"Athletic.net is the best resource for US track and cross country race results. You can search by athlete name, school, club, or meet."}},
       {"@type":"Question","name":"Are these clubs affiliated with USA Track & Field (USATF)?","acceptedAnswer":{"@type":"Answer","text":"Some are, some are not. USATF-affiliated clubs go through the official sanctioning process and may have access to additional competitions. Check the individual club's website or contact them directly to confirm their affiliation status."}},
-      {"@type":"Question","name":"What gear do I need to join a track club?","acceptedAnswer":{"@type":"Answer","text":"Most clubs just need you to show up in comfortable athletic wear and running shoes. If you plan to run on a track, spikes are eventually worth investing in for sprint events."}}
+      {"@type":"Question","name":"How current is the club data?","acceptedAnswer":{"@type":"Answer","text":"Our listings are sourced from Google Maps data and updated regularly. Club details like phone numbers and hours can change, so always verify directly with the club before visiting."}},
+      {"@type":"Question","name":"Can I add or update my club's listing?","acceptedAnswer":{"@type":"Answer","text":"If your club is missing or has outdated information, the fastest way to update it is to make sure your Google Maps / Google Business Profile listing is accurate — our data pulls directly from that source."}},
+      {"@type":"Question","name":"What gear do I need to join a track club?","acceptedAnswer":{"@type":"Answer","text":"Most clubs just need you to show up in comfortable athletic wear and running shoes. If you plan to run on a track, spikes are eventually worth investing in for sprint events. Check the Gear section of this site for recommended beginner and advanced equipment."}}
     ]
   }
   </script>
@@ -686,6 +723,8 @@
 <header>
   <div class="header-inner">
     <div class="logo">Track<span>Club</span>Finder</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label>
     <nav>
       <a href="#browse">Browse States</a>
       <a href="/essentials/" class="nav-highlight">Essentials</a>
@@ -771,7 +810,7 @@
         <span>States Covered</span>
       </div>
       <div class="hero-stat">
-        <strong>1,000+</strong>
+        <strong>2,350+</strong>
         <span>Clubs Listed</span>
       </div>
     </div>
