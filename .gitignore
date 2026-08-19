@@ -3,3 +3,5 @@ __pycache__/
 scraped-clubs.csv
 .scrape-checkpoint.json
 .gsc-credentials/
+*.csv.bak
+track-clubs-data-OLD*.csv
