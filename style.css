@@ -157,6 +157,22 @@ nav a.nav-highlight:hover { background: #e08e0b; }
   white-space: nowrap;
 }
 
+/* ── Browse by City (inline) ── */
+.browse-by-city {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+}
+.browse-by-city .nearby-title {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.browse-by-city .nearby-links {
+  gap: 0.4rem;
+}
+
 /* ── Listings ── */
 .listings-section {
   padding: 3rem 0;

@@ -627,27 +627,25 @@ function generateStatePage(stateData, allStates, stateCities) {
     '      <input type="text" id="club-filter" class="club-filter" placeholder="Filter by city or club name\u2026" aria-label="Filter clubs">\n' +
     '      <span id="filter-count" class="filter-count">' + count + ' clubs</span>\n' +
     '    </div>\n' +
-    '    <div class="clubs-grid">\n' +
-    listingsHTML +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n\n' +
 
     (function() {
       if (!stateCities || !stateCities.length) return '';
       var links = stateCities.map(function(city) {
         return '    <a class="nearby-link" href="/' + stateSlug + '/' + city.slug + '/">' + escapeHTML(city.name) + ' <span class="nearby-count">(' + city.count + ')</span></a>';
       }).join('\n');
-      return '<!-- Browse by City -->\n' +
-        '<section class="nearby-section">\n' +
-        '  <div class="section-inner">\n' +
-        '    <h2 class="nearby-title">Browse ' + escapeHTML(stateName) + ' by City</h2>\n' +
-        '    <div class="nearby-links">\n' +
+      return '    <div class="browse-by-city">\n' +
+        '      <h3 class="nearby-title">Browse ' + escapeHTML(stateName) + ' by City</h3>\n' +
+        '      <div class="nearby-links">\n' +
         links + '\n' +
-        '    </div>\n' +
-        '  </div>\n' +
-        '</section>\n\n';
+        '      </div>\n' +
+        '    </div>\n';
     })() +
+
+    '    <div class="clubs-grid">\n' +
+    listingsHTML +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n\n' +
 
     gearSectionHTML() +
 
