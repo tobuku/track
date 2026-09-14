@@ -350,7 +350,7 @@ function gearSectionHTML() {
 
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
-    html += '      <a class="gear-card" href="https://www.amazon.com/s?k=' + item.q + '&tag=' + AFFILIATE_TAG + '" target="_blank" rel="noopener sponsored">\n' +
+    html += '      <a class="gear-card" href="https://www.amazon.com/s?k=' + item.q + '&tag=' + AFFILIATE_TAG + '" target="_blank" rel="noopener sponsored" onclick="gtag(\'event\',\'affiliate_click\',{affiliate:\'amazon\',product:\'' + item.name.replace(/&amp;/g,'&').replace(/'/g,"\\'") + '\',page_title:document.title,page_url:location.pathname})">\n' +
       '        <div class="gear-img"><picture><source srcset="' + item.webp + '" type="image/webp"><img src="' + item.img + '" alt="' + item.alt + '" loading="lazy" width="' + item.w + '" height="' + item.h + '"></picture></div>\n' +
       '        <div class="gear-body">\n' +
       '          <div class="gear-cat">' + item.cat + '</div>\n' +
@@ -400,7 +400,7 @@ function buildClubCardsHTML(clubs, stateAbbr) {
     var athleticSearch = 'https://www.athletic.net/search?q=' + encodeURIComponent(c.name + ' ' + stateAbbr);
     var linksHTML = '<div class="club-links">\n';
     if (c.website) {
-      linksHTML += '  <a class="club-link" href="' + escapeHTML(c.website) + '" target="_blank" rel="noopener">Website &#8599;</a>\n';
+      linksHTML += '  <a class="club-link" href="' + escapeHTML(c.website) + '" target="_blank" rel="noopener" onclick="gtag(\'event\',\'outbound_club_click\',{club_name:\'' + escapeHTML(c.name).replace(/'/g,"\\'") + '\',destination:\'' + escapeHTML(c.website).replace(/'/g,"\\'") + '\',state:\'' + stateAbbr + '\',source_page:location.pathname})">Website &#8599;</a>\n';
       linksHTML += '  <a class="club-link club-link--secondary" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
     } else {
       linksHTML += '  <a class="club-link athletic" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
@@ -487,6 +487,7 @@ function generateStatePage(stateData, allStates, stateCities) {
   var stateSlug = stateData.slug;
   var count = clubs.length;
   var topCities = getTopCities(clubs, 4);
+  var todayISO = new Date().toISOString().slice(0, 10);
 
   var listingsHTML = buildClubCardsHTML(clubs, stateAbbr);
   var itemListItems = buildItemListSchema(clubs, stateAbbr);
@@ -505,17 +506,51 @@ function generateStatePage(stateData, allStates, stateCities) {
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
     (function() {
-      // Build title — keep under ~60 chars
-      var titleBase = count + ' Track Clubs in ' + escapeHTML(stateName);
-      var pageTitle = titleBase + ' | TrackClubFinder';
-      if (pageTitle.length > 60) pageTitle = titleBase + ' | TCF';
-      if (pageTitle.length > 60) pageTitle = titleBase;
-      // Build description — keep under ~155 chars
-      var descBase = 'Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName);
-      var citySuffix = topCities.length ? ' including ' + topCities.slice(0, 3).join(', ') : '';
-      var metaDesc = descBase + citySuffix + '. Ratings, phone numbers, websites.';
-      if (metaDesc.length > 155) metaDesc = descBase + citySuffix + '. Ratings and contact info.';
-      if (metaDesc.length > 155) metaDesc = descBase + '. Ratings, phone numbers, websites.';
+      // Title overrides for priority states
+      var TITLE_OVERRIDES = {
+        'TX': 'Track Clubs in Texas - ' + count + ' Youth & Adult Clubs Near You',
+        'FL': count + ' Track & Running Clubs in Florida - Find One Near You',
+        'CA': count + ' Track Clubs in California - Youth, Adult & Competitive',
+        'IL': 'Track Clubs in Illinois - ' + count + ' Clubs Including Chicago',
+        'CT': count + ' Track & Running Clubs in Connecticut - Directory',
+        'MS': 'Track Clubs in Mississippi - ' + count + ' Youth & Adult Programs'
+      };
+      // Description overrides for priority states
+      var DESC_OVERRIDES = {
+        'TX': 'Browse ' + count + ' track clubs across Houston, Dallas, San Antonio and more. Youth programs, adult teams. Phone numbers, ratings, websites.',
+        'FL': 'Find ' + count + ' track and running clubs in Florida from Tampa to Miami. Compare ratings, get phone numbers, and visit club websites. Free directory.',
+        'CA': 'Search ' + count + ' track clubs in California. Los Angeles, San Francisco, San Diego and more. Youth, adult, competitive. Ratings and contact info.',
+        'IL': count + ' track clubs in Illinois including Chicago, Springfield, and Naperville. Youth and adult programs with Google ratings, phone numbers, and websites.',
+        'CT': 'Discover ' + count + ' track and running clubs in Connecticut. Compare Google ratings, find phone numbers, and connect with youth and adult programs near you.',
+        'MS': count + ' track clubs in Mississippi with ratings, phone numbers, and websites. Youth programs, adult teams, and competitive clubs across the state.'
+      };
+      // Build title with rotation for non-override states
+      var pageTitle;
+      if (TITLE_OVERRIDES[stateAbbr]) {
+        pageTitle = TITLE_OVERRIDES[stateAbbr];
+      } else {
+        var idx = stateAbbr.charCodeAt(0) + stateAbbr.charCodeAt(1);
+        var variant = idx % 4;
+        if (variant === 0) pageTitle = count + ' Track Clubs in ' + escapeHTML(stateName) + ' - Find One Near You';
+        else if (variant === 1) pageTitle = 'Track & Running Clubs in ' + escapeHTML(stateName) + ' (' + count + ' Listed)';
+        else if (variant === 2) pageTitle = 'Find Track Clubs in ' + escapeHTML(stateName) + ' - ' + count + ' Youth & Adult Clubs';
+        else pageTitle = count + ' Track & Field Clubs in ' + escapeHTML(stateName) + ' | Directory';
+      }
+      if (pageTitle.length > 60) pageTitle = count + ' Track Clubs in ' + escapeHTML(stateName) + ' | TrackClubFinder';
+      if (pageTitle.length > 60) pageTitle = count + ' Track Clubs in ' + escapeHTML(stateName);
+      // Build description with rotation for non-override states
+      var metaDesc;
+      if (DESC_OVERRIDES[stateAbbr]) {
+        metaDesc = DESC_OVERRIDES[stateAbbr];
+      } else {
+        var dIdx = stateAbbr.charCodeAt(0) + stateAbbr.charCodeAt(1);
+        var dVariant = dIdx % 3;
+        var cityList = topCities.length ? topCities.slice(0, 3).join(', ') : '';
+        if (dVariant === 0) metaDesc = 'Browse ' + count + ' track clubs in ' + escapeHTML(stateName) + (cityList ? ' including ' + cityList : '') + '. Ratings, phone numbers, and websites - all free.';
+        else if (dVariant === 1) metaDesc = 'Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '. ' + (cityList ? cityList + ' and more. ' : '') + 'Compare ratings, get contact info. Free directory.';
+        else metaDesc = 'Search ' + count + ' track clubs across ' + escapeHTML(stateName) + '. ' + (cityList ? 'Clubs in ' + cityList + ' and beyond. ' : '') + 'Youth, adult, and competitive programs with contact info.';
+      }
+      if (metaDesc.length > 155) metaDesc = 'Find ' + count + ' track clubs and running clubs in ' + escapeHTML(stateName) + '. Ratings, phone numbers, websites.';
       return '  <title>' + pageTitle + '</title>\n' +
         '  <meta name="description" content="' + metaDesc + '">\n';
     })() +
@@ -610,7 +645,12 @@ function generateStatePage(stateData, allStates, stateCities) {
     '<section class="state-hero">\n' +
     '  <div class="section-inner">\n' +
     '    <h1>Find Track Clubs Near You in ' + escapeHTML(stateName) + '</h1>\n' +
-    '    <p class="hero-sub">' + count + ' track club' + (count !== 1 ? 's' : '') + ' and running club' + (count !== 1 ? 's' : '') + ' near you in ' + escapeHTML(stateName) + (topCities.length ? ', including ' + topCities.join(', ') : '') + '. Browse phone numbers, websites, Google ratings, and links to race results on Athletic.net.</p>\n' +
+    (function() {
+      var cityCount = stateCities ? stateCities.length : 0;
+      var sub = count + ' track club' + (count !== 1 ? 's' : '') + ' across ' + (cityCount > 0 ? cityCount + ' cities in ' : '') + escapeHTML(stateName) + '.';
+      sub += ' Find youth programs, adult teams, and competitive clubs with Google ratings, phone numbers, and websites.';
+      return '    <p class="hero-sub">' + sub + '</p>\n';
+    })() +
     '    <div class="state-stats">\n' +
     '      <div class="state-stat"><strong>' + count + '</strong><span>Clubs Listed</span></div>\n' +
     '      <div class="state-stat"><strong>' + stateAbbr + '</strong><span>' + escapeHTML(stateName) + '</span></div>\n' +
@@ -619,7 +659,7 @@ function generateStatePage(stateData, allStates, stateCities) {
     '</section>\n\n' +
 
     '<!-- Club Listings -->\n' +
-    '<section class="listings-section">\n' +
+    '<section class="listings-section" data-club-count="' + count + '">\n' +
     '  <div class="section-inner">\n' +
     '    <div class="section-label">Directory</div>\n' +
     '    <h2 class="section-title">All Track &amp; Running Clubs in ' + escapeHTML(stateName) + '</h2>\n' +
@@ -634,7 +674,8 @@ function generateStatePage(stateData, allStates, stateCities) {
         return '    <a class="nearby-link" href="/' + stateSlug + '/' + city.slug + '/">' + escapeHTML(city.name) + ' <span class="nearby-count">(' + city.count + ')</span></a>';
       }).join('\n');
       return '    <div class="browse-by-city">\n' +
-        '      <h3 class="nearby-title">Browse ' + escapeHTML(stateName) + ' by City</h3>\n' +
+        '      <h3 class="nearby-title">Track Clubs by City in ' + escapeHTML(stateName) + '</h3>\n' +
+        '      <p style="margin-bottom:0.75rem;font-size:0.9rem;color:#5a6a7a;">Find track clubs in specific cities across ' + escapeHTML(stateName) + '.</p>\n' +
         '      <div class="nearby-links">\n' +
         links + '\n' +
         '      </div>\n' +
@@ -730,6 +771,8 @@ function generateStatePage(stateData, allStates, stateCities) {
     '  <a class="btn" href="/#browse">Back to State Directory</a>\n' +
     '</section>\n\n' +
 
+    '<p style="text-align:center;font-size:0.75rem;color:#8a9ab0;padding:0.5rem 1rem;">Directory last updated: ' + todayISO + '</p>\n\n' +
+
     '</main>\n\n' +
     footerHTML() +
     '\n<script>\n' +
@@ -797,6 +840,10 @@ function generateCityPage(cityData, stateData, otherCities) {
   var listingsHTML = buildClubCardsHTML(clubs, stateAbbr);
   var itemListItems = buildItemListSchema(clubs, stateAbbr);
 
+  // Check if city page is thin (all clubs lack both website and phone)
+  var hasContent = clubs.some(function(c) { return c.website || c.phone; });
+  var robotsDirective = hasContent ? 'index, follow' : 'noindex, follow';
+
   // Title and description
   var pageTitle = count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + ' | TrackClubFinder';
   if (pageTitle.length > 60) pageTitle = count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr;
@@ -817,7 +864,7 @@ function generateCityPage(cityData, stateData, otherCities) {
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
     '  <title>' + pageTitle + '</title>\n' +
     '  <meta name="description" content="' + metaDesc + '">\n' +
-    '  <meta name="robots" content="index, follow">\n' +
+    '  <meta name="robots" content="' + robotsDirective + '">\n' +
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/">\n' +
     '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
     '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
@@ -972,9 +1019,11 @@ function generateSitemap(states, allCities) {
   for (var i = 0; i < stateKeys.length; i++) {
     var s = states[stateKeys[i]];
     xml += '  <url><loc>' + SITE_DOMAIN + '/' + s.slug + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n';
-    // City pages for this state
+    // City pages for this state (exclude noindex pages - those with no phone or website on any club)
     var cities = allCities[stateKeys[i]] || [];
     for (var j = 0; j < cities.length; j++) {
+      var hasContent = cities[j].clubs.some(function(c) { return c.website || c.phone; });
+      if (!hasContent) continue;
       xml += '  <url><loc>' + SITE_DOMAIN + '/' + s.slug + '/' + cities[j].slug + '/</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n';
     }
   }

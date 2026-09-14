@@ -508,5 +508,14 @@
   </div>
 </footer>
 
+<script>
+document.querySelector('form').addEventListener('submit', function() {
+  gtag('event', 'club_submission', {
+    form_type: 'club_submit',
+    state: document.querySelector('[name="state"]').value,
+    source_page: location.pathname
+  });
+});
+</script>
 </body>
 </html>
