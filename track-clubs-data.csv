@@ -1,4 +1,4 @@
-business_name,street_address,city,state,zip,phone,website,google_rating,review_count,hours_monday,hours_tuesday,hours_wednesday,hours_thursday,hours_friday,hours_saturday,hours_sunday,latitude,longitude
+business_name,street_address,city,state,zip,phone,website,google_rating,review_count,hours_monday,hours_tuesday,hours_wednesday,hours_thursday,hours_friday,hours_saturday,hours_sunday,latitude,longitude,description
 Parker Track Club (PTC),"Bob Jones High School Track, 670 Hughes Rd",Madison,AL,35758,1 256-559-8913,,,,"[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]","[""9AM-5PM""]",34.7202526,-86.7416524
 Anniston Runners Club,26 W 10th St,Anniston,AL,36201,,,,,,,,,,,,33.6568023,-85.8310242
 Dothan Runners,3405 Wellington,Dothan,AL,36305,1 334-792-6021,,3.8,,,,,,,,,31.2071298,-85.4386253
@@ -2203,6 +2203,7 @@ West Chester Running Club,,West Chester,PA,19380,,,,,,,,,,,,,
 Women Run Montco,,Springhouse,PA,19477,,,,,,,,,,,,,
 York Road Runners Club (YRRC),,York,PA,17405,,,,,,,,,,,,,
 Yough River Brewing Run Club,,Connellsville,PA,15425,,,,,,,,,,,,,
+GRYT Run Club,212 Valley Brook Road,McMurray,PA,15317,412-576-3368,https://grytrunclub.com,,,,,,,,,,40.2767,-80.1342,"Free all-paces running community in Pittsburgh's South Hills. Meeting point is the Montour Trail not a staffed office. Instagram: @grytrunclub"
 Ocean State Runners Club,,Chepachet,RI,02814,,,,,,,,,,,,,
 Rhode Runner Running Club,,Providence,RI,02904,,http://www.rhoderunner.com,,,,,,,,,,,
 Royal Fire,,East providence,RI,02914,,http://Hsoares65@yahoo.com,,,,,,,,,,,

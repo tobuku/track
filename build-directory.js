@@ -228,6 +228,7 @@ function loadClubs() {
     var reviews   = (r[8] || "").trim();
     var lat       = (r[16] || "").trim();
     var lng       = (r[17] || "").trim();
+    var description = (r[18] || "").trim();
 
     if (!STATE_NAMES[stateAbbr]) continue;
     if (!city) city = "";
@@ -254,7 +255,8 @@ function loadClubs() {
       rating:    rating,
       reviews:   reviews,
       lat:       lat,
-      lng:       lng
+      lng:       lng,
+      description: description
     });
   }
 
@@ -407,6 +409,8 @@ function buildClubCardsHTML(clubs, stateAbbr) {
     }
     linksHTML += '</div>\n';
 
+    var clubDescHTML = c.description ? '<p class="club-desc">' + escapeHTML(c.description) + '</p>\n' : '';
+
     var featured = FEATURED_CLUBS[c.name];
     var cardClass = 'club-card' + (featured ? ' club-card--featured' : '');
     var badgeHTML = featured ? '  <span class="featured-badge">' + escapeHTML(featured.badge) + '</span>\n' : '';
@@ -431,6 +435,7 @@ function buildClubCardsHTML(clubs, stateAbbr) {
       ratingHTML +
       addressHTML +
       phoneHTML +
+      clubDescHTML +
       descHTML +
       linksHTML +
       socialHTML +
