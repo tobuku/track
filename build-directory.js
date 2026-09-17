@@ -23,6 +23,11 @@ var AFFILIATE_TAG = "dwelldoc-20";
 var SITE_DOMAIN   = "https://trackclubfinder.com";
 var GA4_ID        = "G-LC8M82YBSN";
 
+// Cities that always get a city page, even with only 1 club (state abbr + city name)
+var FORCE_CITY_PAGES = [
+  "PA:McMurray"
+];
+
 // Featured clubs with extra links and badge
 var FEATURED_CLUBS = {
   "Quick Track Club": {
@@ -808,7 +813,7 @@ function generateStatePage(stateData, allStates, stateCities) {
 
 // ── City Page Generator ──────────────────────────────────────────────────────
 
-function getCitiesForState(clubs) {
+function getCitiesForState(clubs, stateAbbr) {
   var cityMap = {};
   for (var i = 0; i < clubs.length; i++) {
     var c = clubs[i];
@@ -818,10 +823,11 @@ function getCitiesForState(clubs) {
     }
     cityMap[c.city].clubs.push(c);
   }
-  // Return only cities with 2+ clubs, sorted by count desc then name asc
+  // Return cities with 2+ clubs or forced overrides, sorted by count desc then name asc
   var cities = [];
   for (var key in cityMap) {
-    if (cityMap[key].clubs.length >= 2) {
+    var forced = FORCE_CITY_PAGES.indexOf(stateAbbr + ":" + key) !== -1;
+    if (cityMap[key].clubs.length >= 2 || forced) {
       cityMap[key].count = cityMap[key].clubs.length;
       cities.push(cityMap[key]);
     }
@@ -1051,7 +1057,7 @@ function build() {
   // Build city data for all states
   var allCities = {};
   for (var i = 0; i < stateKeys.length; i++) {
-    allCities[stateKeys[i]] = getCitiesForState(states[stateKeys[i]].clubs);
+    allCities[stateKeys[i]] = getCitiesForState(states[stateKeys[i]].clubs, stateKeys[i]);
   }
 
   var statePages = 0;
