@@ -407,7 +407,7 @@ function buildClubCardsHTML(clubs, stateAbbr) {
     var athleticSearch = 'https://www.athletic.net/search?q=' + encodeURIComponent(c.name + ' ' + stateAbbr);
     var linksHTML = '<div class="club-links">\n';
     if (c.website) {
-      linksHTML += '  <a class="club-link" href="' + escapeHTML(c.website) + '" target="_blank" rel="noopener" onclick="gtag(\'event\',\'outbound_club_click\',{club_name:\'' + escapeHTML(c.name).replace(/'/g,"\\'") + '\',destination:\'' + escapeHTML(c.website).replace(/'/g,"\\'") + '\',state:\'' + stateAbbr + '\',source_page:location.pathname})">Website &#8599;</a>\n';
+      linksHTML += '  <a class="club-link" href="' + escapeHTML(c.website) + '" target="_blank" rel="noopener nofollow" onclick="gtag(\'event\',\'outbound_club_click\',{club_name:\'' + escapeHTML(c.name).replace(/'/g,"\\'") + '\',destination:\'' + escapeHTML(c.website).replace(/'/g,"\\'") + '\',state:\'' + stateAbbr + '\',source_page:location.pathname})">Website &#8599;</a>\n';
       linksHTML += '  <a class="club-link club-link--secondary" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
     } else {
       linksHTML += '  <a class="club-link athletic" href="' + athleticSearch + '" target="_blank" rel="noopener">Search Athletic.net &#8599;</a>\n';
@@ -436,7 +436,7 @@ function buildClubCardsHTML(clubs, stateAbbr) {
       '  <meta itemprop="addressRegion" content="' + stateAbbr + '">\n' +
       (c.rating ? '  <meta itemprop="ratingValue" content="' + escapeHTML(c.rating) + '">\n' : '') +
       badgeHTML +
-      '  <h2 class="club-name" itemprop="name">' + escapeHTML(c.name) + '</h2>\n' +
+      '  <h3 class="club-name" itemprop="name">' + escapeHTML(c.name) + '</h3>\n' +
       ratingHTML +
       addressHTML +
       phoneHTML +
