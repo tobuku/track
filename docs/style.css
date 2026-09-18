@@ -452,8 +452,32 @@ footer {
   line-height: 1.5;
 }
 
+/* ── Focus styles ── */
+a:focus-visible,
+button:focus-visible,
+.club-link:focus-visible,
+.nearby-link:focus-visible,
+.gear-cta:focus-visible,
+.nav-a:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
 /* ── Mobile hamburger (CSS-only) ── */
-.nav-toggle { display: none; }
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.nav-toggle:focus-visible + .nav-toggle-label {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
 .nav-toggle-label { display: none; cursor: pointer; }
 .nav-toggle-label span,
 .nav-toggle-label span::before,

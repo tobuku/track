@@ -112,6 +112,11 @@ var STATE_NEIGHBORS = {
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
+function titleCase(str) {
+  if (!str) return str;
+  return str.toLowerCase().replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+}
+
 function slugify(str) {
   return str.toLowerCase()
     .replace(/['']/g, "")
@@ -225,7 +230,7 @@ function loadClubs() {
 
     var name      = r[0].trim();
     var street    = (r[1] || "").trim();
-    var city      = (r[2] || "").trim();
+    var city      = titleCase((r[2] || "").trim());
     var stateAbbr = (r[3] || "").trim().toUpperCase();
     var zip       = (r[4] || "").trim();
     var phone     = (r[5] || "").trim();
@@ -986,6 +991,8 @@ function generateCityPage(cityData, stateData, otherCities) {
         '  </div>\n' +
         '</section>\n\n';
     })() +
+
+    gearSectionHTML() +
 
     '<!-- Back to State -->\n' +
     '<section class="nearby-section">\n' +
