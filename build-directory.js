@@ -18,7 +18,8 @@ var path = require("path");
 // ── Config ────────────────────────────────────────────────────────────────────
 
 var CSV_FILE      = path.join(__dirname, "track-clubs-data.csv");
-var SITEMAP_FILE  = path.join(__dirname, "sitemap.xml");
+var OUTPUT_DIR    = path.join(__dirname, "docs");
+var SITEMAP_FILE  = path.join(OUTPUT_DIR, "sitemap.xml");
 var AFFILIATE_TAG = "dwelldoc-20";
 var SITE_DOMAIN   = "https://trackclubfinder.com";
 var GA4_ID        = "G-LC8M82YBSN";
@@ -1066,7 +1067,7 @@ function build() {
   for (var i = 0; i < stateKeys.length; i++) {
     var state = states[stateKeys[i]];
     var cities = allCities[stateKeys[i]];
-    var dir = path.join(__dirname, state.slug);
+    var dir = path.join(OUTPUT_DIR, state.slug);
     mkdirp(dir);
     fs.writeFileSync(path.join(dir, "index.html"), generateStatePage(state, states, cities));
     statePages++;
