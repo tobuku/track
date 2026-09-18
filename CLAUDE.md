@@ -6,11 +6,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 TrackClubFinder.com — national directory of track and running clubs across all 50 US states. GitHub Pages static site. Domain: `trackclubfinder.com`. Affiliate tag: `dwelldoc-20`. GA4: `G-LC8M82YBSN`.
 
+## Repo Structure
+
+GitHub Pages publishes from the `/docs` folder (not repo root). Source files in the root
+are NOT publicly accessible.
+
+| Location | Contents | Publicly served? |
+|---|---|---|
+| `docs/` | Homepage, state/city pages, content pages, images, CSS, favicons, CNAME, robots.txt, sitemap.xml | Yes |
+| repo root | `build-directory.js`, `track-clubs-data.csv`, `gsc_automation.py`, `track-clubs-appscript.gs`, `scripts/` | No |
+
 ## Data Pipeline
 
 1. **Google Apps Script** (`track-clubs-appscript.gs`) — runs inside the Google Sheet named `track-club-directory`. Makes 100 Outscraper API queries (2 per state: "track club" + "running club"). Resumes on re-run via `PropertiesService`. Call `resetProgress()` to start over. Call `fillMissingPhones()` after `main()` to backfill missing phone numbers.
 2. **CSV export** — download the sheet as `track-clubs-data.csv`, save to repo root.
-3. **Build** — `node build-directory.js` — reads the CSV, generates all state pages and `sitemap.xml`.
+3. **Build** — `node build-directory.js` — reads the CSV, generates all state/city pages and `sitemap.xml` into `docs/`.
 
 ## Build Command
 
@@ -22,24 +32,30 @@ No dependencies — pure Node.js with no `npm install` required.
 
 ## CSV Column Order
 
-Columns 0–17 (matches GAS script output and build script parser):
+Columns 0–18 (19 total):
 ```
 business_name, street_address, city, state, zip, phone, website,
-google_rating, review_count, hours_monday–sunday (7 cols), latitude, longitude
+google_rating, review_count, hours_monday–sunday (7 cols), latitude, longitude, description
 ```
+Column 18 (`description`) is optional. When populated, it renders as italic text on the club card.
 
 ## Output Structure
 
-- `/{state-slug}/index.html` — one page per state (e.g., `/hawaii/`, `/new-york/`)
-- `sitemap.xml` — all URLs including homepage and all state pages
-- `style.css` — shared CSS loaded by all state pages
-- `index.html` — homepage (all styles inline, does NOT use style.css)
+All output goes to `docs/`:
+
+- `docs/{state-slug}/index.html` — one page per state (e.g., `docs/hawaii/`)
+- `docs/{state-slug}/{city-slug}/index.html` — city pages for cities with 2+ clubs
+- `docs/sitemap.xml` — all URLs including homepage, state, city, and content pages
+- `docs/style.css` — shared CSS loaded by all generated pages
+- `docs/index.html` — homepage (hand-maintained, all styles inline, does NOT use style.css)
 
 State pages link back to `/#browse`. The homepage state grid links use absolute paths (`/alabama/` etc.) which require the custom domain or will 404 on `tobuku.github.io/track/`.
 
 ## Manually Adding a Club
 
-Edit `track-clubs-data.csv` directly, add a row in the correct column order, then re-run `node build-directory.js` and redeploy. Leave unknown fields empty but maintain the correct number of comma-separated columns (18 total).
+Edit `track-clubs-data.csv` directly, add a row in the correct column order, then re-run `node build-directory.js` and redeploy. Leave unknown fields empty but maintain the correct number of comma-separated columns (19 total).
+
+To force a city page for a city with only 1 club, add the state+city to the `FORCE_CITY_PAGES` array in `build-directory.js` (e.g., `"PA:McMurray"`).
 
 ## Redeploying After Data Changes
 
@@ -51,7 +67,7 @@ git commit -m "message"
 git push origin main
 ```
 
-State pages are fully regenerated on every build — do not hand-edit the generated `/{state}/index.html` files directly, edits will be overwritten on next build. Hand-edit `build-directory.js` templates instead.
+State and city pages are fully regenerated into `docs/` on every build — do not hand-edit the generated `docs/{state}/index.html` files directly, edits will be overwritten on next build. Hand-edit `build-directory.js` templates instead.
 
 ## Recurring Data Issue — Spartan Track Club Hawaii
 
@@ -99,22 +115,23 @@ Added after a full site audit. Sections below cover an in-progress remediation p
 
 ## Architectural rule that governs all of this work
 
-**State pages are generated. Never hand-edit `/{state}/index.html`.** Every fix that touches a
-state page must be made in the `build-directory.js` template and applied by re-running the build.
-Every fix to club *data* (duplicates, malformed URLs, missing cities) must be made in
-`track-clubs-data.csv` — and ideally in the Google Sheet, so it survives the next Outscraper export.
+**State and city pages are generated. Never hand-edit `docs/{state}/index.html`.** Every fix that
+touches a state or city page must be made in the `build-directory.js` template and applied by
+re-running the build. Every fix to club *data* (duplicates, malformed URLs, missing cities) must
+be made in `track-clubs-data.csv` — and ideally in the Google Sheet, so it survives the next
+Outscraper export.
 
-`index.html` is hand-maintained and may be edited directly.
+`docs/index.html` is hand-maintained and may be edited directly. Same for content pages in `docs/`.
 
 Applies to each layer:
 
 | Change type | Where it belongs |
 |---|---|
-| Homepage markup, inline CSS, homepage schema | `index.html` directly |
-| State page markup, schema, outbound `rel` attributes | `build-directory.js` templates |
-| Shared styling for generated pages | `style.css` |
+| Homepage markup, inline CSS, homepage schema | `docs/index.html` directly |
+| Content pages (guide, essentials, etc.) | `docs/{page}/index.html` directly |
+| State/city page markup, schema, outbound `rel` attributes | `build-directory.js` templates |
+| Shared styling for generated pages | `docs/style.css` |
 | Club records — dupes, bad URLs, missing city | `track-clubs-data.csv` → then the Google Sheet |
-| New page types (city pages) | new generator in `build-directory.js` |
 
 ## Zero-dependency constraint
 
@@ -163,36 +180,31 @@ og:description, and About section all say "2,350+".
 
 ## Known data defects (fix in the Sheet, like the Spartan row)
 
-- Duplicate entries within a state — `/california/` lists CPRunners, Quicksilver Running Club,
-  and LA Running Club twice each
-- Malformed club URLs — `fleetfeetsantarosa` with no TLD; email addresses in the website column
-  (gmail.com); legacy eteamz.com links worth spot-checking
+- ~~Duplicate entries within a state~~ — FIXED 2026-09-17: removed CPRunners, Quicksilver, LA Running Club dupes
+- ~~Malformed club URLs~~ — FIXED 2026-09-17: cleared emails from URL field, removed eteamz link, added missing TLDs
+- Watch for new duplicates or malformed URLs after future Outscraper exports
 
-## Repo hygiene — source files are publicly served
+## Repo hygiene — RESOLVED
 
-GitHub Pages publishes the whole repo root. Confirmed live and downloadable:
-`track-clubs-data.csv` (268 KB, the full dataset), `build-directory.js`, `gsc_automation.py`.
-Audit the Python and Apps Script files for hardcoded credentials; rotate anything found, since
-it has been public. The structural fix is publishing from a `/docs` folder so only built output
-is served. Do not use robots.txt `Disallow` for this — it does not prevent access and advertises
-the paths.
+~~GitHub Pages published the whole repo root.~~ FIXED 2026-09-17: site now publishes from `/docs`
+folder. Source files (`build-directory.js`, `track-clubs-data.csv`, `gsc_automation.py`,
+`track-clubs-appscript.gs`) are in the repo root and are NOT publicly accessible.
+Stale files (`track-clubs-data-OLD*.csv`, `scraped-clubs.csv`, `scrape-clubs.py`) were deleted
+in Phase 2. Outscraper API key was replaced with placeholder in commit 5360dcb.
+**TODO:** Rotate the actual Outscraper API key (it was publicly exposed before the /docs switch).
 
-Stale files also being served: `track-clubs-data-OLD.csv`, `track-clubs-data-OLD2.csv`,
-`scraped-clubs.csv`, `scrape-clubs.py`.
+## Measured baselines (pre-remediation Aug 2026) → current
 
-## Measured baselines
-
-| Metric | Baseline |
-|---|---|
-| Homepage image payload | 20,243 KB / 38 images |
-| Favicon | 4,598 KB |
-| Indexable pages | 57 |
-| Dofollow external links, `/california/` | 284 of 293 |
-| Internal links, `/california/` | 18 |
-| State pages with valid ItemList schema | 0 of 51 |
-| Domain Rating / referring domains | 0.1 / 436 |
-| Organic keywords / monthly traffic | 1 / ~2 |
-| AI citations (AI Overviews, ChatGPT, Gemini, Perplexity, Copilot) | 0 |
+| Metric | Baseline | Current (Sep 2026) |
+|---|---|---|
+| Homepage image payload | 20,243 KB / 38 images | Optimized WebP |
+| Favicon | 4,598 KB | Proper 32/180/ICO set |
+| Indexable pages | 57 | 422 |
+| Dofollow external links, `/california/` | 284 of 293 | Club links now nofollow |
+| State pages with valid ItemList schema | 0 of 51 | 51 of 51 |
+| Source files publicly accessible | Yes | No (/docs folder) |
+| Domain Rating / referring domains | 0.1 / 436 | TBD |
+| Organic keywords / monthly traffic | 1 / ~2 | TBD |
 
 ## Working rules for remediation
 
