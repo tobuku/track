@@ -247,7 +247,7 @@ function loadClubs() {
     // Clean website URL
     if (website) {
       website = website.replace(/%3F/gi, "?").replace(/%3D/gi, "=").replace(/%26/gi, "&");
-      website = website.replace(/[?&]utm_[^&]*/gi, "").replace(/\?$/, "");
+      website = website.replace(/[?&](utm_[^&]*|fbclid[^&]*|gclid[^&]*|msclkid[^&]*)/gi, "").replace(/\?$/, "");
     }
 
     var stateName = STATE_NAMES[stateAbbr];
@@ -1057,6 +1057,13 @@ function build() {
   console.log("Loading clubs from CSV...");
   var clubs = loadClubs();
   console.log("Loaded " + clubs.length + " clubs.");
+
+  // Validate featured clubs exist in dataset
+  var clubNames = {};
+  for (var v = 0; v < clubs.length; v++) clubNames[clubs[v].name] = true;
+  for (var fc in FEATURED_CLUBS) {
+    if (!clubNames[fc]) console.warn("WARNING: Featured club \"" + fc + "\" not found in CSV data");
+  }
 
   var states = groupByState(clubs);
   var stateKeys = Object.keys(states).sort();
