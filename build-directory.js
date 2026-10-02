@@ -574,6 +574,7 @@ function generateStatePage(stateData, allStates, stateCities) {
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
     '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
     '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
+    '  <meta name="impact-site-verification" content="bfb10f4d-56ef-4d0c-9e27-c7ca0a2d0325">\n' +
     '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(stateName) + '">\n' +
     '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(stateName) + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/">\n' +
@@ -885,6 +886,7 @@ function generateCityPage(cityData, stateData, otherCities) {
     '  <link rel="canonical" href="' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/">\n' +
     '  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n' +
     '  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n' +
+    '  <meta name="impact-site-verification" content="bfb10f4d-56ef-4d0c-9e27-c7ca0a2d0325">\n' +
     '  <meta property="og:title" content="' + count + ' Track Clubs in ' + escapeHTML(cityName) + ', ' + stateAbbr + '">\n' +
     '  <meta property="og:description" content="Find ' + count + ' track and running clubs in ' + escapeHTML(cityName) + ', ' + escapeHTML(stateName) + '.">\n' +
     '  <meta property="og:url" content="' + SITE_DOMAIN + '/' + stateSlug + '/' + citySlug + '/">\n' +
